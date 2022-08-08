@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KontaktHome</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/5a4b6aa97e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="container">
+          <nav>
+            <!-- logo ----------------------------------------------------->
+            <div class="logo">
+              <a href="#">
+                <img
+                  src="./assets/images/logos/Screenshot_6.png"
+                  alt="home logo"
+                />
+              </a>
+            </div>
+            <!-- menu btn ----------------------------------------------------->
+            <button class="menu-btn">
+              <i class="fa-solid fa-bars"></i>
+              <span>Menyu</span>
+            </button>
+            <!-- search bar ----------------------------------------------------->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                class="search-input"
+                type="search"
+                placeholder="Məhsul üzrə axtarış..."
+              />
+              <div class="toggle">
+                <div class="btn">
+                  <i class="fa-solid fa-xmark"></i>
+                  <button>Axtarış</button>
+                </div>
+              </div>
+            </div>
+            <!-- icons ----------------------------------------------------->
+            <div class="icons">
+              <div class="icon user">
+                <a href="#">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </div>
+              <div class="icon compare">
+                <a href="#">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </a>
+              </div>
+              <div class="icon liked">
+                <a href="#">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+              <div class="icon bucket">
+                <a href="#">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </a>
+              </div>
+            </div>
+            <!-- language ----------------------------------------------------->
+            <div class="icon language-switch">
+              <div class="switch">
+                <div class="img">
+                  <img src="./assets/images/logos/azer.svg" alt="flag" />
+                </div>
+                <span>AZ</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- intro section -------------------------------------------------------------->
+      <section>
+        <div class="intro">
+          <div class="container">
+            <!-- sale and payment -------------------------------------------->
+            <div class="top-part">
+              <h3 class="sale">
+                <a href="">Endirim</a>
+              </h3>
+              <button id="payment">Aylıq ödəniş</button>
+            </div>
+            <!-- swiper and menu -------------------------------------------->
+            <div class="slider-wrapper">
+              <div class="catalog-box">
+                <!-- catalogg -->
+              </div>
+              <div class="slider">
+                <div class="swiper mySwiperFirst">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="./assets/images/images/intro swiper images/display (1).webp"
+                        alt="advertisement"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./assets/images/images/intro swiper images/display (2).webp"
+                        alt="advertisement"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./assets/images/images/intro swiper images/display (3).webp"
+                        alt="advertisement"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./assets/images/images/intro swiper images/display (4).webp"
+                        alt="advertisement"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./assets/images/images/intro swiper images/display (5).webp"
+                        alt="advertisement"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./assets/images/images/intro swiper images/display (6).webp"
+                        alt="advertisement"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- payment modal ---------------------------------------------------------->
+          <div class="payment-modal">
+            <div id="payment-overlay" class="overlay" onClick="{back}"></div>
+            <div class="cards">
+              <div class="card-top">
+                <div class="card">
+                  <a href="https://hesab.az/#/">
+                    <img
+                      src="./assets/images/images/payment/hesab.webp"
+                      alt="hesab.az"
+                    />
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="https://gpp.az/WebPortal/Infosite/Default">
+                    <img
+                      src="./assets/images/images/payment/gpp.webp"
+                      alt="Gpp"
+                    />
+                  </a>
+                </div>
+                <div class="card">
+                  <a
+                    href="https://payments.kapitalbank.az/attributes/information/1802"
+                  >
+                    <img
+                      src="./assets/images/images/payment/birbank.webp"
+                      alt="birbank"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <div class="card">
+                  <a
+                    href="https://www.e-pul.az/epay/az/category/online_store/kontakthome_r"
+                  >
+                    <img
+                      src="./assets/images/images/payment/epul.webp"
+                      alt="epul"
+                    />
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="https://portmanat.az/">
+                    <img
+                      src="./assets/images/images/payment/portmanat.webp"
+                      alt="portmanat"
+                    />
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="https://www.million.az/attributes/KontaktHome">
+                    <img
+                      src="./assets/images/images/payment/million.webp"
+                      alt="million"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leader seller section ------------------------------------------------------>
+      <section>
+        <div class="best-sold">
+          <div class="container">
+            <h2 class="sub-heading">Satış liderləri</h2>
+            <div class="sub-nav">
+              <button class="top active">Top 20</button>
+              <button class="phones">Telefonlar</button>
+              <button class="comp">Kompyuterlər</button>
+              <button class="furniture">Məişət Texnikası</button>
+              <button class="tv">Televizorlar</button>
+              <button class="repair">Təmir-tikinti alətləri</button>
+              <button class="smart-house">Ağıllı ev</button>
+            </div>
+            <div class="card-area">
+              <!-- cards -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Partners section ----------------------------------------------------------->
+      <section id="partners">
+        <div class="container">
+          <h2 class="sub-heading">Partnyorlar</h2>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (1).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (2).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (3).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (4).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (5).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (6).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (7).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (8).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (9).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (10).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img
+                    src="./assets/images/logos/partners/display (11).webp"
+                    alt="partners logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- scroll img --------------------->
+          <div class="scIco">
+            <img
+              src="./assets/images/images/Screenshot_10.png"
+              alt="scroll img"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Kontakt TV-------------------------------------------------------------->
+      <section>
+        <div class="container">
+          <div class="top">
+            <h2>Kontakt TV</h2>
+            <a href="https://www.youtube.com/channel/UCf8uNO6TqBobRSWzBl9HPAA">
+              <span class="yt">YouTube</span>
+              <span class="num">0</span>
+            </a>
+          </div>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/CKkJwm9f0po"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer ----------------------------------------------------------------->
+      <footer>
+        <div class="footer-content">
+          <!-- information-------------------------------->
+          <div class="container">
+            <div class="further-info">
+              <!-- melumat ------------------------------------->
+              <div class="info box">
+                <h3>Məlumat</h3>
+                <a href="">Tez-tez verilən suallar</a>
+                <a href="">Saytın istifadə şərtləri</a>
+                <a href="">Kontakt TV</a>
+              </div>
+              <!-- sirketler ----------------------------------->
+              <div class="companies box">
+                <h3>Şirkətlər</h3>
+                <a href="">Şirkət haqqında</a>
+                <a href="">Şirkətin xəbərləri</a>
+                <a href="">Mağazalarımız</a>
+                <a href="">Xidmətlər</a>
+                <a href="">Vakansiyalar</a>
+                <a href="">Konfidensiallıq siyasəti</a>
+              </div>
+              <!-- istifadeciler ucun --------------------------->
+              <div class="for-customers box">
+                <h3>Müştərilər üçün</h3>
+                <a href="">Çatdırıma və ödəniş</a>
+                <a href="">Geri qaytarma siyasəti</a>
+                <a href="">Zəmanət</a>
+                <a href="">Hissə-hissə ödənişinə dair tələblər</a>
+                <a href="">Aylıq ödənişlərin həyata keçirilməsi üsülları</a>
+                <a href="">Aylıq ödənişlərin üsulları</a>
+              </div>
+              <!-- elaqe ------------------------------------------>
+              <div class="contact box">
+                <h3>Əlaqə</h3>
+                <a href="tel:*6060" id="tel">*6060</a>
+                <a href="">Biz xəritədə</a>
+              </div>
+            </div>
+            <!-- socials----------------------------------->
+            <div class="socials">
+              <div class="left">
+                <label for="">Abunə olun:</label>
+                <div class="subs">
+                  <input type="email" placeholder="Email" />
+                  <button>Abunə olmaq</button>
+                </div>
+              </div>
+            </div>
+            <h5>© Оnlayn - mağaza Kontakt Home - 2014 - 2021</h5>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- script ----------------------------------------------------------------------->
+    <script src="./assets/js/index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      // introSwiper-------------------------
+      var swiperFirst = new Swiper(".mySwiperFirst", {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      // partnersSwiper-------------------------------
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>
