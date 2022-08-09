@@ -46,7 +46,7 @@
             <div class="search">
               <i class="fa-solid fa-magnifying-glass"></i>
               <input
-                class="search-input"
+                id="search-input"
                 type="search"
                 placeholder="Məhsul üzrə axtarış..."
               />
@@ -229,16 +229,62 @@
           <div class="container">
             <h2 class="sub-heading">Satış liderləri</h2>
             <div class="sub-nav">
-              <button class="top active">Top 20</button>
-              <button class="phones">Telefonlar</button>
-              <button class="comp">Kompyuterlər</button>
-              <button class="furniture">Məişət Texnikası</button>
-              <button class="tv">Televizorlar</button>
-              <button class="repair">Təmir-tikinti alətləri</button>
-              <button class="smart-house">Ağıllı ev</button>
+              <button id="btn" class="first active">Top 20</button>
+              <button id="btn" class="phones">Telefonlar</button>
+              <button id="btn" class="comp">Kompyuterlər</button>
+              <button id="btn" class="furniture">Məişət Texnikası</button>
+              <button id="btn" class="tv">Televizorlar</button>
+              <button id="btn" class="repair">Təmir-tikinti alətləri</button>
+              <button id="btn" class="smart-house">Ağıllı ev</button>
             </div>
             <div class="card-area">
               <!-- cards -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- sale offers----------------------------------------------------------------->
+      <section>
+        <div class="container">
+          <div class="sub-heading">
+            <h2>Endirim təklifləri</h2>
+            <button>
+              <a href="#">Bütün Endirim təklifləri
+              </a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+          <div class="cards">
+            <div class="cards-top">
+              <div class="card">
+                <div class="img">
+                  <a href="#">
+                    <img
+                      src="./assets/images/images/products/house things/display (1).webp"
+                      alt="phones"
+                    />
+                  </a>
+                </div>
+                <a class="product-name" href="#">Buxarlı təmizləyici Black&Decker FSMH13E10-QS</a>
+                <div class="price-small">
+                  <h4>179.<sup>99</sup>₼</h4>
+                </div>
+                <div class="offer-price">
+                  <h4>129.<sup>99</sup></h4>
+                </div>
+                <div class="monthly-payment">
+                  <span>7.22 ₼ 0% 18 ay</span>
+                </div>
+                <button class="add-to-card">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span>Səbətə əlavə et</span>
+                </button>
+                <!-- <div class="hoverable">
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-scale-balanced"></i></button>
+                  <button><i class="fa-solid fa-thumbs-up"></i></button>
+                </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -373,8 +419,14 @@
       <!-- footer ----------------------------------------------------------------->
       <footer>
         <div class="footer-content">
-          <!-- information-------------------------------->
           <div class="container">
+            <!-- scroll to Top----------------------------->
+            <div class="scroll-top">
+              <div class="scroll-button">
+                <button class="to-top"><i class="fa-solid fa-arrow-up"></i></button>
+                <h3>Yuxarı</h3>
+              </div>
+            </div>
             <div class="further-info">
               <!-- melumat ------------------------------------->
               <div class="info box">
@@ -415,8 +467,11 @@
               <div class="left">
                 <label for="">Abunə olun:</label>
                 <div class="subs">
-                  <input type="email" placeholder="Email" />
-                  <button>Abunə olmaq</button>
+                  <div class="email-input">
+                    <input class="email" type="email" placeholder="E-mail" />
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                  </div>
+                  <button class="mail-button">Abunə olmaq</button>
                 </div>
               </div>
             </div>

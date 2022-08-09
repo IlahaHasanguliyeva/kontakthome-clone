@@ -1,3 +1,21 @@
+@-webkit-keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +47,9 @@ header {
   height: 55px;
   background-color: white;
   border-bottom: 1px solid #d8d8d8;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 header .container nav {
@@ -128,10 +149,6 @@ header .container nav .search input {
   border: none;
 }
 
-header .container nav .search .show {
-  display: block !important;
-}
-
 header .container nav .search .toggle {
   display: none;
 }
@@ -145,8 +162,9 @@ header .container nav .search .toggle .btn {
           align-items: center;
 }
 
-header .container nav .search .toggle .btn i {
-  color: #1f1f1f;
+header .container nav .search .toggle .btn .fa-xmark {
+  color: #171717;
+  cursor: pointer;
 }
 
 header .container nav .search .toggle .btn button {
@@ -156,6 +174,7 @@ header .container nav .search .toggle .btn button {
   border-radius: 5px;
   color: white;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 header .container nav input[type="search"]::-webkit-search-cancel-button {
@@ -477,15 +496,107 @@ section .best-sold .container .sub-nav .active::after {
   position: absolute;
   bottom: 26px;
   left: 0;
+  width: 100%;
   height: 2px;
   background-color: #da2c18;
-  width: 100%;
-  -webkit-transition: width 0.3s linear;
-  transition: width 0.3s linear;
+  -webkit-animation: underline 0.3s forwards;
+          animation: underline 0.3s forwards;
 }
 
 section .best-sold .container .card-area {
   height: 200px;
+}
+
+section .container .sub-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 41px;
+}
+
+section .container .sub-heading h2 {
+  padding-right: 35px;
+  margin-bottom: unset;
+  padding-bottom: unset;
+  border-bottom: none;
+}
+
+section .container .sub-heading button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45px;
+  width: 230px;
+  border: 1px solid #d8d8d8;
+  border-radius: 21px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+section .container .sub-heading button:hover i {
+  padding-left: 6px;
+  color: #da2c18;
+}
+
+section .container .sub-heading button a {
+  padding-left: 19px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  font-weight: 500;
+  color: #171717;
+}
+
+section .container .sub-heading button i {
+  font-size: 14px;
+  margin-left: 10px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+section .container .cards .card-top .card {
+  width: 220px;
+  height: 487px;
+}
+
+section .container .cards .card-top .card .img {
+  height: 250px;
+  width: 250px;
+}
+
+section .container .cards .card-top .card .img a img {
+  height: 100%;
+  width: 100%;
+  padding: 50px 5px 5px;
+}
+
+section .container .cards .card-top .card .product-name {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  font-weight: 500;
+  color: #171717;
 }
 
 #partners .container {
@@ -601,6 +712,40 @@ footer .footer-content .container {
   background-color: #171717;
 }
 
+footer .footer-content .container .scroll-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 55px;
+}
+
+footer .footer-content .container .scroll-top .scroll-button {
+  text-align: right;
+  z-index: 10;
+}
+
+footer .footer-content .container .scroll-top .scroll-button .to-top {
+  cursor: pointer;
+  padding: 18px;
+  margin-right: 34px;
+  background-color: #dd2901;
+  border: none;
+}
+
+footer .footer-content .container .scroll-top .scroll-button .to-top i {
+  font-size: 18px;
+  color: white;
+}
+
+footer .footer-content .container .scroll-top .scroll-button h3 {
+  margin-top: 14px;
+  color: white;
+  margin-right: 31px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+}
+
 footer .footer-content .container .further-info {
   border-bottom: 1px solid #3f4144;
   padding-top: 5px;
@@ -673,10 +818,10 @@ footer .footer-content .container .socials .left label {
   color: white;
   font-weight: 500;
   font-size: 18px;
-  line-height: 24px;
 }
 
 footer .footer-content .container .socials .left .subs {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -689,11 +834,36 @@ footer .footer-content .container .socials .left .subs {
           align-items: center;
 }
 
-footer .footer-content .container .socials .left .subs input {
+footer .footer-content .container .socials .left .subs .email-input {
+  width: 314px;
+  height: 50px;
   border: 1px solid #d8d8d8;
-  outline: none;
-  padding: 10px 11px 9px 16px;
   border-radius: 10px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-content .container .socials .left .subs .email-input input {
+  padding: 10px 11px 9px 16px;
+  border: none;
+  font-size: 12px;
+  width: 90%;
+  outline: none;
+}
+
+footer .footer-content .container .socials .left .subs .email-input i {
+  display: none;
+  font-size: 25px;
+  color: #da2c18;
+  padding-right: 8px;
 }
 
 footer .footer-content .container .socials .left .subs button {
@@ -705,9 +875,10 @@ footer .footer-content .container .socials .left .subs button {
   line-height: 17px;
   color: white;
   border-radius: 10px;
-  background-color: #d8d8d8;
-  -webkit-transition: background-color 0.3s linear;
-  transition: background-color 0.3s linear;
+  background-color: gray;
+  border: none;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 footer .footer-content .container h5 {

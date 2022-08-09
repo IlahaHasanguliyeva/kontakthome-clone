@@ -15,6 +15,16 @@ $black: #171717;
   color: $black;
 }
 
+// underline animation
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +49,8 @@ header {
   height: 55px;
   background-color: white;
   border-bottom: 1px solid $grey;
+  position: sticky;
+  top: 0;
   .container {
     nav {
       display: flex;
@@ -108,16 +120,14 @@ header {
           margin-bottom: 4px;
           border: none;
         }
-        .show {
-          display: block !important;
-        }
         .toggle {
           display: none;
           .btn {
             display: flex;
             align-items: center;
-            i {
-              color: #1f1f1f;
+            .fa-xmark {
+              color: $black;
+              cursor: pointer;
             }
             button {
               background-color: $red;
@@ -126,6 +136,7 @@ header {
               border-radius: 5px;
               color: white;
               margin-left: 10px;
+              cursor: pointer;
             }
           }
         }
@@ -251,7 +262,7 @@ section {
           font-size: 14px;
           font-weight: 500;
           a {
-            color: #171717;
+            color: $black;
             text-decoration: none;
           }
         }
@@ -365,7 +376,7 @@ section {
           background-color: transparent;
           font-size: 12px;
           font-weight: 500;
-          color: #171717;
+          color: $black;
           line-height: 17px;
           padding: 29px 0;
           cursor: pointer;
@@ -377,15 +388,95 @@ section {
             position: absolute;
             bottom: 26px;
             left: 0;
+            width: 100%;
             height: 2px;
             background-color: $red;
-            width: 100%;
-            transition: width 0.3s linear;
+            animation: underline 0.3s forwards;
           }
         }
       }
       .card-area {
         height: 200px;
+      }
+    }
+  }
+}
+
+// sale offers section-----------------------------------------------------
+section {
+  .container {
+    .sub-heading {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 32px;
+      border-bottom: 1px solid $grey;
+      margin-bottom: 41px;
+      h2 {
+        padding-right: 35px;
+        margin-bottom: unset;
+        padding-bottom: unset;
+        border-bottom: none;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        width: 230px;
+        border: 1px solid $grey;
+        border-radius: 21px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 0.2s linear;
+        &:hover {
+          i {
+            padding-left: 6px;
+            color: $red;
+          }
+        }
+        a {
+          padding-left: 19px;
+          text-decoration: none;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: -0.28px;
+          font-weight: 500;
+          color: $black;
+        }
+        i {
+          font-size: 14px;
+          margin-left: 10px;
+          transition: 0.1s linear;
+        }
+      }
+    }
+    // cards------------------------------
+    .cards {
+      .card-top {
+        .card {
+          width: 220px;
+          height: 487px;
+          .img {
+            height: 250px;
+            width: 250px;
+            a {
+              img {
+                height: 100%;
+                width: 100%;
+                padding: 50px 5px 5px;
+              }
+            }
+          }
+          .product-name {
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -0.28px;
+            font-weight: 500;
+            color: $black;
+          }
+        }
       }
     }
   }
@@ -481,6 +572,36 @@ footer {
   .footer-content {
     .container {
       background-color: $black;
+      // scroll-to-top-----------------------------
+      .scroll-top {
+        position: sticky;
+        top: 55px;
+        .scroll-button {
+          text-align: right;
+          z-index: 10;
+          .to-top {
+            cursor: pointer;
+            padding: 18px;
+            margin-right: 34px;
+            background-color: #dd2901;
+            border: none;
+            i {
+              font-size: 18px;
+              color: white;
+            }
+          }
+          h3 {
+            margin-top: 14px;
+            color: white;
+            margin-right: 31px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.36px;
+          }
+        }
+      }
+      // further info-------------------------------
       .further-info {
         border-bottom: 1px solid #3f4144;
         padding-top: 5px;
@@ -521,6 +642,7 @@ footer {
           }
         }
       }
+      // socials------------------------------------
       .socials {
         padding: 34px 0 37px;
         border-bottom: 1px solid #3f4144;
@@ -529,17 +651,34 @@ footer {
             color: white;
             font-weight: 500;
             font-size: 18px;
-            line-height: 24px;
           }
           .subs {
+            margin-top: 30px;
             display: flex;
             flex-direction: row;
             align-items: center;
-            input {
+            .email-input {
+              width: 314px;
+              height: 50px;
               border: 1px solid #d8d8d8;
-              outline: none;
-              padding: 10px 11px 9px 16px;
               border-radius: 10px;
+              background-color: white;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              input {
+                padding: 10px 11px 9px 16px;
+                border: none;
+                font-size: 12px;
+                width: 90%;
+                outline: none;
+              }
+              i {
+                display: none;
+                font-size: 25px;
+                color: $red;
+                padding-right: 8px;
+              }
             }
             button {
               width: 144px;
@@ -550,8 +689,9 @@ footer {
               line-height: 17px;
               color: white;
               border-radius: 10px;
-              background-color: $grey;
-              transition: background-color 0.3s linear;
+              background-color: gray;
+              border: none;
+              transition: 0.3s linear;
             }
           }
         }
