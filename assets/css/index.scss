@@ -453,28 +453,199 @@ section {
     }
     // cards------------------------------
     .cards {
-      .card-top {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .card-wrapper {
+        width: 25%;
         .card {
-          width: 220px;
-          height: 487px;
-          .img {
-            height: 250px;
-            width: 250px;
-            a {
-              img {
-                height: 100%;
-                width: 100%;
-                padding: 50px 5px 5px;
+          border: 1px solid $grey;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+          position: relative;
+          &:hover {
+            .wrap-outer {
+              .wrap-inner {
+                img {
+                  width: 90% !important;
+                }
+                .prices {
+                  margin-bottom: 10px;
+                }
+                .add-to-card {
+                  background-color: $red;
+                  margin-bottom: 26px;
+                  i,
+                  span {
+                    color: white;
+                  }
+                }
+                .hoverable {
+                  display: block;
+                }
               }
             }
           }
-          .product-name {
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 18px;
-            letter-spacing: -0.28px;
-            font-weight: 500;
-            color: $black;
+          .wrap-outer {
+            padding: 15px 20px 20px;
+            .wrap-inner {
+              display: flex;
+              flex-direction: column;
+              height: 484px;
+              .img {
+                transition: 0.1s;
+                width: 100%;
+                margin: 0 auto;
+                a {
+                  img {
+                    transition: 0.1s;
+                    height: 100%;
+                    width: 100%;
+                    padding: 50px 0 0;
+                    object-fit: contain;
+                  }
+                }
+              }
+              .name {
+                transition: 0.1s;
+                margin-left: 8px;
+                margin-bottom: 11px;
+                .product-name {
+                  height: 40px;
+                  text-decoration: none;
+                  font-size: 14px;
+                  line-height: 18px;
+                  letter-spacing: -0.28px;
+                  font-weight: 500;
+                  color: $black;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+              .prices {
+                transition: 0.1s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                flex-grow: 1;
+                padding-left: 8px;
+                margin-bottom: 15px;
+                .price-small {
+                  transition: 0.1s;
+                  h4 {
+                    margin-bottom: -10px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.36px;
+                    color: $black;
+                    sup {
+                      font-weight: 700;
+                      line-height: 24px;
+                      letter-spacing: -0.36px;
+                      color: $black;
+                    }
+                    span {
+                      font-size: 14px;
+                    }
+                  }
+                }
+                .offer-price {
+                  transition: 0.1s;
+                  h4 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -0.36px;
+                    color: $red;
+                  }
+                  sup {
+                    font-weight: 700;
+                    color: $red;
+                  }
+                  span {
+                    font-size: 18px;
+                    color: $black;
+                  }
+                }
+              }
+              .add-to-card {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                border: 1px solid $grey;
+                border-radius: 10px;
+                width: 100%;
+                height: 55px;
+                cursor: pointer;
+                transition: 0.1s;
+                i {
+                  font-size: 18px;
+                  color: gray;
+                  margin-right: 13px;
+                }
+                span {
+                  font-size: 12px;
+                  font-weight: 500;
+                  line-height: 17px;
+                  color: $black;
+                }
+              }
+              .hoverable {
+                width: 100.6%;
+                position: absolute;
+                display: none;
+                bottom: -120px;
+                left: -1px;
+                border: 1px solid $grey;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: white;
+                border-top: none;
+                transition: 0.1s;
+                .button-wrapper {
+                  transition: 0.1s;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  // padding-left: 23px;
+                  // padding-right: 24px;
+                  padding-top: 26px;
+                  padding-bottom: 75px;
+                  .heart {
+                    border: 2px solid $grey;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    border-right: none;
+                  }
+                  .compare {
+                    border: 2px solid $grey;
+                  }
+                  .like {
+                    border: 2px solid $grey;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    border-left: none;
+                  }
+                  button {
+                    background-color: transparent;
+                    cursor: pointer;
+                    width: 30%;
+                    height: 45px;
+                    i {
+                      font-size: 22px;
+                      color: gray;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
