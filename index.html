@@ -18,7 +18,10 @@
       crossorigin="anonymous"
     ></script>
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -157,7 +160,7 @@
           </div>
           <!-- payment modal ---------------------------------------------------------->
           <div class="payment-modal">
-            <div id="payment-overlay" class="overlay" onClick="{back}"></div>
+            <div id="payment-overlay" class="overlay"></div>
             <div class="cards">
               <div class="card-top">
                 <div class="card">
@@ -246,52 +249,64 @@
           <div class="sub-heading">
             <h2>Endirim təklifləri</h2>
             <button>
-              <a href="#">Bütün Endirim təklifləri
-              </a>
+              <a href="#">Bütün Endirim təklifləri </a>
               <i class="fa-solid fa-arrow-right-long"></i>
             </button>
           </div>
           <div class="cards">
-              <div class="card-wrapper">
-                <div class="card">
-                  <div class="wrap-outer">
-                    <div class="wrap-inner">
-                      <div class="img">
-                        <a href="#">
-                          <img
-                            src="./assets/images/images/products/house things/display (1).webp"
-                            alt="phones"
-                          />
-                        </a>
+           <div id="offer-cards-upper">
+            <!-- card -->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="wrap-outer">
+                  <div class="wrap-inner">
+                    <div class="img">
+                      <a href="#">
+                        <img
+                          src="./assets/images/images/products/house things/display (1).webp"
+                          alt="phones"
+                        />
+                      </a>
+                    </div>
+                    <div class="name">
+                      <a class="product-name" href="#"
+                        >Buxarlı təmizləyici Black&Decker FSMH13E10-QS</a
+                      >
+                    </div>
+                    <div class="prices">
+                      <div class="price-small">
+                        <h4>179.<sup>99</sup><span></span></h4>
                       </div>
-                      <div class="name">
-                        <a class="product-name" href="#">Buxarlı təmizləyici Black&Decker FSMH13E10-QS</a>
+                      <div class="offer-price">
+                        <h4>129.<sup>99</sup><span>₼</span></h4>
                       </div>
-                      <div class="prices">
-                        <div class="price-small">
-                          <h4>179.<sup>99</sup><span></span></h4>
-                        </div>
-                        <div class="offer-price">
-                          <h4>129.<sup>99</sup><span>₼</span></h4>
-                        </div>
-                      </div>
-                      <button class="add-to-card">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span>Səbətə əlavə et</span>
-                      </button>
-                      <div class="hoverable">
-                        <div class="button-wrapper">
-                          <button class="heart"><i class="fa-solid fa-heart"></i></button>
-                          <button class="compare"><i class="fa-solid fa-scale-balanced"></i></button>
-                          <button class="like"><i class="fa-solid fa-thumbs-up"></i></button>
-                        </div>
+                    </div>
+                    <button class="add-to-card">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      <span>Səbətə əlavə et</span>
+                    </button>
+                    <div class="hoverable">
+                      <div class="button-wrapper">
+                        <button class="heart">
+                          <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="compare">
+                          <i class="fa-solid fa-scale-balanced"></i>
+                        </button>
+                        <button class="like">
+                          <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-                
               </div>
-            
+            </div>
+           </div>
+           <div id="offer-cards-bottom">
+           <!-- cards -->
+           </div>
+            </div>
           </div>
         </div>
       </section>
@@ -405,7 +420,10 @@
         <div class="container">
           <div class="top">
             <h2>Kontakt TV</h2>
-            <a href="https://www.youtube.com/channel/UCf8uNO6TqBobRSWzBl9HPAA">
+            <a
+              href="https://www.youtube.com/channel/UCf8uNO6TqBobRSWzBl9HPAA"
+              target="_blank"
+            >
               <span class="yt">YouTube</span>
               <span class="num">0</span>
             </a>
@@ -429,7 +447,9 @@
             <!-- scroll to Top----------------------------->
             <div class="scroll-top">
               <div class="scroll-button">
-                <button class="to-top"><i class="fa-solid fa-arrow-up"></i></button>
+                <button class="to-top">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
                 <h3>Yuxarı</h3>
               </div>
             </div>
@@ -470,23 +490,129 @@
             </div>
             <!-- socials----------------------------------->
             <div class="socials">
+              <!-- ----------------------->
               <div class="left">
                 <label for="">Abunə olun:</label>
                 <div class="subs">
                   <div class="email-input">
-                    <input class="email" type="email" placeholder="E-mail" />
+                    <input id="subscribe-input" class="email" type="email" placeholder="E-mail" />
                     <i class="fa-solid fa-triangle-exclamation"></i>
+                    <i class="fa-solid fa-check"></i>
                   </div>
                   <button class="mail-button">Abunə olmaq</button>
                 </div>
+              </div>
+              <div class="right">
+                <h3>Biz sosial şəbəkələrdə:</h3>
+                <ul class="social-logos">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/Kontakthome"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/logos/socials/fb.svg"
+                        alt="socials"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/c/KontaktHome-TV"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/logos/socials/yt.svg"
+                        alt="socials"
+                    /></a>
+                  </li>
+                  <li class="instagram">
+                    <div class="insta-popup">
+                      <span>@Kontakt_Home</span>
+                      <p>@Kontakt Home Mebel</p>
+                    </div>
+                    <img
+                      src="./assets/images/logos/socials/inst.svg"
+                      alt="socials"
+                    />
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/" target="_blank"
+                      ><img
+                        src="./assets/images/logos/socials/linkedin.svg"
+                        alt="socials"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=994508286060&text&app_absent=0"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/logos/socials/whatsapp.png"
+                        alt="socials"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://t.me/kontakt_az" target="_blank"
+                      ><img
+                        src="./assets/images/logos/socials/telegram.svg"
+                        alt="socials"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@kontakt_home?is_from_webapp=1&sender_device=pc"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/logos/socials/tiktok.png"
+                        alt="socials"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/KontakHome" target="_blank"
+                      ><img
+                        src="./assets/images/logos/socials//twitter.svg"
+                        alt="socials"
+                    /></a>
+                  </li>
+                </ul>
+                <h3>Ödəniş sistemləri</h3>
+                <ul class="payment-logos">
+                  <li>
+                    <img
+                      src="./assets/images/logos/socials/visa_icon.png"
+                      alt="payment method"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/logos/socials/mc.svg"
+                      alt="payment method"
+                    />
+                  </li>
+                </ul>
               </div>
             </div>
             <h5>© Оnlayn - mağaza Kontakt Home - 2014 - 2021</h5>
           </div>
         </div>
+        <!-- subscriber modal ------>
+        <div class="sub-modal">
+          <div id="mail-overlay" class="overlay"></div>
+          <div class="subscriber-modal">
+            <span>
+              <img
+              src="./assets/images/images/smile.svg"
+              alt="smiley face"
+            />
+            </span>
+            <h4>
+              Siz uğurla abunə oldunuz. <br />
+              Təşəkkür edirik!
+            </h4>
+          </div>
+        </div>
       </footer>
     </main>
     <!-- script ----------------------------------------------------------------------->
+    <script src="./assets/js/products.js"></script>
     <script src="./assets/js/index.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
