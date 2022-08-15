@@ -74,7 +74,7 @@
                   <i class="fa-solid fa-heart"></i>
                 </a>
               </div>
-              <div class="icon bucket">
+              <div id="basket" class="icon bucket">
                 <a href="#">
                   <i class="fa-solid fa-bag-shopping"></i>
                 </a>
@@ -95,6 +95,64 @@
       </div>
     </header>
     <main>
+      <!-- menu and card modals ------------------------------------------------------>
+      <div class="menu-modal">
+        <div class="overlay" id="menu-overlay"></div>
+        <div class="menu">
+          <div class="category-wrap" >
+              <div class="category">
+                <a href="#" target="_blank">
+                  <img src="./assets/images/menu icons/phones.webp" alt="phones">
+                  <span>Telefonlar və Planşetlər</span>
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+                  <!-- sub categories -->
+                   <ul>
+                   <li class="sub-category">
+                    <a href="#" target="_blank">
+                      <span>Smartfonlar</span>
+                      <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <!-- cards -->
+                  <div class="sub-category-cards">
+                    <div class="sub-cat-card">
+                      <a href="#" target="_blank">
+                        <img src="./assets/images/sub-category-imgs/phones/smartphones/display.webp" alt="product">
+                        <span>Apple</span>
+                      </a>
+                    </div>
+                    <!---------->
+                    <div class="sub-cat-card">
+                      <a href="#" target="_blank">
+                        <img src="./assets/images/sub-category-imgs/phones/smartphones/display (1).webp" alt="product">
+                        <span>Samsung</span>
+                      </a>
+                    </div>
+                    <div class="sub-cat-card">
+                      <a href="#" target="_blank">
+                        <img src="./assets/images/sub-category-imgs/phones/smartphones/display (2).webp" alt="product">
+                        <span>Xiaomi</span>
+                      </a>
+                    </div>
+                  </div>
+                   </li>
+                   </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- basket -->
+      <div class="basket-modal">
+        <div id="basket-modal" class="overlay"></div>
+        <div class="empty-basket">
+         <div class="content">
+          <img src="./assets/images/images/Screenshot_11.png" alt="basket">
+          <h4>Səbətiniz boşdur!</h4>
+          <p>Bəyəndiyiniz məhsulları səbətə əlavə edin</p>
+          <button>Məhsul kataloqu</button>
+         </div>
+        </div>
+      </div>
       <!-- intro section -------------------------------------------------------------->
       <section>
         <div class="intro">
@@ -109,7 +167,6 @@
             <!-- swiper and menu -------------------------------------------->
             <div class="slider-wrapper">
               <div class="catalog-box">
-                <!-- catalogg -->
               </div>
               <div class="slider">
                 <div class="swiper mySwiperFirst">
@@ -253,59 +310,11 @@
               <i class="fa-solid fa-arrow-right-long"></i>
             </button>
           </div>
-          <div class="cards">
-           <div id="offer-cards-upper">
+          <div class="cards" id="sale-cards">
             <!-- card -->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="wrap-outer">
-                  <div class="wrap-inner">
-                    <div class="img">
-                      <a href="#">
-                        <img
-                          src="./assets/images/images/products/house things/display (1).webp"
-                          alt="phones"
-                        />
-                      </a>
-                    </div>
-                    <div class="name">
-                      <a class="product-name" href="#"
-                        >Buxarlı təmizləyici Black&Decker FSMH13E10-QS</a
-                      >
-                    </div>
-                    <div class="prices">
-                      <div class="price-small">
-                        <h4>179.<sup>99</sup><span></span></h4>
-                      </div>
-                      <div class="offer-price">
-                        <h4>129.<sup>99</sup><span>₼</span></h4>
-                      </div>
-                    </div>
-                    <button class="add-to-card">
-                      <i class="fa-solid fa-bag-shopping"></i>
-                      <span>Səbətə əlavə et</span>
-                    </button>
-                    <div class="hoverable">
-                      <div class="button-wrapper">
-                        <button class="heart">
-                          <i class="fa-solid fa-heart"></i>
-                        </button>
-                        <button class="compare">
-                          <i class="fa-solid fa-scale-balanced"></i>
-                        </button>
-                        <button class="like">
-                          <i class="fa-solid fa-thumbs-up"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
            </div>
-           <div id="offer-cards-bottom">
-           <!-- cards -->
-           </div>
+           <!-- load more -->
+           <p class="load-more"><button>Daha çox göstər</button><i class="fa-solid fa-ellipsis"></i></p>
             </div>
           </div>
         </div>
