@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt Home</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/bucket.css" />
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/5a4b6aa97e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="container">
+          <nav>
+            <!-- logo ----------------------------------------------------->
+            <div class="logo">
+              <a href="#">
+                <img
+                  src="./assets/images/logos/Screenshot_6.png"
+                  alt="home logo"
+                />
+              </a>
+            </div>
+            <!-- menu btn ----------------------------------------------------->
+            <button class="menu-btn">
+              <i class="fa-solid fa-bars"></i>
+              <span>Menyu</span>
+            </button>
+            <!-- search bar ----------------------------------------------------->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Məhsul üzrə axtarış..."
+              />
+              <div class="toggle">
+                <div class="btn">
+                  <i class="fa-solid fa-xmark"></i>
+                  <button>Axtarış</button>
+                </div>
+              </div>
+            </div>
+            <!-- icons ----------------------------------------------------->
+            <div class="icons">
+              <div class="icon user">
+                <a href="#">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </div>
+              <div class="icon compare">
+                <a href="#">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </a>
+              </div>
+              <div class="icon liked">
+                <a href="#">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+              <div id="basket" class="icon bucket">
+                <a href="#">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="number-of-items"></span>
+                </a>
+              </div>
+            </div>
+            <!-- language ----------------------------------------------------->
+            <div class="icon language-switch">
+              <div class="switch">
+                <div class="img">
+                  <img src="./assets/images/logos/azer.svg" alt="flag" />
+                </div>
+                <span>AZ</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="route">
+          <a href="./index.html" target="_blank"
+            ><i class="fa-solid fa-house" id="home"></i
+          ></a>
+          <i class="fa-solid fa-greater-than" class="other"></i>
+          <a href="#">Səbət</a>
+        </div>
+      </div>
+      <section>
+        <div class="container">
+          <h2>Səbət</h2>
+          <div class="bucket">
+            <div class="bucket-left">
+              <div class="add-to-card-list">
+                <div class="remove-all">
+                  <button>Hamısını sil<i class="fa-solid fa-trash"></i></button>
+                </div>
+                <!-- cards -->
+              </div>
+            </div>
+            <div class="bucket-right">
+              <div class="total-prices">
+                <h3>Məhsullar:<span>(4 əd)</span></h3>
+                <div class="name-price-wrapper">
+                  <div class="item-card">
+                    <!--  -->
+                  </div>
+                </div>
+                <div class="total">
+                  <a class="order">
+                    <span>Ödəniləcək məbləğ</span>
+                    <span>888₼</span>
+                  </a>
+                </div>
+              </div>
+              <div class="order-btn">
+                <a href="#" class="order">
+                  <span>Sifarişi rəsimləşdir</span>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </div>
+              <div class="one-click">
+                <h4>və ya Bir Kliklə al</h4>
+                <form action="">
+                  <div class="radio">
+                    <input type="radio" id="cash" name="payment" value="cash" /> 
+                  <label for="cash">Nağd al</label> 
+                  </div>
+                  <div class="radio">
+                    <input
+                    type="radio"
+                    id="partly"
+                    name="payment"
+                    value="partly"
+                  />
+                  <label for="partly">Hissə-hissə al</label>
+                  </div>
+                  <input type="tel" />
+                  <button>Klik</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

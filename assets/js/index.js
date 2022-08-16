@@ -33,7 +33,17 @@ const menuModal = document.querySelector(".menu-modal");
 const menuOverlay = document.querySelector("#menu-overlay");
 const basketIco = document.querySelector("#basket");
 const basketModal = document.querySelector(".basket-modal");
+const emptyBasket = document.querySelector(".empty-basket");
+const fullBasket = document.querySelector(".full-basket");
+const orderPageBtn = document.querySelector(".order-btns");
 const basketOverlay = document.querySelector("#basket-modal");
+
+// if (!fullBasket.children.length > 0) {
+//   emptyBasket.classList.add(".show")
+// } else {
+//   emptyBasket.classList.remove(".show")
+//   orderPageBtn.classList.add("show");
+// }
 
 menuBtn.addEventListener("click", () => {
   if (basketModal.classList.contains("show")) {
@@ -156,6 +166,10 @@ mailOverlay.addEventListener("click", () => {
 // products-----------
 
 const saleCards = document.querySelector("#sale-cards");
+const basketCardsEl = document.querySelector(".full-basket");
+const totalItemsEl = document.querySelector(".number-products");
+const totalPriceEl = document.querySelector("#total-price");
+const numberOnIcon = document.querySelector(".number-of-items");
 // render products
 function renderSaleProducts() {
   saleProducts.forEach((product) => {
@@ -172,17 +186,25 @@ function renderSaleProducts() {
                       </a>
                     </div>
                     <div class="name">
-                      <a class="product-name" href="#" target="_blank">${product.name}</a>
+                      <a class="product-name" href="#" target="_blank">${
+                        product.name
+                      }</a>
                     </div>
                     <div class="prices">
                       <div class="price-small">
-                        <h4>${product.prevPrice}<sup>99</sup><span>₼</span></h4>
+                        <h4>${
+                          product.prevPrice
+                        }.<sup>99</sup><span>₼</span></h4>
                       </div>
                       <div class="offer-price">
-                        <h4>${product.price}<sup>99</sup><span>₼</span></h4>
+                        <h4>${Math.trunc(
+                          product.price
+                        )}.<sup>99</sup><span>₼</span></h4>
                       </div>
                     </div>
-                    <button class="add-to-card">
+                    <button class="add-to-card" onclick="addToCard(${
+                      product.id
+                    })">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span>Səbətə əlavə et</span>
                     </button>
@@ -207,8 +229,118 @@ function renderSaleProducts() {
 }
 
 renderSaleProducts();
+// item card
+let card = JSON.parse(localStorage.getItem("CARD")) || [];
+updateCard();
 
-// load more btn---------------------------
+// add to card func
+function addToCard(id) {
+  // check if product already exist in card
+  if (card.some((item) => item.id === id)) {
+    changeNumberOfUnits("plus", id);
+  } else {
+    const item = saleProducts.find((product) => product.id === id);
+    card.push({
+      ...item,
+      numberOfUnits: 1,
+    });
+  }
+
+  updateCard();
+}
+// update card func
+function updateCard() {
+  renderBasketCardItems();
+  renderSubtotal();
+
+  // save cart to local storage
+  localStorage.setItem("CARD", JSON.stringify(card));
+}
+
+// render basket card
+function renderBasketCardItems() {
+  basketCardsEl.innerHTML = "";
+  card.forEach((item) => {
+    basketCardsEl.innerHTML += `
+    
+    <div class="basket-card">
+    <button class="remove-card" onclick="removeItemFromCart(${
+      item.id
+    })"><i class="fa-solid fa-xmark"></i></button>
+    <div class="product-details">
+      <div class="img">
+        <img src="${item.imgSrc}" alt="product">
+      </div>
+      <div class="img-details">
+        <a href="#" target="_blank" class="p-name">${item.name}</a>
+        <div class="count-price">
+          <div class="count">
+            <button class="minus-btn" onclick="changeNumberOfUnits('minus', ${
+              item.id
+            })"><i class="fa-solid fa-minus"></i></button>
+            <span>${item.numberOfUnits}</span>
+            <button class="plus-btn" onclick="changeNumberOfUnits('plus', ${
+              item.id
+            })"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <div class="price">
+            <h5>${Math.trunc(item.price)}.<sup>99</sup><span>₼</span></h5>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+  });
+}
+
+// remove item from cart
+function removeItemFromCart(id) {
+  card = card.filter((item) => item.id !== id);
+
+  updateCard();
+}
+
+// change number of units
+function changeNumberOfUnits(action, id) {
+  card = card.map((item) => {
+    let numberOfUnits = item.numberOfUnits;
+    if (item.id === id) {
+      if (action === "minus" && numberOfUnits > 1) {
+        numberOfUnits--;
+      } else if (action === "plus" && numberOfUnits < item.inStock) {
+        numberOfUnits++;
+      }
+    }
+
+    return {
+      ...item,
+      numberOfUnits: numberOfUnits,
+    };
+  });
+  updateCard();
+}
+
+// calculate and render subtotal
+function renderSubtotal() {
+  let totalPrice = 0,
+    totalItems = 0;
+
+  card.forEach((item) => {
+    totalPrice += item.price * item.numberOfUnits;
+    totalItems += item.numberOfUnits;
+  });
+
+  totalPriceEl.innerHTML = `${totalPrice.toFixed(2)}₼`;
+  totalItemsEl.innerHTML = `${totalItems}`;
+  if (totalItems === 0) {
+    numberOnIcon.innerHTML = "";
+  } else {
+    numberOnIcon.innerHTML = `${totalItems}`;
+  }
+}
+
+// load more btn-----------------------------------------
 
 let loadMoreBtn = document.querySelector(".load-more");
 let currentItem = 4;

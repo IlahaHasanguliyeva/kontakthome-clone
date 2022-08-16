@@ -1,0 +1,295 @@
+main .route {
+  padding-top: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+}
+
+main .route #home {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 12px;
+}
+
+main .route #home:hover {
+  color: #d8d8d8;
+}
+
+main .route a {
+  padding-right: 8px;
+  color: gray;
+  text-decoration: none;
+}
+
+main .route a:hover {
+  text-decoration: underline;
+}
+
+main .route i {
+  padding-right: 8px;
+  color: gray;
+  font-size: 6px;
+}
+
+main section {
+  padding-top: 14px;
+}
+
+main section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -1.08px;
+  color: #171717;
+  line-height: 40px;
+  border: none;
+}
+
+main section .bucket {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section .bucket .bucket-left {
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  width: 69%;
+}
+
+main section .bucket .bucket-left .add-to-card-list {
+  height: 300px;
+}
+
+main section .bucket .bucket-left .add-to-card-list .remove-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 62px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+main section .bucket .bucket-left .add-to-card-list .remove-all button {
+  margin-right: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main section .bucket .bucket-left .add-to-card-list .remove-all button:hover {
+  color: #da2c18;
+}
+
+main section .bucket .bucket-left .add-to-card-list .remove-all button:hover i {
+  color: #da2c18;
+}
+
+main section .bucket .bucket-left .add-to-card-list .remove-all button i {
+  margin-left: 5px;
+  font-size: 16px;
+  color: gray;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main section .bucket .bucket-right {
+  width: 30%;
+}
+
+main section .bucket .bucket-right .total-prices {
+  position: relative;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  height: 705px;
+}
+
+main section .bucket .bucket-right .total-prices h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 62px;
+  border-bottom: 1px solid #d8d8d8;
+  letter-spacing: -0.48px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #171717;
+}
+
+main section .bucket .bucket-right .total-prices h3 span {
+  letter-spacing: -0.48px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #171717;
+  padding-left: 6px;
+}
+
+main section .bucket .bucket-right .total-prices .total {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 82px;
+  width: 100%;
+  padding: 18px;
+  border-top: 1px solid #d8d8d8;
+  background-color: #fcfcfd;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+main section .bucket .bucket-right .total-prices .total span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main section .bucket .bucket-right .order-btn {
+  margin-top: 11px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+main section .bucket .bucket-right .order-btn .order {
+  width: 100%;
+  height: 62px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #da2c18;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #da2c18;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+main section .bucket .bucket-right .order-btn .order:hover {
+  background-color: #bc2020;
+}
+
+main section .bucket .bucket-right .order-btn .order:hover i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-left: 15px;
+}
+
+main section .bucket .bucket-right .order-btn .order span {
+  color: white;
+  padding-left: 110px;
+  font-size: 12px;
+}
+
+main section .bucket .bucket-right .order-btn .order i {
+  font-size: 14px;
+  color: white;
+  padding-left: 6px;
+}
+
+main section .bucket .bucket-right .one-click {
+  margin-top: 11px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+main section .bucket .bucket-right .one-click h4 {
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+main section .bucket .bucket-right .one-click form {
+  padding: 0 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+main section .bucket .bucket-right .one-click form .radio {
+  padding-bottom: 20px;
+}
+
+main section .bucket .bucket-right .one-click form input {
+  margin-bottom: 11px;
+}
+
+main section .bucket .bucket-right .one-click form button {
+  height: 62px;
+  width: 346px;
+  margin-left: -36px;
+  background-color: #da2c18;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main section .bucket .bucket-right .one-click form button:hover {
+  background-color: #bc2020;
+}
+/*# sourceMappingURL=bucket.css.map */
