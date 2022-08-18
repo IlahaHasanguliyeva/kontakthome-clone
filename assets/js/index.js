@@ -107,10 +107,6 @@ for (let i = 0; i < btns.length; i++) {
   });
 }
 
-// sale offer cards-----------------------------------------------------------------------
-
-const offerCardWrapperTop = document.querySelector(".cards-upper");
-
 // footer ---------------------------------------------------------------------------------
 // scroll to top---
 const scrollTop = document.querySelector(".to-top");
@@ -210,8 +206,10 @@ function renderSaleProducts() {
                     </button>
                     <div class="hoverable">
                       <div class="button-wrapper">
-                        <button class="heart">
-                          <i class="fa-solid fa-heart"></i>
+                        <button class="heart" onclick="addToWish(${
+                          product.id
+                        })">
+                          <i class="fa-solid fa-heart wish"></i>
                         </button>
                         <button class="compare">
                           <i class="fa-solid fa-scale-balanced"></i>
@@ -233,6 +231,9 @@ renderSaleProducts();
 let card = JSON.parse(localStorage.getItem("CARD")) || [];
 updateCard();
 
+let likeCard = JSON.parse(localStorage.getItem("WISHCARD")) || [];
+updateCard();
+
 // add to card func
 function addToCard(id) {
   // check if product already exist in card
@@ -248,6 +249,17 @@ function addToCard(id) {
 
   updateCard();
 }
+
+function addToWish(id) {
+  if (likeCard.some((item) => item.id === id)) {
+    console.log("bye")
+  } else {
+    const item = saleProducts.find((product) => product.id === id);
+    likeCard.push(item);
+    console.log("hi");
+  }
+}
+
 // update card func
 function updateCard() {
   renderBasketCardItems();
@@ -312,7 +324,6 @@ function changeNumberOfUnits(action, id) {
         numberOfUnits++;
       }
     }
-
     return {
       ...item,
       numberOfUnits: numberOfUnits,

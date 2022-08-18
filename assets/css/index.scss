@@ -191,7 +191,7 @@ header {
           a:hover {
             color: $red;
           }
-          .number-of-items{
+          .number-of-items {
             padding: 0px 6px;
             border-radius: 3px;
             background-color: #da2c18;
@@ -353,8 +353,8 @@ header {
         }
       }
     }
+
     .order-btns {
-      // display: none;
       position: fixed;
       right: 0;
       bottom: 0;
@@ -395,34 +395,34 @@ header {
           }
         }
       }
-      .basket-btns{
+      .basket-btns {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding-top: 9px;
-        a{
+        a {
           text-decoration: none;
           color: $black;
           font-size: 12px;
           border-radius: 8px;
         }
-        .go-basket-page{
+        .go-basket-page {
           padding: 16px 0;
           padding-left: 34px;
           padding-right: 34px;
           transition: 0.3s;
           border: 1px solid $grey;
-          &:hover{
+          &:hover {
             background-color: $grey;
           }
-          i{
+          i {
             color: gray;
             font-size: 18px;
             padding-right: 6px;
           }
         }
-        .order{
+        .order {
           width: 245px;
           height: 52px;
           transition: 0.3s;
@@ -431,18 +431,18 @@ header {
           flex-direction: row;
           align-items: center;
           border: 1px solid $red;
-          &:hover{
+          &:hover {
             background-color: rgb(188, 32, 32);
-            i{
+            i {
               transition: 0.3s;
               padding-left: 15px;
             }
           }
-          span{
+          span {
             color: white;
             padding-left: 55px;
           }
-          i{
+          i {
             font-size: 18px;
             color: white;
             padding-left: 6px;
@@ -1267,6 +1267,10 @@ footer {
 }
 
 .menu-modal {
+  display: none;
+}
+
+.hide {
   display: none;
 }
 

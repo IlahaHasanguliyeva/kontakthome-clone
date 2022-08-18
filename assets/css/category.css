@@ -1,0 +1,318 @@
+section .heading {
+  margin-top: 20px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+}
+
+section .heading h1 {
+  padding: 20px 30px;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -1.08px;
+  color: #171717;
+  line-height: 40px;
+}
+
+section .heading .route {
+  padding: 23px 30px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+}
+
+section .heading .route #home {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 12px;
+}
+
+section .heading .route #home:hover {
+  color: #d8d8d8;
+}
+
+section .heading .route a {
+  padding-right: 8px;
+  color: gray;
+  text-decoration: none;
+}
+
+section .heading .route a:hover {
+  text-decoration: underline;
+}
+
+section .heading .route i {
+  padding-right: 8px;
+  color: gray;
+  font-size: 6px;
+}
+
+section .category-cards {
+  padding-bottom: 63px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+section .category-cards .card {
+  margin-top: 11px;
+  width: 24%;
+  height: 316px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 0 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section .category-cards .card .img {
+  width: 290px;
+  height: 159px;
+  margin-bottom: 50px;
+}
+
+section .category-cards .card .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section .category-cards .card .sub-category-name {
+  padding-bottom: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+section .category-cards .card .sub-category-name:hover .name {
+  color: #da2c18;
+}
+
+section .category-cards .card .sub-category-name:hover .bubble {
+  visibility: visible;
+  opacity: 1;
+}
+
+section .category-cards .card .sub-category-name .name {
+  text-decoration: none;
+  color: #171717;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+section .category-cards .card .sub-category-name i {
+  font-size: 12px;
+  color: #d8d8d8;
+}
+
+section .category-cards .card .sub-category-name .bubble {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: 0;
+  top: 36px;
+  width: 108px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: white;
+  border-radius: 7px;
+  border: 1px solid #d8d8d8;
+  -webkit-box-shadow: 2px -7px 13px -8px rgba(0, 0, 0, 0.13);
+          box-shadow: 2px -7px 13px -8px rgba(0, 0, 0, 0.13);
+  padding: 20px 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .category-cards .card .sub-category-name .bubble a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #171717;
+  padding-bottom: 11px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+section .category-cards .card .sub-category-name .bubble a:hover {
+  color: #da2c18;
+}
+
+section .category-cards .card .sub-category-name .bubble:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 7px 9px;
+  border-color: white transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -9px;
+  left: 33px;
+}
+
+section .sub-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 41px;
+}
+
+section .sub-heading h2 {
+  padding-right: 35px;
+  margin-bottom: unset;
+  padding-bottom: unset;
+  border-bottom: none;
+}
+
+section .sub-heading button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45px;
+  width: 200px;
+  border: 1px solid #d8d8d8;
+  border-radius: 21px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+section .sub-heading button:hover i {
+  padding-left: 6px;
+  color: #da2c18;
+}
+
+section .sub-heading button a {
+  padding-left: 19px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  font-weight: 500;
+  color: #171717;
+}
+
+section .sub-heading button i {
+  font-size: 14px;
+  margin-left: 10px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+section .cards {
+  width: 100%;
+}
+
+section p {
+  margin: 46px auto 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d8d8d8;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section p button {
+  cursor: pointer;
+  font-size: 12px;
+  color: #171717;
+  line-height: 17px;
+  background-color: transparent;
+  border: none;
+}
+
+section p button:hover + i {
+  color: #171717;
+}
+
+section p i {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding-top: 2px;
+  margin-left: 8px;
+  font-size: 24px;
+  color: #d8d8d8;
+}
+/*# sourceMappingURL=category.css.map */

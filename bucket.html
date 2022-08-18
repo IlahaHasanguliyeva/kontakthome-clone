@@ -26,7 +26,7 @@
           <nav>
             <!-- logo ----------------------------------------------------->
             <div class="logo">
-              <a href="#">
+              <a href="./index.html">
                 <img
                   src="./assets/images/logos/Screenshot_6.png"
                   alt="home logo"
@@ -100,31 +100,37 @@
           <i class="fa-solid fa-greater-than" class="other"></i>
           <a href="#">Səbət</a>
         </div>
-      </div>
-      <section>
-        <div class="container">
+        <div class="sub-heading">
           <h2>Səbət</h2>
+        </div>
+      </div>
+      <section class="bucket-products">
+        <div class="container">
           <div class="bucket">
             <div class="bucket-left">
               <div class="add-to-card-list">
                 <div class="remove-all">
                   <button>Hamısını sil<i class="fa-solid fa-trash"></i></button>
                 </div>
-                <!-- cards -->
+                <div class="bucket-list">
+                </div>
               </div>
             </div>
             <div class="bucket-right">
               <div class="total-prices">
-                <h3>Məhsullar:<span>(4 əd)</span></h3>
+                <h3>Məhsullar:<span class="total-items"></span></h3>
                 <div class="name-price-wrapper">
-                  <div class="item-card">
-                    <!--  -->
-                  </div>
+                    <div class="list">
+                    </div>
                 </div>
                 <div class="total">
+                  <!-- <div class="discount">
+                    <h5>Endirim:</h5>
+                    <span>888₼</span>
+                  </div> -->
                   <a class="order">
                     <span>Ödəniləcək məbləğ</span>
-                    <span>888₼</span>
+                    <span id="total-price">888₼</span>
                   </a>
                 </div>
               </div>
@@ -158,8 +164,15 @@
           </div>
         </div>
       </section>
+      <section class="empty-bucket">
+        <div class="empty">
+          <img src="./assets/images/images/Screenshot_2.png" alt="empty bucket">
+          <h3>Səbətiniz boşdur!</h3>
+          <p>Bəyəndiyiniz məhsulları səbətə əlavə edin</p>
+          <button><i class="fa-solid fa-bars"></i>Məhsul kataloqu</button>
+        </div>
+      </section>
     </main>
-    <script src="./assets/js/products.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/bucket.js"></script>
   </body>
 </html>

@@ -1701,6 +1701,10 @@ footer .footer-content .container h5 {
   display: none;
 }
 
+.hide {
+  display: none;
+}
+
 .menu {
   position: absolute;
   top: 55px;

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt Home</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/category.css" />
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/5a4b6aa97e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="container">
+          <nav>
+            <!-- logo ----------------------------------------------------->
+            <div class="logo">
+              <a href="./index.html">
+                <img
+                  src="./assets/images/logos/Screenshot_6.png"
+                  alt="home logo"
+                />
+              </a>
+            </div>
+            <!-- menu btn ----------------------------------------------------->
+            <button class="menu-btn">
+              <i class="fa-solid fa-bars"></i>
+              <span>Menyu</span>
+            </button>
+            <!-- search bar ----------------------------------------------------->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Məhsul üzrə axtarış..."
+              />
+              <div class="toggle">
+                <div class="btn">
+                  <i class="fa-solid fa-xmark"></i>
+                  <button>Axtarış</button>
+                </div>
+              </div>
+            </div>
+            <!-- icons ----------------------------------------------------->
+            <div class="icons">
+              <div class="icon user">
+                <a href="#">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </div>
+              <div class="icon compare">
+                <a href="#">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </a>
+              </div>
+              <div class="icon liked">
+                <a href="#">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+              <div id="basket" class="icon bucket">
+                <a href="./bucket.html" target="_blank">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="number-of-items"></span>
+                </a>
+              </div>
+            </div>
+            <!-- language ----------------------------------------------------->
+            <div class="icon language-switch">
+              <div class="switch">
+                <div class="img">
+                  <img src="./assets/images/logos/azer.svg" alt="flag" />
+                </div>
+                <span>AZ</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+              <!-- menu and card modals ------------------------------------------------------>
+      <div class="menu-modal">
+        <div class="overlay" id="menu-overlay"></div>
+        <div class="menu">
+          <div class="category-wrap" >
+              <div class="category">
+                <a href="#" target="_blank">
+                  <img src="./assets/images/menu icons/phones.webp" alt="phones">
+                  <span>Telefonlar və Planşetlər</span>
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+                  <!-- sub categories -->
+                   <ul>
+                   <li class="sub-category">
+                    <a href="#" target="_blank">
+                      <span>Smartfonlar</span>
+                      <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <!-- cards -->
+                  <div class="sub-category-cards">
+                    <div class="sub-cat-card">
+                      <a href="#" target="_blank">
+                        <img src="./assets/images/sub-category-imgs/phones/smartphones/display.webp" alt="product">
+                        <span>Apple</span>
+                      </a>
+                    </div>
+                    <!---------->
+                    <div class="sub-cat-card">
+                      <a href="#" target="_blank">
+                        <img src="./assets/images/sub-category-imgs/phones/smartphones/display (1).webp" alt="product">
+                        <span>Samsung</span>
+                      </a>
+                    </div>
+                    <div class="sub-cat-card">
+                      <a href="#" target="_blank">
+                        <img src="./assets/images/sub-category-imgs/phones/smartphones/display (2).webp" alt="product">
+                        <span>Xiaomi</span>
+                      </a>
+                    </div>
+                  </div>
+                   </li>
+                   </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- basket -->
+      <div class="basket-modal">
+        <div id="basket-modal" class="overlay"></div>
+        <div class="basket-content">
+          <div class="full-basket"></div>
+          <div class="order-btns">
+            <div class="number-price">
+              <div class="products-count">
+                <span class="number-products"></span><span>Məhsul</span>
+              </div>
+              <div class="total-price">
+                <span>məbləğ:</span>
+                <h3 id="total-price">₼</h3>
+              </div>
+            </div>
+            <div class="basket-btns">
+              <a href="#" target="_blank" class="go-basket-page">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Səbət
+              </a>
+              <a href="#" class="order">
+                <span>Sifarişi rəsimləşdir</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- heading -->
+      <div class="container">
+        <section>
+          <div class="heading">
+            <h1>Telefonlar və Planşetlər</h1>
+            <div class="route">
+              <a href="./index.html" target="_blank"
+                ><i class="fa-solid fa-house" id="home"></i
+              ></a>
+              <i class="fa-solid fa-greater-than" class="other"></i>
+              <a href="#">Telefonlar və Planşetlər</a>
+            </div>
+          </div>
+        </section>
+        <!-- sub categories -->
+        <section>
+          <div class="category-cards">
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display.webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Smartfonlar</a>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="bubble">
+                  <a href="#" target="_blank">Apple</a>
+                  <a href="#" target="_blank">Samsung</a>
+                  <a href="#" target="_blank">Xiaomi</a>
+                  <a href="#" target="_blank">Huawei</a>
+                  <a href="#" target="_blank">Blackview</a>
+                  <a href="#" target="_blank">Realme</a>
+                  <a href="#" target="_blank">Honor</a>
+                  <a href="#" target="_blank">Nokia</a>
+                  <a href="#" target="_blank">Lenovo</a>
+                  <a href="#" target="_blank">Asus</a>
+                  <a href="#" target="_blank">ZTE</a>
+                </div>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (1).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Planşetlər</a>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="bubble">
+                  <a href="#" target="_blank">Apple</a>
+                  <a href="#" target="_blank">Samsung</a>
+                  <a href="#" target="_blank">Xiaomi</a>
+                  <a href="#" target="_blank">Blackview</a>
+                  <a href="#" target="_blank">Lenovo</a>
+                  <a href="#" target="_blank">Microsoft</a>
+                  <a href="#" target="_blank">TCL</a>
+                </div>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (2).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Düyməli telefonlar</a>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="bubble">
+                  <a href="#" target="_blank">Nokia</a>
+                  <a href="#" target="_blank">BQ</a>
+                  <a href="#" target="_blank">INOI</a>
+                </div>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (3).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank"
+                  >Ev və Ofis telefonları</a
+                >
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="bubble">
+                  <a href="#" target="_blank">Panasonic</a>
+                  <a href="#" target="_blank">Gigaset</a>
+                </div>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (4).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Elektron kitab</a>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (5).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Nömrələr</a>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (6).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Aksesuarlar</a>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="bubble">
+                  <a href="#" target="_blank">Power Bank</a>
+                  <a href="#" target="_blank">USB başlıq</a>
+                  <a href="#" target="_blank">Qoruyucu örtük</a>
+                  <a href="#" target="_blank">Planşet üçün örtük</a>
+                  <a href="#" target="_blank">Telefon üçün tutacaq</a>
+                  <a href="#" target="_blank">Planşet üçün qələm</a>
+                  <a href="#" target="_blank">Açarlıq</a>
+                  <a href="#" target="_blank">Ekran təmizləyicisi</a>
+                </div>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (7).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Qulaqlıqlar</a>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="bubble">
+                  <a href="#" target="_blank">Simli qulaqlıqlar</a>
+                  <a href="#" target="_blank">Simsiz qulaqlıqlar</a>
+                </div>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+              <div class="img">
+                <a href="#" target="_blank"
+                  ><img
+                    src="./assets/images/category imgs/phones/display (8).webp"
+                    alt="category"
+                /></a>
+              </div>
+              <div class="sub-category-name">
+                <a class="name" href="#" target="_blank">Qulaqlıqlar</a>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="bubble">
+                  <a href="#" target="_blank">Policral</a>
+                  <a href="#" target="_blank">Wacom</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- phone section -->
+        <section>
+              <div class="sub-heading">
+                <h2>Smartfonlar</h2>
+                <button>
+                  <a href="#">Bütün Smartfonlar</a>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+              <div class="first-card" id="sale-cards">
+                <!-- card -->
+               </div>
+               <!-- load more -->
+               <p class="load-more"><button>Daha çox göstər</button><i class="fa-solid fa-ellipsis"></i></p>
+                </div>
+              </div>
+          </section>
+      </div>
+    </main>
+    <!-- script ----------------------------------------------------------------------->
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/phonesC.js"></script>
+  </body>
+</html>
