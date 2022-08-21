@@ -50,6 +50,28 @@ main .route i {
   font-size: 6px;
 }
 
+main .container .info {
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+}
+
+main .container .info h3 {
+  border-bottom: 1px solid #d8d8d8;
+  padding-top: 14px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 14px;
+}
+
+main .container .info h3 i {
+  padding-right: 5px;
+  color: green;
+}
+
+main .container .info p {
+  padding: 14px;
+}
+
 main section .bucket {
   width: 100%;
   display: -webkit-box;
@@ -138,6 +160,11 @@ main section .bucket .bucket-left .add-to-card-list .bucket-list .card {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #d8d8d8;
+}
+
+main section .bucket .bucket-left .add-to-card-list .bucket-list .card:nth-last-child(1) {
+  border: none;
+  padding-bottom: 0;
 }
 
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .img {
@@ -567,60 +594,6 @@ main section .bucket .bucket-right .order-btn .order i {
   font-size: 14px;
   color: white;
   padding-left: 6px;
-}
-
-main section .bucket .bucket-right .one-click {
-  margin-top: 11px;
-  border: 1px solid #d8d8d8;
-  border-radius: 10px;
-  padding: 18px;
-}
-
-main section .bucket .bucket-right .one-click h4 {
-  text-align: center;
-  font-size: 14px;
-  padding-bottom: 30px;
-}
-
-main section .bucket .bucket-right .one-click form {
-  padding: 0 36px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-}
-
-main section .bucket .bucket-right .one-click form .radio {
-  padding-bottom: 20px;
-}
-
-main section .bucket .bucket-right .one-click form input {
-  margin-bottom: 11px;
-}
-
-main section .bucket .bucket-right .one-click form button {
-  height: 62px;
-  width: 346px;
-  margin-left: -36px;
-  background-color: #da2c18;
-  border-radius: 10px;
-  border: none;
-  color: white;
-  font-weight: 600;
-  font-size: 12px;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-main section .bucket .bucket-right .one-click form button:hover {
-  background-color: #bc2020;
 }
 
 .empty-bucket .empty {

@@ -75,98 +75,53 @@ basketOverlay.addEventListener("click", () => {
     body.style.overflow = "auto";
 });
 
-// payment modal----------------------------------------------------------------------------
-const payment = document.querySelector("#payment");
-const paymentOverlay = document.querySelector("#payment-overlay");
-const modal = document.querySelector(".payment-modal");
+// show ed products-----
 
-payment.addEventListener("click", () => {
-    modal.classList.add("show");
-    body.style.overflow = "hidden";
-});
-
-paymentOverlay.addEventListener("click", () => {
-    modal.classList.remove("show");
-    body.style.overflow = "auto";
-});
-
-// section two------------------------------------------------------------------------------
-
-const btns = document.querySelectorAll("#btn");
-
-for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-        const current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
-
-// footer ---------------------------------------------------------------------------------
-// scroll to top---
-const scrollTop = document.querySelector(".to-top");
-scrollTop.addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-    });
-});
-
-// email input---
-const mailOverlay = document.querySelector("#mail-overlay");
-const subModal = document.querySelector(".sub-modal");
-const emailInput = document.querySelector(".email");
-const warnIcon = document.querySelector(".fa-triangle-exclamation");
-const tickIcon = document.querySelector(".fa-check");
-const validRegex =
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const mailBtn = document.querySelector(".mail-button");
-
-emailInput.addEventListener("input", () => {
-    if (emailInput.value.match(validRegex)) {
-        mailBtn.style.backgroundColor = "#da2c18";
-        mailBtn.style.cursor = "pointer";
-        warnIcon.classList.remove("show");
-        tickIcon.classList.add("show");
-        // button click
-        mailBtn.addEventListener(
-            "click",
-            () => {
-                emailInput.value = "";
-                tickIcon.classList.remove("show");
-                subModal.classList.add("show");
-                body.style.overflow = "hidden";
-                mailBtn.style.backgroundColor = "gray";
-                mailBtn.style.cursor = "default";
-            }, { once: true }
-        );
-    } else {
-        mailBtn.style.backgroundColor = "gray";
-        warnIcon.classList.add("show");
-        tickIcon.classList.remove("show");
-    }
-});
-
-mailOverlay.addEventListener("click", () => {
-    subModal.classList.remove("show");
-    body.style.overflow = "auto";
-});
-
-// products-----------
-
-const saleCards = document.querySelector("#sale-cards");
-const basketCardsEl = document.querySelector(".full-basket");
+// add to card
+const wishList = document.querySelector(".wished-products");
+const basketListEl = document.querySelector(".bucket-list");
 const totalItemsEl = document.querySelector(".number-products");
 const totalPriceEl = document.querySelector("#total-price");
 const numberOnIcon = document.querySelector(".number-of-items");
 const numberOnIconHeart = document.querySelector(".number-of-items-heart");
 const numberOnIconCompare = document.querySelector(".number-of-items-scale");
+const removeAll = document.querySelector(".remove-all");
+const itemListEl = document.querySelector(".list");
+const fullWish = document.querySelector(".full-wish");
+const emptyWish = document.querySelector(".empty-wish");
+const basketCardsEl = document.querySelector(".full-basket")
 
-// render products
-function renderSaleProducts() {
-    saleProducts.forEach((product) => {
-        saleCards.innerHTML += `
+// item card
+// item card
+let card = JSON.parse(localStorage.getItem("CARD")) || [];
+updateCard();
+
+let likeCard = JSON.parse(localStorage.getItem("WISH")) || [];
+updateWishList();
+
+let compareCard = JSON.parse(localStorage.getItem("COMPARE")) || [];
+updateCompare();
+
+if (likeCard.length === 0) {
+    fullWish.classList.add("hide");
+    emptyWish.classList.add("active");
+} else if (likeCard.length > 0) {
+    fullWish.classList.add("active");
+    emptyWish.classList.add("hide");
+}
+
+// update card func
+function updateCard() {
+    renderBasketCardItems();
+    renderSubtotal();
+    // save cart to local storage
+    localStorage.setItem("CARD", JSON.stringify(card));
+}
+
+// render wish
+function renderWishList() {
+    likeCard.forEach((product) => {
+        wishList.innerHTML += `
       <div class="card-wrapper">
               <div class="card">
                 <div class="wrap-outer">
@@ -209,7 +164,7 @@ function renderSaleProducts() {
                         })">
                         <img class="wish ${
                           product.id
-                        }" src="./assets/images/menu icons/heart-icon.svg" alt="icon">
+                        }" src="./assets/images/menu icons/heart-icon-filled.svg" alt="icon">
                         </button>
                         <button class="compare" onclick="addToCompare(${
                           product.id
@@ -225,42 +180,7 @@ function renderSaleProducts() {
                 </div>
               </div>
             </div>`;
-    });
-
-    // const wishBtn = document.querySelector(".wish");
-    // wishBtn.addEventListener("toggle", () => {
-    //   wishBtn.setAttribute(
-    //     "src",
-    //     "./assets/images/menu icons/heart-icon-filled.svg"
-    //   );
-    // });
-}
-
-renderSaleProducts();
-
-// item card
-let card = JSON.parse(localStorage.getItem("CARD")) || [];
-updateCard();
-
-let likeCard = JSON.parse(localStorage.getItem("WISH")) || [];
-updateWishList();
-
-let compareCard = JSON.parse(localStorage.getItem("COMPARE")) || [];
-updateCompare();
-
-// add to card func
-function addToCard(id) {
-    // check if product already exist in card
-    if (card.some((item) => item.id === id)) {
-        changeNumberOfUnits("plus", id);
-    } else {
-        const item = saleProducts.find((product) => product.id === id);
-        card.push({
-            ...item,
-            numberOfUnits: 1,
-        });
-    }
-    updateCard();
+    })
 }
 
 // add to wish func
@@ -268,21 +188,16 @@ function addToWish(id) {
     // check if product already exist in card
     if (likeCard.some((item) => item.id === id)) {
         likeCard = likeCard.filter((item) => item.id !== id);
-    } else {
-        const item = saleProducts.find((product) => product.id === id);
-        likeCard.push({
-            ...item,
-            numberOfUnits: 1,
-        });
-
     }
     updateWishList();
 }
 
 function updateWishList() {
+    renderWishList();
     WishTotal();
     localStorage.setItem("WISH", JSON.stringify(likeCard));
 }
+
 
 function WishTotal() {
     let totalItems = 0;
@@ -296,21 +211,6 @@ function WishTotal() {
     }
 }
 
-// add to compare func
-
-function addToCompare(id) {
-    if (compareCard.some((item) => item.id === id)) {
-        compareCard = compareCard.filter((item) => item.id !== id);
-    } else {
-        const item = saleProducts.find((product) => product.id === id);
-        compareCard.push({
-            ...item,
-            numberOfUnits: 1,
-        });
-    }
-
-    updateCompare();
-}
 
 function updateCompare() {
     compareTotal();
@@ -322,7 +222,6 @@ function compareTotal() {
     compareCard.forEach((item) => {
         totalItems += item.numberOfUnits;
     });
-    totalItemsEl.innerHTML = `${totalItems}`;
     if (totalItems === 0) {
         numberOnIconCompare.innerHTML = "";
     } else {
@@ -330,13 +229,23 @@ function compareTotal() {
     }
 }
 
-// update card func
-function updateCard() {
-    renderBasketCardItems();
-    renderSubtotal();
+// calculate and render subtotal
+function renderSubtotal() {
+    let totalPrice = 0,
+        totalItems = 0;
 
-    // save cart to local storage
-    localStorage.setItem("CARD", JSON.stringify(card));
+    card.forEach((item) => {
+        totalPrice += item.price * item.numberOfUnits;
+        totalItems += item.numberOfUnits;
+    });
+
+    totalPriceEl.innerHTML = `${totalPrice.toFixed(2)}₼`;
+    totalItemsEl.innerHTML = `${totalItems}`;
+    if (totalItems === 0) {
+        numberOnIcon.innerHTML = "";
+    } else {
+        numberOnIcon.innerHTML = `${totalItems}`;
+    }
 }
 
 // render basket card
@@ -376,13 +285,6 @@ function renderBasketCardItems() {
     });
 }
 
-// remove item from cart
-function removeItemFromCart(id) {
-    card = card.filter((item) => item.id !== id);
-
-    updateCard();
-}
-
 // change number of units
 function changeNumberOfUnits(action, id) {
     card = card.map((item) => {
@@ -402,40 +304,9 @@ function changeNumberOfUnits(action, id) {
     updateCard();
 }
 
-// calculate and render subtotal
-function renderSubtotal() {
-    let totalPrice = 0,
-        totalItems = 0;
+// remove item from cart
+function removeItemFromCart(id) {
+    card = card.filter((item) => item.id !== id);
 
-    card.forEach((item) => {
-        totalPrice += item.price * item.numberOfUnits;
-        totalItems += item.numberOfUnits;
-    });
-
-    totalPriceEl.innerHTML = `${totalPrice.toFixed(2)}₼`;
-    totalItemsEl.innerHTML = `${totalItems}`;
-    if (totalItems === 0) {
-        numberOnIcon.innerHTML = "";
-    } else {
-        numberOnIcon.innerHTML = `${totalItems}`;
-    }
+    updateCard();
 }
-
-// load more btn-----------------------------------------
-
-let loadMoreBtn = document.querySelector(".load-more");
-let currentItem = 4;
-
-loadMoreBtn.onclick = () => {
-    let boxes = [...document.querySelectorAll(".cards .card-wrapper")];
-
-    for (let i = currentItem; i < currentItem + 4; i++) {
-        boxes[i].style.display = "inline-block";
-    }
-
-    currentItem += 4;
-
-    if (currentItem >= boxes.length) {
-        loadMoreBtn.style.display = "none";
-    }
-};

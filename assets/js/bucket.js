@@ -1,3 +1,4 @@
+"use strict";
 // Search bar-----------------------------------------------------------
 const searchBtns = document.querySelector(".toggle");
 const searchInput = document.querySelector("#search-input");
@@ -5,26 +6,57 @@ const searchIcon = document.querySelector(".fa-magnifying-glass");
 const clearSearch = document.querySelector(".fa-xmark");
 
 searchInput.addEventListener("focus", () => {
-  searchIcon.style.color = "#da2c18";
+    searchIcon.style.color = "#da2c18";
 });
 
 searchInput.addEventListener("blur", () => {
-  searchIcon.style.color = "black";
+    searchIcon.style.color = "black";
 });
 
 clearSearch.addEventListener("click", () => {
-  if (searchInput.value !== "") {
-    searchInput.value = "";
-  }
+    if (searchInput.value !== "") {
+        searchInput.value = "";
+        searchBtns.classList.remove("show");
+    }
 });
 
 searchInput.addEventListener("input", () => {
-  if (searchInput.value !== "") {
-    searchBtns.classList.add("show");
-  } else if (searchInput.value === "") {
-    searchBtns.classList.remove("show");
-  }
+    if (searchInput.value !== "") {
+        searchBtns.classList.add("show");
+    } else if (searchInput.value === "") {
+        searchBtns.classList.remove("show");
+    }
 });
+
+// menu btn-------------------------------------------------------------------------------
+const body = document.querySelector("body");
+const menuBtn = document.querySelector(".menu-btn");
+const catalogBtn = document.querySelector(".catalogue");
+const menuModal = document.querySelector(".menu-modal");
+const menuOverlay = document.querySelector("#menu-overlay");
+const basketIco = document.querySelector("#basket");
+const basketModal = document.querySelector(".basket-modal");
+const emptyBasket = document.querySelector(".empty-basket");
+const fullBasket = document.querySelector(".full-basket");
+const orderPageBtn = document.querySelector(".order-btns");
+const basketOverlay = document.querySelector("#basket-modal");
+
+catalogBtn.addEventListener("click", () => {
+    menuModal.classList.add("show");
+    body.style.overflow = "hidden";
+})
+
+
+menuBtn.addEventListener("click", () => {
+    menuModal.classList.add("show");
+    body.style.overflow = "hidden";
+});
+
+menuOverlay.addEventListener("click", () => {
+    menuModal.classList.remove("show");
+    body.style.overflow = "auto";
+});
+
 
 // add to card
 const saleCards = document.querySelector("#sale-cards");
@@ -32,58 +64,96 @@ const basketListEl = document.querySelector(".bucket-list");
 const totalItemsEl = document.querySelector(".total-items");
 const totalPriceEl = document.querySelector("#total-price");
 const numberOnIcon = document.querySelector(".number-of-items");
+const numberOnIconHeart = document.querySelector(".number-of-items-heart");
+const numberOnIconCompare = document.querySelector(".number-of-items-scale");
 const removeAll = document.querySelector(".remove-all");
 const itemListEl = document.querySelector(".list");
 const fullBucket = document.querySelector(".bucket-products");
 const emptyBucket = document.querySelector(".empty-bucket");
 
 // item card
+// item card
 let card = JSON.parse(localStorage.getItem("CARD")) || [];
 updateCard();
 
+let likeCard = JSON.parse(localStorage.getItem("WISH")) || [];
+updateWishList();
+
+let compareCard = JSON.parse(localStorage.getItem("COMPARE")) || [];
+updateCompare();
+
 if (card.length === 0) {
-  fullBucket.classList.add("hide");
-  emptyBucket.classList.add("active");
+    fullBucket.classList.add("hide");
+    emptyBucket.classList.add("active");
 } else if (card.length > 0) {
-  fullBucket.classList.add("active");
-  emptyBucket.classList.add("hide");
+    fullBucket.classList.add("active");
+    emptyBucket.classList.add("hide");
 }
 
 // update card func
 function updateCard() {
-  renderListItems();
-  renderBasketListItems();
-  renderSubtotal();
+    renderListItems();
+    renderBasketListItems();
+    renderSubtotal();
 
-  // save cart to local storage
-  localStorage.setItem("CARD", JSON.stringify(card));
+    // save cart to local storage
+    localStorage.setItem("CARD", JSON.stringify(card));
+}
+
+function updateWishList() {
+    WishTotal();
+    localStorage.setItem("WISH", JSON.stringify(likeCard));
+}
+
+function WishTotal() {
+    let totalItems = 0;
+    likeCard.forEach((item) => {
+        totalItems += item.numberOfUnits;
+    });
+    if (totalItems === 0) {
+        numberOnIconHeart.innerHTML = "";
+    } else {
+        numberOnIconHeart.innerHTML = `${totalItems}`;
+    }
+}
+
+
+function updateCompare() {
+    compareTotal();
+    localStorage.setItem("COMPARE", JSON.stringify(compareCard));
+}
+
+function compareTotal() {
+    let totalItems = 0;
+    compareCard.forEach((item) => {
+        totalItems += item.numberOfUnits;
+    });
+    if (totalItems === 0) {
+        numberOnIconCompare.innerHTML = "";
+    } else {
+        numberOnIconCompare.innerHTML = `${totalItems}`;
+    }
 }
 
 // render list items
 function renderListItems() {
-  itemListEl.innerHTML = "";
-  card.forEach((item) => {
-    itemListEl.innerHTML += `
+    itemListEl.innerHTML = "";
+    card.forEach((item) => {
+        itemListEl.innerHTML += `
     <div class="item">
     <div class="current">
       <h4>${item.name}</h4>
       <span>${Math.trunc(item.price)}.<sup>99</sup>₼</span>
     </div>
     `;
-  });
+    });
 }
-
-// <div class="sale">
-//   <span>Nağd alış endirimi:</span>
-//   <span class="pr">.<sup>00</sup>₼</span>
-// </div>
-// </div>
 
 // render basket card
 function renderBasketListItems() {
-  basketListEl.innerHTML = "";
-  card.forEach((item) => {
-    basketListEl.innerHTML += `
+    basketListEl.innerHTML = "";
+    card.forEach((item) => {
+        basketListEl.innerHTML += `
     <div class="card">
     <div class="img">
       <img src="${item.imgSrc}" alt="product">
@@ -126,57 +196,57 @@ function renderBasketListItems() {
       </div>
     </div>
   </div>`;
-  });
+    });
 }
 
 // remove item from cart
 function removeItemFromCart(id) {
-  card = card.filter((item) => item.id !== id);
+    card = card.filter((item) => item.id !== id);
 
-  updateCard();
+    updateCard();
 }
 
 // remove all
 removeAll.addEventListener("click", () => {
-  card = [];
+    card = [];
 
-  updateCard();
+    updateCard();
 });
 
 // change number of units
 function changeNumberOfUnits(action, id) {
-  card = card.map((item) => {
-    let numberOfUnits = item.numberOfUnits;
-    if (item.id === id) {
-      if (action === "minus" && numberOfUnits > 1) {
-        numberOfUnits--;
-      } else if (action === "plus" && numberOfUnits < item.inStock) {
-        numberOfUnits++;
-      }
-    }
-    return {
-      ...item,
-      numberOfUnits: numberOfUnits,
-    };
-  });
-  updateCard();
+    card = card.map((item) => {
+        let numberOfUnits = item.numberOfUnits;
+        if (item.id === id) {
+            if (action === "minus" && numberOfUnits > 1) {
+                numberOfUnits--;
+            } else if (action === "plus" && numberOfUnits < item.inStock) {
+                numberOfUnits++;
+            }
+        }
+        return {
+            ...item,
+            numberOfUnits: numberOfUnits,
+        };
+    });
+    updateCard();
 }
 
 // calculate and render subtotal
 function renderSubtotal() {
-  let totalPrice = 0,
-    totalItems = 0;
+    let totalPrice = 0,
+        totalItems = 0;
 
-  card.forEach((item) => {
-    totalPrice += item.price * item.numberOfUnits;
-    totalItems += item.numberOfUnits;
-  });
+    card.forEach((item) => {
+        totalPrice += item.price * item.numberOfUnits;
+        totalItems += item.numberOfUnits;
+    });
 
-  totalPriceEl.innerHTML = `${totalPrice.toFixed(2)}₼`;
-  totalItemsEl.innerHTML = `(${totalItems} əd)`;
-  if (totalItems === 0) {
-    numberOnIcon.innerHTML = "";
-  } else {
-    numberOnIcon.innerHTML = `${totalItems}`;
-  }
+    totalPriceEl.innerHTML = `${totalPrice.toFixed(2)}₼`;
+    totalItemsEl.innerHTML = `(${totalItems} əd)`;
+    if (totalItems === 0) {
+        numberOnIcon.innerHTML = "";
+    } else {
+        numberOnIcon.innerHTML = `${totalItems}`;
+    }
 }

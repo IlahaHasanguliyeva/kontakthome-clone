@@ -371,3 +371,12 @@ const samsung = [
   },
 ]
 
+const tablets = [
+  {
+    id: 44,
+    name: "Samsung Galaxy Tab S6 Lite (SM-P615) 64 GB Pink",
+    price: 849.99,
+    inStock: 25,
+    imgSrc: "assets/images/",
+  },
+]

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/loginPage.css" />
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/5a4b6aa97e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="container">
+          <nav>
+            <!-- logo ----------------------------------------------------->
+            <div class="logo">
+              <a href="./index.html">
+                <img
+                  src="./assets/images/logos/Screenshot_6.png"
+                  alt="home logo"
+                />
+              </a>
+            </div>
+            <!-- menu btn ----------------------------------------------------->
+            <button class="menu-btn">
+              <i class="fa-solid fa-bars"></i>
+              <span>Menyu</span>
+            </button>
+            <!-- search bar ----------------------------------------------------->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Məhsul üzrə axtarış..."
+              />
+              <div class="toggle">
+                <div class="btn">
+                  <i class="fa-solid fa-xmark"></i>
+                  <button>Axtarış</button>
+                </div>
+              </div>
+            </div>
+            <!-- icons ----------------------------------------------------->
+            <div class="icons">
+              <div class="icon user">
+                <a href="./loginPage.html" target="_blank">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </div>
+              <div class="icon compare">
+                <a href="#">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </a>
+              </div>
+              <div class="icon liked">
+                <a href="#">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+              <div id="basket" class="icon bucket">
+                <a href="./bucket.html" target="_blank">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="number-of-items"></span>
+                </a>
+              </div>
+            </div>
+            <!-- language ----------------------------------------------------->
+            <div class="icon language-switch">
+              <div class="switch">
+                <div class="img">
+                  <img src="./assets/images/logos/azer.svg" alt="flag" />
+                </div>
+                <span>AZ</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="user">
+          <div class="box">
+            <!-- login ------------------------------------------->
+            <div class="login">
+              <form action="" class="form">
+                <h5>Daxil Ol</h5>
+                <label for="name"
+                  >İstifadəçi adı və ya E-ünvan<span>*</span></label
+                >
+                <input type="text" name="name" id="name" />
+                <label for="password">Şifrə<span>*</span></label>
+                <input type="password" name="password" id="password" />
+                <div class="remember-me">
+                  <input type="checkbox" name="" id="remember" />
+                  <label for="rememeber">Məni yadda saxla</label>
+                </div>
+                <div class="btns">
+                  <button class="login-btn">Daxil ol</button>
+                  <button class="sign-in-btn"><a href="./signUp.html">Hesab Yarat</a></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/loginPage.js"></script>
+  </body>
+</html>

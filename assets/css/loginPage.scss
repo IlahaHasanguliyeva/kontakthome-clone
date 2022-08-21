@@ -1,0 +1,105 @@
+// vars
+$red: #da2c18;
+$grey: #d8d8d8;
+$black: #171717;
+$light-grey: #fcfcfd;
+
+main {
+  .container {
+    padding: 80px 0;
+    .user {
+      width: 30%;
+      border: 1px solid $grey;
+      border-radius: 10px;
+      margin: auto;
+      .box {
+        padding: 20px 0;
+        margin-left: 55px;
+        .form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h5 {
+            width: 80%;
+            text-align: center;
+            line-height: 18px;
+            letter-spacing: -0.28px;
+            font-size: 26px;
+            margin-bottom: 26px;
+          }
+          label {
+            line-height: 18px;
+            letter-spacing: -0.28px;
+            font-size: 14px;
+            margin-bottom: 14px;
+            span {
+              color: red;
+            }
+          }
+          input {
+            width: 80%;
+            height: 34px;
+            outline: none;
+            border: 1px solid $grey;
+            border-radius: 5px;
+            margin-bottom: 20px;
+          }
+          .remember-me {
+            width: 80%;
+            text-align: left;
+            input {
+              width: unset;
+              height: unset;
+              margin-bottom: unset;
+            }
+            label {
+              letter-spacing: -0.28px;
+              font-size: 12px;
+            }
+          }
+        }
+        .login-page {
+          text-decoration: none;
+          font-size: 12px;
+          text-align: left;
+          padding-top: 11px;
+          color: $black;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .btns {
+          padding-top: 24px;
+          width: 80%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          button {
+            font-size: 14px;
+            letter-spacing: -0.28px;
+            cursor: pointer;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 6px;
+            color: white;
+          }
+          a{
+            color: white;
+            text-decoration: none;
+          }
+          .login-btn {
+            background-color: $red;
+          }
+          .sign-in-btn {
+            background-color: $grey;
+            transition: 0.3s;
+            &:hover {
+              background-color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

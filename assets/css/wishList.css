@@ -1,0 +1,320 @@
+.wished-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wished-products .card-wrapper {
+  width: 25%;
+  display: none;
+}
+
+.wished-products .card-wrapper:nth-child(1) {
+  display: inline-block;
+}
+
+.wished-products .card-wrapper:nth-child(2) {
+  display: inline-block;
+}
+
+.wished-products .card-wrapper:nth-child(3) {
+  display: inline-block;
+}
+
+.wished-products .card-wrapper:nth-child(4) {
+  display: inline-block;
+}
+
+.wished-products .card-wrapper .card {
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner img {
+  width: 90% !important;
+}
+
+.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .add-to-card {
+  background-color: #da2c18;
+  margin-bottom: 26px;
+}
+
+.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .add-to-card i,
+.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .add-to-card span {
+  color: white;
+}
+
+.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .hoverable {
+  display: block;
+  opacity: 1;
+}
+
+.wished-products .card-wrapper .card .wrap-outer {
+  padding: 15px 20px 20px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 484px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .img {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  max-width: 100%;
+  width: 90%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 auto;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .img a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .img a img {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  height: 100%;
+  width: 100%;
+  padding: 50px 0 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .name {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  margin-left: 8px;
+  margin-bottom: 11px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .name .product-name {
+  height: 40px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  font-weight: 500;
+  color: #171717;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .name .product-name:hover {
+  text-decoration: underline;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 8px;
+  margin-bottom: 15px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .percent {
+  margin-top: 5px;
+  padding: 2px 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 16px;
+  background-color: #d8d8d8;
+  border-radius: 5px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .price-small {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .price-small h4 {
+  margin-bottom: -10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  color: #171717;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .price-small h4 sup {
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  color: #171717;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .price-small h4 span {
+  font-size: 14px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .offer-price {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .offer-price h4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  color: #da2c18;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .offer-price sup {
+  font-weight: 700;
+  color: #da2c18;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .prices .offer-price span {
+  font-size: 18px;
+  color: #171717;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .add-to-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  width: 100%;
+  height: 55px;
+  min-height: 55px;
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .add-to-card i {
+  font-size: 18px;
+  color: gray;
+  margin-right: 13px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .add-to-card span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #171717;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .hoverable {
+  opacity: 0;
+  width: 100.6%;
+  position: absolute;
+  z-index: 80;
+  display: none;
+  bottom: -120px;
+  left: -1px;
+  border: 1px solid #d8d8d8;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: white;
+  border-top: none;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 26px;
+  padding-bottom: 75px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper .heart {
+  border: 2px solid #d8d8d8;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: none;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper .compare {
+  border: 2px solid #d8d8d8;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper .like {
+  border: 2px solid #d8d8d8;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: none;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper button {
+  background-color: transparent;
+  cursor: pointer;
+  width: 30%;
+  height: 45px;
+}
+
+.wished-products .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper button i {
+  font-size: 22px;
+  color: gray;
+}
+
+.empty-wish {
+  padding: 46px;
+}
+/*# sourceMappingURL=wishList.css.map */

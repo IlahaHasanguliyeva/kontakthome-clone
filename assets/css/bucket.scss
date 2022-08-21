@@ -1,473 +1,456 @@
-// vars
-$red: #da2c18;
-$grey: #d8d8d8;
-$black: #171717;
-$light-grey: #fcfcfd;
-
-main {
-  .sub-heading {
-    h2 {
-      font-size: 36px;
-      font-weight: 600;
-      letter-spacing: -1.08px;
-      color: $black;
-      line-height: 40px;
-      border: none;
-      margin-top: 14px;
-      border-bottom: 1px solid $grey;
-    }
-  }
-  .route {
-    padding-top: 18px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 12px;
-    #home {
-      transition: 0.3s;
-      font-size: 12px;
-      &:hover {
-        color: $grey;
-      }
-    }
-    a {
-      padding-right: 8px;
-      color: gray;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    i {
-      padding-right: 8px;
-      color: gray;
-      font-size: 6px;
-    }
-  }
-
-  section {
-    .bucket {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      .bucket-left {
-        border: 1px solid $grey;
-        border-radius: 10px;
-        width: 69%;
-        .add-to-card-list {
-          height: fit-content;
-          .remove-all {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            height: 62px;
-            border-bottom: 1px solid $grey;
-            button {
-              margin-right: 30px;
-              height: 30px;
-              background-color: transparent;
-              border: none;
-              font-size: 14px;
-              cursor: pointer;
-              transition: 0.4s;
-              &:hover {
-                color: $red;
-                i {
-                  color: $red;
-                }
-              }
-              i {
-                margin-left: 5px;
-                font-size: 16px;
-                color: gray;
-                transition: 0.4s;
-              }
-            }
-          }
-          .bucket-list {
-            padding: 0 38px;
-            padding-bottom: 60px;
-            .card {
-              padding: 63px 0;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              border-bottom: 1px solid $grey;
-              .img {
-                width: 120px;
-                height: 90px;
-                width: 22%;
-                margin: 45px 0;
-                img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                }
-              }
-              .product-details {
-                width: 70%;
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                .name {
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: space-between;
-                  margin-bottom: 40px;
-                  .name-stars {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    a {
-                      width: 108px;
-                      line-height: 18px;
-                      letter-spacing: -0.28px;
-                      font-size: 14px;
-                      font-weight: 500;
-                      color: $black;
-                      text-decoration: none;
-                      &:hover {
-                        text-decoration: underline;
-                      }
-                    }
-                    .stars {
-                      margin-left: 18px;
-                      font-size: 10px;
-                      i {
-                        color: $grey;
-                        padding-right: 5px;
-                      }
-                    }
-                  }
-                  .remove-btn {
-                    button {
-                      background-color: transparent;
-                      border: none;
-                      color: $grey;
-                      font-size: 20px;
-                      cursor: pointer;
-                      transition: 0.3s;
-                      &:hover {
-                        color: black;
-                      }
-                    }
-                  }
-                }
-                .price-and-count {
-                  margin-top: 20px;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: space-between;
-                  .price {
-                    span {
-                      line-height: 18px;
-                      letter-spacing: -0.28px;
-                      font-size: 14px;
-                      font-weight: 500;
-                      color: $black;
-                      padding-bottom: 5px;
-                    }
-                    h3 {
-                      font-weight: 700;
-                      color: #171717;
-                      font-size: 18px;
-                      line-height: 21px;
-                      letter-spacing: -0.36px;
-                      sup {
-                        font-weight: 700;
-                      }
-                    }
-                  }
-                  .quantity {
-                    padding-right: 11px;
-                    width: 200px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    span {
-                      line-height: 18px;
-                      letter-spacing: -0.28px;
-                      font-size: 14px;
-                      font-weight: 500;
-                      color: $black;
-                      padding-bottom: 5px;
-                    }
-                    .count {
-                      button {
-                        width: 25px;
-                        height: 24px;
-                        padding: 0 6px;
-                        background-color: transparent;
-                        border: 1px solid $grey;
-                        border-radius: 5px;
-                        cursor: pointer;
-                      }
-                      span {
-                        padding: 0 6px;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      .bucket-right {
-        width: 30%;
-        .total-prices {
-          position: relative;
-          border: 1px solid $grey;
-          border-radius: 10px;
-          height: 705px;
-          h3 {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            height: 62px;
-            border-bottom: 1px solid $grey;
-            letter-spacing: -0.48px;
-            font-size: 24px;
-            line-height: 30px;
-            font-weight: 600;
-            color: $black;
-            padding: 0 18px;
-            span {
-              letter-spacing: -0.48px;
-              font-size: 24px;
-              line-height: 30px;
-              font-weight: 600;
-              color: $black;
-              padding-left: 6px;
-            }
-          }
-          .name-price-wrapper {
-            height: 560px;
-            overflow-y: auto;
-            .list {
-              padding: 0 18px;
-              .item {
-                width: 100%;
-                padding-top: 30px;
-                padding-bottom: 30px;
+    // vars
+    $red: #da2c18;
+    $grey: #d8d8d8;
+    $black: #171717;
+    $light-grey: #fcfcfd;
+    main {
+        .sub-heading {
+            h2 {
+                font-size: 36px;
+                font-weight: 600;
+                letter-spacing: -1.08px;
+                color: $black;
+                line-height: 40px;
+                border: none;
+                margin-top: 14px;
                 border-bottom: 1px solid $grey;
-                display: flex;
-                flex-direction: column;
-                justify-content: left;
-                .current {
-                  width: inherit;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                  align-items: center;
-                  h4 {
-                    width: 223px;
-                    line-height: 18px;
-                    letter-spacing: -0.28px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: $black;
-                  }
-                  span {
-                    font-weight: 700;
-                    color: $black;
-                    font-size: 18px;
-                    line-height: 24px;
-                    letter-spacing: -0.36px;
-                    sup {
-                      font-weight: 700;
-                    }
-                  }
-                }
-                .sale {
-                  width: inherit;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                  align-items: center;
-                  span {
-                    font-size: 12px;
-                    line-height: 15px;
-                    color: gray;
-                  }
-                  .pr {
-                    color: $red;
-                    font-size: 18px;
-                    font-weight: 700;
-                    sup {
-                      font-weight: 700;
-                      margin-right: 6px;
-                    }
-                  }
-                }
-              }
             }
-          }
-          .total {
-            position: absolute;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 82px;
-            width: 100%;
-            padding: 18px;
-            border-top: 1px solid $grey;
-            background-color: $light-grey;
-            border-bottom-left-radius: 18px;
-            border-bottom-right-radius: 18px;
-            span {
-              font-size: 18px;
-              font-weight: 700;
-            }
-            .order {
-              width: inherit;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-            }
-            .discount {
-              width: inherit;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-              padding-bottom: 16px;
-              border-bottom: 1px solid $grey;
-            }
-          }
         }
-        .order-btn {
-          margin-top: 11px;
-          border: 1px solid $grey;
-          border-radius: 10px;
-          padding: 18px;
-          .order {
-            width: 100%;
-            height: 62px;
-            transition: 0.3s;
-            background-color: $red;
+        .route {
+            padding-top: 18px;
             display: flex;
             flex-direction: row;
             align-items: center;
-            border: 1px solid $red;
-            border-radius: 10px;
-            text-decoration: none;
-            &:hover {
-              background-color: rgb(188, 32, 32);
-              i {
+            font-size: 12px;
+            #home {
                 transition: 0.3s;
-                padding-left: 15px;
-              }
+                font-size: 12px;
+                &:hover {
+                    color: $grey;
+                }
             }
-            span {
-              color: white;
-              padding-left: 110px;
-              font-size: 12px;
+            a {
+                padding-right: 8px;
+                color: gray;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             i {
-              font-size: 14px;
-              color: white;
-              padding-left: 6px;
+                padding-right: 8px;
+                color: gray;
+                font-size: 6px;
             }
-          }
         }
-        .one-click {
-          margin-top: 11px;
-          border: 1px solid $grey;
-          border-radius: 10px;
-          padding: 18px;
-          h4 {
-            text-align: center;
-            font-size: 14px;
-            padding-bottom: 30px;
-          }
-          form {
-            padding: 0 36px;
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            .radio {
-              padding-bottom: 20px;
+        .container {
+            .info {
+                border: 1px solid $grey;
+                border-radius: 10px;
+                h3 {
+                    border-bottom: 1px solid $grey;
+                    padding-top: 14px;
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    padding-bottom: 14px;
+                    i {
+                        padding-right: 5px;
+                        color: green;
+                    }
+                }
+                p {
+                    padding: 14px;
+                }
             }
-            input {
-              margin-bottom: 11px;
+        }
+        section {
+            .bucket {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                .bucket-left {
+                    border: 1px solid $grey;
+                    border-radius: 10px;
+                    width: 69%;
+                    .add-to-card-list {
+                        height: fit-content;
+                        .remove-all {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            height: 62px;
+                            border-bottom: 1px solid $grey;
+                            button {
+                                margin-right: 30px;
+                                height: 30px;
+                                background-color: transparent;
+                                border: none;
+                                font-size: 14px;
+                                cursor: pointer;
+                                transition: 0.4s;
+                                &:hover {
+                                    color: $red;
+                                    i {
+                                        color: $red;
+                                    }
+                                }
+                                i {
+                                    margin-left: 5px;
+                                    font-size: 16px;
+                                    color: gray;
+                                    transition: 0.4s;
+                                }
+                            }
+                        }
+                        .bucket-list {
+                            padding: 0 38px;
+                            padding-bottom: 60px;
+                            .card {
+                                padding: 63px 0;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                border-bottom: 1px solid $grey;
+                                &:nth-last-child(1) {
+                                    border: none;
+                                    padding-bottom: 0;
+                                }
+                                .img {
+                                    width: 120px;
+                                    height: 90px;
+                                    width: 22%;
+                                    margin: 45px 0;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
+                                .product-details {
+                                    width: 70%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: stretch;
+                                    .name {
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        margin-bottom: 40px;
+                                        .name-stars {
+                                            display: flex;
+                                            flex-direction: row;
+                                            align-items: center;
+                                            a {
+                                                width: 108px;
+                                                line-height: 18px;
+                                                letter-spacing: -0.28px;
+                                                font-size: 14px;
+                                                font-weight: 500;
+                                                color: $black;
+                                                text-decoration: none;
+                                                &:hover {
+                                                    text-decoration: underline;
+                                                }
+                                            }
+                                            .stars {
+                                                margin-left: 18px;
+                                                font-size: 10px;
+                                                i {
+                                                    color: $grey;
+                                                    padding-right: 5px;
+                                                }
+                                            }
+                                        }
+                                        .remove-btn {
+                                            button {
+                                                background-color: transparent;
+                                                border: none;
+                                                color: $grey;
+                                                font-size: 20px;
+                                                cursor: pointer;
+                                                transition: 0.3s;
+                                                &:hover {
+                                                    color: black;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .price-and-count {
+                                        margin-top: 20px;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        .price {
+                                            span {
+                                                line-height: 18px;
+                                                letter-spacing: -0.28px;
+                                                font-size: 14px;
+                                                font-weight: 500;
+                                                color: $black;
+                                                padding-bottom: 5px;
+                                            }
+                                            h3 {
+                                                font-weight: 700;
+                                                color: #171717;
+                                                font-size: 18px;
+                                                line-height: 21px;
+                                                letter-spacing: -0.36px;
+                                                sup {
+                                                    font-weight: 700;
+                                                }
+                                            }
+                                        }
+                                        .quantity {
+                                            padding-right: 11px;
+                                            width: 200px;
+                                            display: flex;
+                                            flex-direction: row;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            span {
+                                                line-height: 18px;
+                                                letter-spacing: -0.28px;
+                                                font-size: 14px;
+                                                font-weight: 500;
+                                                color: $black;
+                                                padding-bottom: 5px;
+                                            }
+                                            .count {
+                                                button {
+                                                    width: 25px;
+                                                    height: 24px;
+                                                    padding: 0 6px;
+                                                    background-color: transparent;
+                                                    border: 1px solid $grey;
+                                                    border-radius: 5px;
+                                                    cursor: pointer;
+                                                }
+                                                span {
+                                                    padding: 0 6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .bucket-right {
+                    width: 30%;
+                    .total-prices {
+                        position: relative;
+                        border: 1px solid $grey;
+                        border-radius: 10px;
+                        height: 705px;
+                        h3 {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            height: 62px;
+                            border-bottom: 1px solid $grey;
+                            letter-spacing: -0.48px;
+                            font-size: 24px;
+                            line-height: 30px;
+                            font-weight: 600;
+                            color: $black;
+                            padding: 0 18px;
+                            span {
+                                letter-spacing: -0.48px;
+                                font-size: 24px;
+                                line-height: 30px;
+                                font-weight: 600;
+                                color: $black;
+                                padding-left: 6px;
+                            }
+                        }
+                        .name-price-wrapper {
+                            height: 560px;
+                            overflow-y: auto;
+                            .list {
+                                padding: 0 18px;
+                                .item {
+                                    width: 100%;
+                                    padding-top: 30px;
+                                    padding-bottom: 30px;
+                                    border-bottom: 1px solid $grey;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: left;
+                                    .current {
+                                        width: inherit;
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        h4 {
+                                            width: 223px;
+                                            line-height: 18px;
+                                            letter-spacing: -0.28px;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            color: $black;
+                                        }
+                                        span {
+                                            font-weight: 700;
+                                            color: $black;
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                            letter-spacing: -0.36px;
+                                            sup {
+                                                font-weight: 700;
+                                            }
+                                        }
+                                    }
+                                    .sale {
+                                        width: inherit;
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        span {
+                                            font-size: 12px;
+                                            line-height: 15px;
+                                            color: gray;
+                                        }
+                                        .pr {
+                                            color: $red;
+                                            font-size: 18px;
+                                            font-weight: 700;
+                                            sup {
+                                                font-weight: 700;
+                                                margin-right: 6px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .total {
+                            position: absolute;
+                            bottom: 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 82px;
+                            width: 100%;
+                            padding: 18px;
+                            border-top: 1px solid $grey;
+                            background-color: $light-grey;
+                            border-bottom-left-radius: 18px;
+                            border-bottom-right-radius: 18px;
+                            span {
+                                font-size: 18px;
+                                font-weight: 700;
+                            }
+                            .order {
+                                width: inherit;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+                            .discount {
+                                width: inherit;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding-bottom: 16px;
+                                border-bottom: 1px solid $grey;
+                            }
+                        }
+                    }
+                    .order-btn {
+                        margin-top: 11px;
+                        border: 1px solid $grey;
+                        border-radius: 10px;
+                        padding: 18px;
+                        .order {
+                            width: 100%;
+                            height: 62px;
+                            transition: 0.3s;
+                            background-color: $red;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            border: 1px solid $red;
+                            border-radius: 10px;
+                            text-decoration: none;
+                            &:hover {
+                                background-color: rgb(188, 32, 32);
+                                i {
+                                    transition: 0.3s;
+                                    padding-left: 15px;
+                                }
+                            }
+                            span {
+                                color: white;
+                                padding-left: 110px;
+                                font-size: 12px;
+                            }
+                            i {
+                                font-size: 14px;
+                                color: white;
+                                padding-left: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .empty-bucket {
+        .empty {
+            height: 80vh;
+            padding-top: 80px;
+            text-align: center;
+            h3 {
+                color: $black;
+                letter-spacing: -0.48px;
+                font-size: 24px;
+                line-height: 30px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 500;
+                color: $black;
+                letter-spacing: -.28px;
+                line-height: 20px;
             }
             button {
-              height: 62px;
-              width: 346px;
-              margin-left: -36px;
-              background-color: $red;
-              border-radius: 10px;
-              border: none;
-              color: white;
-              font-weight: 600;
-              font-size: 12px;
-              cursor: pointer;
-              transition: 0.3s;
-              &:hover {
-                background-color: rgb(188, 32, 32);
-              }
+                margin-top: 45px;
+                color: white;
+                font-size: 14px;
+                letter-spacing: -.28px;
+                line-height: 20px;
+                padding: 18px 28px;
+                background-color: $red;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background-color: rgb(188, 32, 32);
+                }
+                i {
+                    padding-right: 8px;
+                }
             }
-          }
         }
-      }
     }
-  }
-}
-
-.empty-bucket {
-  .empty {
-    height: 80vh;
-    padding-top: 80px;
-    text-align: center;
-    h3 {
-      color: $black;
-      letter-spacing: -0.48px;
-      font-size: 24px;
-      line-height: 30px;
-      font-weight: 600;
+    
+    .hide {
+        display: none;
     }
-    p{
-      font-size: 14px;
-      font-weight: 500;
-      color: $black;
-      letter-spacing: -.28px;
-      line-height: 20px;
+    
+    .active {
+        display: block;
     }
-    button{
-      margin-top: 45px;
-      color: white;
-      font-size: 14px;
-      letter-spacing: -.28px;
-      line-height: 20px;
-      padding: 18px 28px;
-      background-color: $red;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-      &:hover {
-        background-color: rgb(188, 32, 32);
-      }
-      i{
-        padding-right: 8px;
-      }
-    }
-  }
-}
-
-.hide {
-  display: none;
-}
-
-.active {
-  display: block;
-}
