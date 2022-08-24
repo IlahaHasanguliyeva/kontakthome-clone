@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-CloginPage.htmlompatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt Home</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <!-- styles -->
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/category.css" />
+    <link rel="stylesheet" href="./assets/css/user.css" />
     <!-- icons -->
     <script src="https://kit.fontawesome.com/5a4b6aa97e.js" crossorigin="anonymous"></script>
     <!-- fonts -->
@@ -102,7 +102,7 @@
             </div>
         </div>
     </header>
-    <!-- main --------------------------->
+    <!-- main ------------------------->
     <main>
         <!-- menu and card modals ---------------------------------------------------- -->
 
@@ -1052,181 +1052,59 @@
             </div>
         </div>
 
-        <!-- heading -->
         <div class="container">
-            <section>
-                <div class="heading">
-                    <h1>Telefonlar və Planşetlər</h1>
-                    <div class="route">
-                        <a href="./index.html" target="_blank"><i class="fa-solid fa-house" id="home"></i
-              ></a>
-                        <i class="fa-solid fa-greater-than" class="other"></i>
-                        <a href="#">Telefonlar və Planşetlər</a>
-                    </div>
-                </div>
-            </section>
-            <!-- sub categories -->
-            <section>
-                <div class="category-cards">
-                    <div class="card">
-                        <div class="img">
-                            <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display.webp" alt="category" /></a>
-                        </div>
-                        <div class="sub-category-name">
-                            <a class="name" href="#" target="_blank">Smartfonlar</a>
-                            <i class="fa-solid fa-angle-down"></i>
-                            <div class="bubble">
-                                <a href="#" target="_blank">Apple</a>
-                                <a href="#" target="_blank">Samsung</a>
-                                <a href="#" target="_blank">Xiaomi</a>
-                                <a href="#" target="_blank">Huawei</a>
-                                <a href="#" target="_blank">Blackview</a>
-                                <a href="#" target="_blank">Realme</a>
-                                <a href="#" target="_blank">Honor</a>
-                                <a href="#" target="_blank">Nokia</a>
-                                <a href="#" target="_blank">Lenovo</a>
-                                <a href="#" target="_blank">Asus</a>
-                                <a href="#" target="_blank">ZTE</a>
+            <div class="user">
+                <div class="box">
+                    <!-- sign up ------------------------------------------->
+                    <div class="sign-up">
+                        <form class="register form">
+                            <h5>Qeydiyyat</h5>
+                            <label for="userName">İstifadəçi adı <span>*</span> </label>
+                            <input type="text" id="userName" />
+                            <div class="error name"><i class="fa-solid fa-triangle-exclamation"></i>
+                                <div class="msg-name"></div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- card -->
-                    <div class="card">
-                        <div class="img">
-                            <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (1).webp" alt="category" /></a>
-                        </div>
-                        <div class="sub-category-name">
-                            <a class="name" href="#" target="_blank">Planşetlər</a>
-                            <i class="fa-solid fa-angle-down"></i>
-                            <div class="bubble">
-                                <a href="#" target="_blank">Apple</a>
-                                <a href="#" target="_blank">Samsung</a>
-                                <a href="#" target="_blank">Xiaomi</a>
-                                <a href="#" target="_blank">Blackview</a>
-                                <a href="#" target="_blank">Lenovo</a>
-                                <a href="#" target="_blank">Microsoft</a>
-                                <a href="#" target="_blank">TCL</a>
+                            <!--  -->
+                            <label for="email">Elektron poçt ünvanı<span>*</span></label>
+                            <input type="email" id="email" />
+                            <div class="error email"><i class="fa-solid fa-triangle-exclamation"></i>
+                                <div class="msg-email"></div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- card -->
-                    <div class="card">
-                        <div class="img">
-                            <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (2).webp" alt="category" /></a>
-                        </div>
-                        <div class="sub-category-name">
-                            <a class="name" href="#" target="_blank">Düyməli telefonlar</a>
-                            <i class="fa-solid fa-angle-down"></i>
-                            <div class="bubble">
-                                <a href="#" target="_blank">Nokia</a>
-                                <a href="#" target="_blank">BQ</a>
-                                <a href="#" target="_blank">INOI</a>
+                            <!--  -->
+                            <label for="firstPassword"><i class="fa-solid fa-circle-info"><div class="info">Şifrəniz ən azı 8 simvol uzunluğunda olmalıdır</div></i>Şifrə<span>*</span></label>
+                            <input type="password" id="firstPassword" />
+                            <div class="error password"><i class="fa-solid fa-triangle-exclamation"></i>
+                                <div class="msg-password"></div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- card -->
-                    <div class="card">
-                        <div class="img">
-                            <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (3).webp" alt="category" /></a>
-                        </div>
-                        <div class="sub-category-name">
-                            <a class="name" href="#" target="_blank">Ev və Ofis telefonları</a
+                            <!--  -->
+                            <label for="password-again">Şifrənizi təsdiq edin<span>*</span></label
                 >
-                <i class="fa-solid fa-angle-down"></i>
-                <div class="bubble">
-                  <a href="#" target="_blank">Panasonic</a>
-                            <a href="#" target="_blank">Gigaset</a>
-                        </div>
-                    </div>
+                <input type="password" id="password-again" />
+                <div class="error check"><i class="fa-solid fa-triangle-exclamation"></i>
+                  <div class="msg-password-check"></div>
+              </div>
+                <div class="remember-me">
+                  <input type="checkbox" name="" id="agree" />
+                  <label for="agree"
+                    >Qeydiyyatdan keçməklə saytdan istifadə qaydalarını qəbul
+                    edirəm</label
+                  >
+                  <div class="error terms"><i class="fa-solid fa-triangle-exclamation"></i>
+                    <div class="msg-terms"></div>
                 </div>
-                <!-- card -->
-                <div class="card">
-                    <div class="img">
-                        <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (4).webp" alt="category" /></a>
-                    </div>
-                    <div class="sub-category-name">
-                        <a class="name" href="#" target="_blank">Elektron kitab</a>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </div>
                 </div>
-                <!-- card -->
-                <div class="card">
-                    <div class="img">
-                        <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (5).webp" alt="category" /></a>
-                    </div>
-                    <div class="sub-category-name">
-                        <a class="name" href="#" target="_blank">Nömrələr</a>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </div>
+                <a href="./loginPage.html" class="login-page btn"
+                  >Artıq üzvsünüz?</a
+                >
+                <div class="btns">
+                  <button type="button" class="submit-btn">Qeydiyyat</button>
+                  <a href="./loginPage.html" class="change-form">Daxil ol</a>
                 </div>
-                <!-- card -->
-                <div class="card">
-                    <div class="img">
-                        <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (6).webp" alt="category" /></a>
-                    </div>
-                    <div class="sub-category-name">
-                        <a class="name" href="#" target="_blank">Aksesuarlar</a>
-                        <i class="fa-solid fa-angle-down"></i>
-                        <div class="bubble">
-                            <a href="#" target="_blank">Power Bank</a>
-                            <a href="#" target="_blank">USB başlıq</a>
-                            <a href="#" target="_blank">Qoruyucu örtük</a>
-                            <a href="#" target="_blank">Planşet üçün örtük</a>
-                            <a href="#" target="_blank">Telefon üçün tutacaq</a>
-                            <a href="#" target="_blank">Planşet üçün qələm</a>
-                            <a href="#" target="_blank">Açarlıq</a>
-                            <a href="#" target="_blank">Ekran təmizləyicisi</a>
-                        </div>
-                    </div>
+              </form>
                 </div>
-                <!-- card -->
-                <div class="card">
-                    <div class="img">
-                        <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (7).webp" alt="category" /></a>
-                    </div>
-                    <div class="sub-category-name">
-                        <a class="name" href="#" target="_blank">Qulaqlıqlar</a>
-                        <i class="fa-solid fa-angle-down"></i>
-                        <div class="bubble">
-                            <a href="#" target="_blank">Simli qulaqlıqlar</a>
-                            <a href="#" target="_blank">Simsiz qulaqlıqlar</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- card -->
-                <div class="card">
-                    <div class="img">
-                        <a href="#" target="_blank"><img src="./assets/images/category imgs/phones/display (8).webp" alt="category" /></a>
-                    </div>
-                    <div class="sub-category-name">
-                        <a class="name" href="#" target="_blank">Qulaqlıqlar</a>
-                        <i class="fa-solid fa-angle-down"></i>
-                        <div class="bubble">
-                            <a href="#" target="_blank">Policral</a>
-                            <a href="#" target="_blank">Wacom</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
         </div>
-        </section>
-        <!-- phone section -->
-        <section>
-            <div class="sub-heading">
-                <h2>Smartfonlar</h2>
-                <button>
-                  <a href="#">Bütün Smartfonlar</a>
-                  <i class="fa-solid fa-arrow-right-long"></i>
-                </button>
-            </div>
-            <div class="first-card" id="sale-cards">
-                <!-- card -->
-            </div>
-            <!-- load more -->
-            <p class="load-more"><button>Daha çox göstər</button><i class="fa-solid fa-ellipsis"></i></p>
-            </div>
-            </div>
-        </section>
-        </div>
+      </div>
     </main>
     <!-- footer ------------------------->
     <footer>
@@ -1237,8 +1115,8 @@
                 <div class="scroll-top">
                     <div class="scroll-button">
                         <button class="to-top">
-          <i class="fa-solid fa-arrow-up"></i>
-        </button>
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
 
                         <h3>Yuxarı</h3>
                     </div>
@@ -1287,12 +1165,12 @@
                         <a href="">Zəmanət</a>
 
                         <a href="">
-          Hissə-hissə ödənişinə dair tələblər
-        </a>
+            Hissə-hissə ödənişinə dair tələblər
+          </a>
 
                         <a href="">
-          Aylıq ödənişlərin həyata keçirilməsi üsülları
-        </a>
+            Aylıq ödənişlərin həyata keçirilməsi üsülları
+          </a>
 
                         <a href="">Aylıq ödənişlərin üsulları</a>
                     </div>
@@ -1316,16 +1194,16 @@
                     <div class="left">
                         <label for="">Abunə olun:</label>
 
-                        <div class="subs">
-                            <div class="email-input">
-                                <input id="subscribe-input" class="email" type="email" placeholder="E-mail"></input>
+                            <div class="subs">
+                                <div class="email-input">
+                                    <input id="subscribe-input" class="email" type="email" placeholder="E-mail"></input>
 
-                                <i class="fa-solid fa-triangle-exclamation"></i>
-                                <i class="fa-solid fa-check"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <button class="mail-button">Abunə olmaq</button>
                             </div>
-
-                            <button class="mail-button">Abunə olmaq</button>
-                        </div>
                     </div>
 
                     <div class="right">
@@ -1412,11 +1290,11 @@
 
             <div class="subscriber-modal">
                 <span>
-      <img
-        src="./assets/images/images/smile.svg"
-        alt="smiley face"
-      >
-    </span>
+        <img
+          src="./assets/images/images/smile.svg"
+          alt="smiley face"
+        >
+      </span>
 
                 <h4>
                     Siz uğurla abunə oldunuz.
@@ -1425,10 +1303,11 @@
                 </h4>
             </div>
         </div>
-    </footer>
-    <!-- script ----------------------------------------------------------------------->
-    <script src="./assets/js/products.js"></script>
-    <script src="./assets/js/phonesC.js"></script>
+        </footer>
+
+        <script src="./assets/js/register.js"></script>
 </body>
 
 </html>
+
+<img src="./assets/images/" alt="" />

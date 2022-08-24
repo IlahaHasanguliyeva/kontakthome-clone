@@ -250,3 +250,54 @@ function renderSubtotal() {
         numberOnIcon.innerHTML = `${totalItems}`;
     }
 }
+
+// footer ---------------------------------------------------------------------------------
+// scroll to top---
+const scrollTop = document.querySelector(".to-top");
+scrollTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+});
+
+// email input---
+const mailOverlay = document.querySelector("#mail-overlay");
+const subModal = document.querySelector(".sub-modal");
+const emailInput = document.querySelector(".email");
+const warnIcon = document.querySelector(".fa-triangle-exclamation");
+const tickIcon = document.querySelector(".fa-check");
+const validRegex =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const mailBtn = document.querySelector(".mail-button");
+
+emailInput.addEventListener("input", () => {
+    if (emailInput.value.match(validRegex)) {
+        mailBtn.style.backgroundColor = "#da2c18";
+        mailBtn.style.cursor = "pointer";
+        warnIcon.classList.remove("show");
+        tickIcon.classList.add("show");
+        // button click
+        mailBtn.addEventListener(
+            "click",
+            () => {
+                emailInput.value = "";
+                tickIcon.classList.remove("show");
+                subModal.classList.add("show");
+                body.style.overflow = "hidden";
+                mailBtn.style.backgroundColor = "gray";
+                mailBtn.style.cursor = "default";
+            }, { once: true }
+        );
+    } else {
+        mailBtn.style.backgroundColor = "gray";
+        warnIcon.classList.add("show");
+        tickIcon.classList.remove("show");
+    }
+});
+
+mailOverlay.addEventListener("click", () => {
+    subModal.classList.remove("show");
+    body.style.overflow = "auto";
+});

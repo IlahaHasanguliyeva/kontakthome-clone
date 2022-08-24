@@ -8,53 +8,37 @@ main .sub-heading h2 {
   margin-top: 14px;
   border-bottom: 1px solid #d8d8d8;
 }
-
 main .route {
   padding-top: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   font-size: 12px;
 }
-
 main .route #home {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   font-size: 12px;
 }
-
 main .route #home:hover {
   color: #d8d8d8;
 }
-
 main .route a {
   padding-right: 8px;
   color: gray;
   text-decoration: none;
 }
-
 main .route a:hover {
   text-decoration: underline;
 }
-
 main .route i {
   padding-right: 8px;
   color: gray;
   font-size: 6px;
 }
-
 main .container .info {
   border: 1px solid #d8d8d8;
   border-radius: 10px;
 }
-
 main .container .info h3 {
   border-bottom: 1px solid #d8d8d8;
   padding-top: 14px;
@@ -62,59 +46,37 @@ main .container .info h3 {
   padding-right: 14px;
   padding-bottom: 14px;
 }
-
 main .container .info h3 i {
   padding-right: 5px;
   color: green;
 }
-
 main .container .info p {
   padding: 14px;
 }
-
 main section .bucket {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
 main section .bucket .bucket-left {
   border: 1px solid #d8d8d8;
   border-radius: 10px;
   width: 69%;
 }
-
 main section .bucket .bucket-left .add-to-card-list {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-
 main section .bucket .bucket-left .add-to-card-list .remove-all {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   height: 62px;
   border-bottom: 1px solid #d8d8d8;
 }
-
 main section .bucket .bucket-left .add-to-card-list .remove-all button {
   margin-right: 30px;
   height: 30px;
@@ -122,109 +84,65 @@ main section .bucket .bucket-left .add-to-card-list .remove-all button {
   border: none;
   font-size: 14px;
   cursor: pointer;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 main section .bucket .bucket-left .add-to-card-list .remove-all button:hover {
   color: #da2c18;
 }
-
 main section .bucket .bucket-left .add-to-card-list .remove-all button:hover i {
   color: #da2c18;
 }
-
 main section .bucket .bucket-left .add-to-card-list .remove-all button i {
   margin-left: 5px;
   font-size: 16px;
   color: gray;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list {
   padding: 0 38px;
   padding-bottom: 60px;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card {
   padding: 63px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   border-bottom: 1px solid #d8d8d8;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card:nth-last-child(1) {
   border: none;
   padding-bottom: 0;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .img {
   width: 120px;
   height: 90px;
   width: 22%;
   margin: 45px 0;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details {
   width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  flex-direction: column;
+  align-items: stretch;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name .name-stars {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name .name-stars a {
   width: 108px;
   line-height: 18px;
@@ -234,52 +152,35 @@ main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-
   color: #171717;
   text-decoration: none;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name .name-stars a:hover {
   text-decoration: underline;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name .name-stars .stars {
   margin-left: 18px;
   font-size: 10px;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name .name-stars .stars i {
   color: #d8d8d8;
   padding-right: 5px;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name .remove-btn button {
   background-color: transparent;
   border: none;
   color: #d8d8d8;
   font-size: 20px;
   cursor: pointer;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .name .remove-btn button:hover {
   color: black;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count .price span {
   line-height: 18px;
   letter-spacing: -0.28px;
@@ -288,7 +189,6 @@ main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-
   color: #171717;
   padding-bottom: 5px;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count .price h3 {
   font-weight: 700;
   color: #171717;
@@ -296,29 +196,17 @@ main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-
   line-height: 21px;
   letter-spacing: -0.36px;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count .price h3 sup {
   font-weight: 700;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count .quantity {
   padding-right: 11px;
   width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count .quantity span {
   line-height: 18px;
   letter-spacing: -0.28px;
@@ -327,7 +215,6 @@ main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-
   color: #171717;
   padding-bottom: 5px;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count .quantity .count button {
   width: 25px;
   height: 24px;
@@ -337,32 +224,22 @@ main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-
   border-radius: 5px;
   cursor: pointer;
 }
-
 main section .bucket .bucket-left .add-to-card-list .bucket-list .card .product-details .price-and-count .quantity .count span {
   padding: 0 6px;
 }
-
 main section .bucket .bucket-right {
   width: 30%;
 }
-
 main section .bucket .bucket-right .total-prices {
   position: relative;
   border: 1px solid #d8d8d8;
   border-radius: 10px;
   height: 705px;
 }
-
 main section .bucket .bucket-right .total-prices h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   height: 62px;
   border-bottom: 1px solid #d8d8d8;
   letter-spacing: -0.48px;
@@ -372,7 +249,6 @@ main section .bucket .bucket-right .total-prices h3 {
   color: #171717;
   padding: 0 18px;
 }
-
 main section .bucket .bucket-right .total-prices h3 span {
   letter-spacing: -0.48px;
   font-size: 24px;
@@ -381,50 +257,29 @@ main section .bucket .bucket-right .total-prices h3 span {
   color: #171717;
   padding-left: 6px;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper {
   height: 560px;
   overflow-y: auto;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list {
   padding: 0 18px;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #d8d8d8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  flex-direction: column;
+  justify-content: left;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .current {
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .current h4 {
   width: 223px;
   line-height: 18px;
@@ -433,7 +288,6 @@ main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item
   font-weight: 500;
   color: #171717;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .current span {
   font-weight: 700;
   color: #171717;
@@ -441,61 +295,37 @@ main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item
   line-height: 24px;
   letter-spacing: -0.36px;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .current span sup {
   font-weight: 700;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .sale {
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .sale span {
   font-size: 12px;
   line-height: 15px;
   color: gray;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .sale .pr {
   color: #da2c18;
   font-size: 18px;
   font-weight: 700;
 }
-
 main section .bucket .bucket-right .total-prices .name-price-wrapper .list .item .sale .pr sup {
   font-weight: 700;
   margin-right: 6px;
 }
-
 main section .bucket .bucket-right .total-prices .total {
   position: absolute;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 82px;
   width: 100%;
   padding: 18px;
@@ -504,92 +334,56 @@ main section .bucket .bucket-right .total-prices .total {
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
 }
-
 main section .bucket .bucket-right .total-prices .total span {
   font-size: 18px;
   font-weight: 700;
 }
-
 main section .bucket .bucket-right .total-prices .total .order {
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
 main section .bucket .bucket-right .total-prices .total .discount {
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 16px;
   border-bottom: 1px solid #d8d8d8;
 }
-
 main section .bucket .bucket-right .order-btn {
   margin-top: 11px;
   border: 1px solid #d8d8d8;
   border-radius: 10px;
   padding: 18px;
 }
-
 main section .bucket .bucket-right .order-btn .order {
   width: 100%;
   height: 62px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #da2c18;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   border: 1px solid #da2c18;
   border-radius: 10px;
   text-decoration: none;
 }
-
 main section .bucket .bucket-right .order-btn .order:hover {
-  background-color: #bc2020;
+  background-color: rgb(188, 32, 32);
 }
-
 main section .bucket .bucket-right .order-btn .order:hover i {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   padding-left: 15px;
 }
-
 main section .bucket .bucket-right .order-btn .order span {
   color: white;
   padding-left: 110px;
   font-size: 12px;
 }
-
 main section .bucket .bucket-right .order-btn .order i {
   font-size: 14px;
   color: white;
@@ -601,7 +395,6 @@ main section .bucket .bucket-right .order-btn .order i {
   padding-top: 80px;
   text-align: center;
 }
-
 .empty-bucket .empty h3 {
   color: #171717;
   letter-spacing: -0.48px;
@@ -609,34 +402,29 @@ main section .bucket .bucket-right .order-btn .order i {
   line-height: 30px;
   font-weight: 600;
 }
-
 .empty-bucket .empty p {
   font-size: 14px;
   font-weight: 500;
   color: #171717;
-  letter-spacing: -.28px;
+  letter-spacing: -0.28px;
   line-height: 20px;
 }
-
 .empty-bucket .empty button {
   margin-top: 45px;
   color: white;
   font-size: 14px;
-  letter-spacing: -.28px;
+  letter-spacing: -0.28px;
   line-height: 20px;
   padding: 18px 28px;
   background-color: #da2c18;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .empty-bucket .empty button:hover {
-  background-color: #bc2020;
+  background-color: rgb(188, 32, 32);
 }
-
 .empty-bucket .empty button i {
   padding-right: 8px;
 }
@@ -647,5 +435,4 @@ main section .bucket .bucket-right .order-btn .order i {
 
 .active {
   display: block;
-}
-/*# sourceMappingURL=bucket.css.map */
+}/*# sourceMappingURL=bucket.css.map */

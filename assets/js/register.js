@@ -1,4 +1,3 @@
-"use strict";
 // Search bar-----------------------------------------------------------
 const searchBtns = document.querySelector(".toggle");
 const searchInput = document.querySelector("#search-input");
@@ -16,7 +15,6 @@ searchInput.addEventListener("blur", () => {
 clearSearch.addEventListener("click", () => {
     if (searchInput.value !== "") {
         searchInput.value = "";
-        searchBtns.classList.remove("show");
     }
 });
 
@@ -25,6 +23,136 @@ searchInput.addEventListener("input", () => {
         searchBtns.classList.add("show");
     } else if (searchInput.value === "") {
         searchBtns.classList.remove("show");
+    }
+});
+
+// form ------------------------------------------------------
+const errorName = document.querySelector(".msg-name");
+const errorEmail = document.querySelector(".msg-email");
+const errorPassword = document.querySelector(".msg-password");
+const errorPasswordCheck = document.querySelector(".msg-password-check");
+const errorTerms = document.querySelector(".msg-terms");
+const usernameInput = document.querySelector("#userName");
+const emailInputForm = document.querySelector("#email");
+const passwordInput = document.querySelector("#firstPassword");
+const checkPassword = document.querySelector("#password-again");
+const register = document.querySelector(".register");
+const checkBox = document.querySelector("#agree");
+const submitBtn = document.querySelector(".submit-btn")
+const validRegex =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// error functions
+function usernameValidation() {
+    if (usernameInput.value === "") {
+        errorName.textContent = `Bu sahə tələb olunur`;
+        document.querySelector(".name").classList.add("show");
+    } else {
+        document.querySelector(".name").classList.remove("show");
+    }
+}
+
+function emailValidation() {
+    if (emailInputForm.value !== "" && !emailInputForm.value.match(validRegex)) {
+        errorEmail.textContent = `Zəhmət olmasa, etibarlı e-poçt ünvanı daxil edin`;
+        document.querySelector(".email").classList.add("show");
+    } else if (emailInputForm.value === "") {
+        errorEmail.textContent = `Bu sahə tələb olunur`;
+        document.querySelector(".email").classList.add("show");
+    } else {
+        document.querySelector(".email").classList.remove("show");
+    }
+}
+
+function passwordValidation() {
+    if (passwordInput.value.length < 8 && passwordInput.value.length > 0) {
+        errorPassword.textContent = `Şifrəniz çox qısadır`;
+        document.querySelector(".password").classList.add("show");
+    } else if (passwordInput.value.length === 0) {
+        errorPassword.textContent = `Bu sahə tələb olunur`;
+        document.querySelector(".password").classList.add("show");
+    } else {
+        document.querySelector(".password").classList.remove("show");
+    }
+}
+
+function passwordCheck() {
+    if (checkPassword.value === "") {
+        errorPasswordCheck.textContent = `Bu sahə tələb olunur`;
+        document.querySelector(".check").classList.add("show");
+    } else if (checkPassword.value !== passwordInput.value) {
+        errorPasswordCheck.textContent = `Şifrə uyğun deyil`;
+        document.querySelector(".check").classList.add("show");
+    } else {
+        document.querySelector(".check").classList.remove("show");
+    }
+}
+
+function check() {
+    if (!checkBox.checked) {
+        errorTerms.textContent = `Bu sahə tələb olunur`;
+        document.querySelector(".terms").classList.add("show");
+    } else {
+        document.querySelector(".terms").classList.remove("show");
+    }
+}
+// errors
+usernameInput.addEventListener("blur", usernameValidation);
+emailInputForm.addEventListener("blur", emailValidation);
+emailInputForm.addEventListener("input", emailValidation);
+passwordInput.addEventListener("blur", passwordValidation);
+passwordInput.addEventListener("change", passwordValidation);
+checkPassword.addEventListener("blur", passwordCheck);
+checkPassword.addEventListener("change", passwordCheck);
+checkBox.addEventListener("input", check)
+    // submit
+submitBtn.addEventListener("click", (e) => {
+    let name = usernameInput.value;
+    let email = emailInputForm.value;
+    let password = passwordInput.value;
+    if (usernameInput.value === "") {
+        usernameValidation();
+        e.preventDefault();
+    }
+    if (emailInputForm.value !== "" && !emailInputForm.value.match(validRegex)) {
+        emailValidation();
+        e.preventDefault();
+    }
+    if (emailInputForm.value === "") {
+        emailValidation();
+        e.preventDefault();
+    }
+    if (passwordInput.value.length < 8 && passwordInput.value.length > 0) {
+        passwordValidation();
+        e.preventDefault();
+    }
+    if (passwordInput.value.length === 0) {
+        passwordValidation();
+        e.preventDefault();
+    }
+    if (checkPassword.value === "") {
+        passwordCheck();
+        e.preventDefault();
+    }
+    if (checkPassword.value !== passwordInput.value) {
+        passwordCheck();
+        e.preventDefault();
+    }
+    if (!checkBox.checked) {
+        check()
+        e.preventDefault();
+    }
+    // create user
+    else {
+        fetch("http://localhost:9000/create-user", {
+                method: "POST",
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    password: password,
+                }),
+            })
+            .then((res) => res.json())
+            .then((res) => console.log(res));
     }
 });
 
@@ -75,8 +203,6 @@ basketOverlay.addEventListener("click", () => {
     body.style.overflow = "auto";
 });
 
-// show ed products-----
-
 // add to card
 const wishList = document.querySelector(".wished-products");
 const basketListEl = document.querySelector(".bucket-list");
@@ -101,85 +227,12 @@ updateWishList();
 let compareCard = JSON.parse(localStorage.getItem("COMPARE")) || [];
 updateCompare();
 
-if (likeCard.length === 0) {
-    fullWish.classList.add("hide");
-    emptyWish.classList.add("active");
-} else if (likeCard.length > 0) {
-    fullWish.classList.add("active");
-    emptyWish.classList.add("hide");
-}
-
 // update card func
 function updateCard() {
     renderBasketCardItems();
     renderSubtotal();
     // save cart to local storage
     localStorage.setItem("CARD", JSON.stringify(card));
-}
-
-// render wish
-function renderWishList() {
-    likeCard.forEach((product) => {
-        wishList.innerHTML += `
-      <div class="card-wrapper">
-              <div class="card">
-                <div class="wrap-outer">
-                  <div class="wrap-inner">
-                    <div class="img">
-                      <a href="#">
-                        <img
-                          src="${product.imgSrc}"
-                        />
-                      </a>
-                    </div>
-                    <div class="name">
-                      <a class="product-name" href="#" target="_blank">${
-                        product.name
-                      }</a>
-                    </div>
-                    <div class="prices">
-                      <div class="price-small">
-                        <del><h4>${
-                          product.prevPrice
-                        }.<sup>99</sup><span>₼</span></h4></del>
-                      </div>
-                      <div class="offer-price">
-                        <h4>${Math.trunc(
-                          product.price
-                        )}.<sup>99</sup><span>₼</span></h4>
-                      </div>
-                      <h6 class="percent">0₼.0%.12ay</h6>
-                    </div>
-                    <button class="add-to-card" onclick="addToCard(${
-                      product.id
-                    })">
-                      <i class="fa-solid fa-bag-shopping"></i>
-                      <span>Səbətə əlavə et</span>
-                    </button>
-                    <div class="hoverable">
-                      <div class="button-wrapper">
-                        <button class="heart" onclick="addToWish(${
-                          product.id
-                        })">
-                        <img class="wish ${
-                          product.id
-                        }" src="./assets/images/menu icons/heart-icon-filled.svg" alt="icon">
-                        </button>
-                        <button class="compare" onclick="addToCompare(${
-                          product.id
-                        })">
-                          <i class="fa-solid fa-scale-balanced"></i>
-                        </button>
-                        <button class="like">
-                          <i class="fa-solid fa-thumbs-up"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>`;
-    })
 }
 
 // add to wish func
@@ -192,7 +245,6 @@ function addToWish(id) {
 }
 
 function updateWishList() {
-    renderWishList();
     WishTotal();
     localStorage.setItem("WISH", JSON.stringify(likeCard));
 }
@@ -209,7 +261,6 @@ function WishTotal() {
         numberOnIconHeart.innerHTML = `${totalItems}`;
     }
 }
-
 
 function updateCompare() {
     compareTotal();
@@ -327,8 +378,6 @@ const subModal = document.querySelector(".sub-modal");
 const emailInput = document.querySelector(".email");
 const warnIcon = document.querySelector(".fa-triangle-exclamation");
 const tickIcon = document.querySelector(".fa-check");
-const validRegex =
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const mailBtn = document.querySelector(".mail-button");
 
 emailInput.addEventListener("input", () => {

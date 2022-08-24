@@ -1,0 +1,171 @@
+// vars
+$red: #da2c18;
+$grey: #d8d8d8;
+$black: #171717;
+$light-grey: #fcfcfd;
+main {
+    .container {
+        padding: 80px 0;
+        .user {
+            width: 450px;
+            border: 1px solid $grey;
+            border-radius: 10px;
+            margin: auto;
+            .box {
+                padding: 40px 0;
+                margin-left: 55px;
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    h5 {
+                        width: 328px;
+                        text-align: center;
+                        line-height: 18px;
+                        letter-spacing: -0.28px;
+                        font-size: 26px;
+                        margin-bottom: 26px;
+                    }
+                    label {
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: -0.28px;
+                        font-size: 14px;
+                        margin-bottom: 14px;
+                        span {
+                            color: red;
+                        }
+                    }
+                    input {
+                        width: 328px;
+                        height: 34px;
+                        outline: none;
+                        border: 1px solid $grey;
+                        border-radius: 5px;
+                        margin-bottom: 20px;
+                        padding: 5px;
+                        color: $black;
+                    }
+                    .remember-me {
+                        width: 328px;
+                        text-align: left;
+                        input {
+                            accent-color: $red;
+                            width: unset;
+                            height: unset;
+                            margin-bottom: unset;
+                            display: inline;
+                        }
+                        label {
+                            letter-spacing: -0.28px;
+                            font-size: 12px;
+                            display: inline;
+                            padding-bottom: 3px;
+                        }
+                    }
+                }
+                .login-page {
+                    text-decoration: none;
+                    font-size: 12px;
+                    text-align: left;
+                    padding-top: 11px;
+                    color: $black;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .btns {
+                    padding-top: 24px;
+                    width: 328px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    button {
+                        font-size: 14px;
+                        letter-spacing: -0.28px;
+                        cursor: pointer;
+                        border: none;
+                        padding: 16px 42px;
+                        border-radius: 6px;
+                        color: white;
+                    }
+                    a {
+                        font-size: 14px;
+                        letter-spacing: -0.28px;
+                        padding: 16px 42px;
+                        border-radius: 6px;
+                        color: white;
+                        text-decoration: none;
+                    }
+                    .submit-btn {
+                        background-color: $red;
+                    }
+                    .change-form {
+                        background-color: $grey;
+                        transition: 0.3s;
+                        &:hover {
+                            background-color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error {
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    width: inherit;
+    font-size: 12px;
+    margin-top: -18px;
+    margin-bottom: 15px;
+    padding-left: 3px;
+    color: $red;
+    i {
+        color: $red;
+        padding-right: 5px;
+        font-size: 12px;
+    }
+}
+
+.terms {
+    margin-top: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fa-circle-info {
+    position: relative;
+    color: $grey;
+    padding-right: 5px;
+    padding-left: 3px;
+    &:hover {
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .info {
+        color: white;
+        position: absolute;
+        width: 250px;
+        top: -25px;
+        left: -3px;
+        visibility: hidden;
+        opacity: 0;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #00000093;
+        transition: 0.4s;
+        font-size: 10px;
+    }
+}

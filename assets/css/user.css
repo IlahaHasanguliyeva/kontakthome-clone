@@ -1,77 +1,66 @@
 main .container {
   padding: 80px 0;
 }
-
 main .container .user {
-  width: 30%;
+  width: 450px;
   border: 1px solid #d8d8d8;
   border-radius: 10px;
   margin: auto;
 }
-
 main .container .user .box {
-  padding: 20px 0;
+  padding: 40px 0;
   margin-left: 55px;
 }
-
 main .container .user .box .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
 main .container .user .box .form h5 {
-  width: 80%;
+  width: 328px;
   text-align: center;
   line-height: 18px;
   letter-spacing: -0.28px;
   font-size: 26px;
   margin-bottom: 26px;
 }
-
 main .container .user .box .form label {
-  line-height: 18px;
+  display: flex;
+  align-items: center;
   letter-spacing: -0.28px;
   font-size: 14px;
   margin-bottom: 14px;
 }
-
 main .container .user .box .form label span {
   color: red;
 }
-
 main .container .user .box .form input {
-  width: 80%;
+  width: 328px;
   height: 34px;
   outline: none;
   border: 1px solid #d8d8d8;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding: 5px;
+  color: #171717;
 }
-
 main .container .user .box .form .remember-me {
-  width: 80%;
+  width: 328px;
   text-align: left;
 }
-
 main .container .user .box .form .remember-me input {
+  accent-color: #da2c18;
   width: unset;
   height: unset;
   margin-bottom: unset;
+  display: inline;
 }
-
 main .container .user .box .form .remember-me label {
   letter-spacing: -0.28px;
   font-size: 12px;
+  display: inline;
+  padding-bottom: 3px;
 }
-
 main .container .user .box .login-page {
   text-decoration: none;
   font-size: 12px;
@@ -79,55 +68,95 @@ main .container .user .box .login-page {
   padding-top: 11px;
   color: #171717;
 }
-
 main .container .user .box .login-page:hover {
   text-decoration: underline;
 }
-
 main .container .user .box .btns {
   padding-top: 24px;
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 328px;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
 main .container .user .box .btns button {
   font-size: 14px;
   letter-spacing: -0.28px;
   cursor: pointer;
   border: none;
-  padding: 14px 32px;
+  padding: 16px 42px;
   border-radius: 6px;
   color: white;
 }
-
 main .container .user .box .btns a {
+  font-size: 14px;
+  letter-spacing: -0.28px;
+  padding: 16px 42px;
+  border-radius: 6px;
   color: white;
   text-decoration: none;
 }
-
-main .container .user .box .btns .login-btn {
+main .container .user .box .btns .submit-btn {
   background-color: #da2c18;
 }
-
-main .container .user .box .btns .sign-in-btn {
+main .container .user .box .btns .change-form {
   background-color: #d8d8d8;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
-main .container .user .box .btns .sign-in-btn:hover {
+main .container .user .box .btns .change-form:hover {
   background-color: #da2c18;
 }
-/*# sourceMappingURL=loginPage.css.map */
+
+.error {
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  width: inherit;
+  font-size: 12px;
+  margin-top: -18px;
+  margin-bottom: 15px;
+  padding-left: 3px;
+  color: #da2c18;
+}
+.error i {
+  color: #da2c18;
+  padding-right: 5px;
+  font-size: 12px;
+}
+
+.terms {
+  margin-top: 0;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fa-circle-info {
+  position: relative;
+  color: #d8d8d8;
+  padding-right: 5px;
+  padding-left: 3px;
+}
+.fa-circle-info:hover .info {
+  visibility: visible;
+  opacity: 1;
+}
+.fa-circle-info .info {
+  color: white;
+  position: absolute;
+  width: 250px;
+  top: -25px;
+  left: -3px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+  transition: 0.4s;
+  font-size: 10px;
+}/*# sourceMappingURL=user.css.map */
