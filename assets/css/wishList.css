@@ -6,19 +6,6 @@
 }
 .wished-products .card-wrapper {
   width: 25%;
-  display: none;
-}
-.wished-products .card-wrapper:nth-child(1) {
-  display: inline-block;
-}
-.wished-products .card-wrapper:nth-child(2) {
-  display: inline-block;
-}
-.wished-products .card-wrapper:nth-child(3) {
-  display: inline-block;
-}
-.wished-products .card-wrapper:nth-child(4) {
-  display: inline-block;
 }
 .wished-products .card-wrapper .card {
   border: 1px solid #d8d8d8;
@@ -219,7 +206,6 @@
   font-size: 22px;
   color: gray;
 }
-
-.empty-wish {
+.wished-products .empty-wish {
   padding: 46px;
 }/*# sourceMappingURL=wishList.css.map */

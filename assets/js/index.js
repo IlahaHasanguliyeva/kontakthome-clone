@@ -226,14 +226,6 @@ function renderSaleProducts() {
               </div>
             </div>`;
     });
-
-    // const wishBtn = document.querySelector(".wish");
-    // wishBtn.addEventListener("toggle", () => {
-    //   wishBtn.setAttribute(
-    //     "src",
-    //     "./assets/images/menu icons/heart-icon-filled.svg"
-    //   );
-    // });
 }
 
 renderSaleProducts();

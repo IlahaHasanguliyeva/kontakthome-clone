@@ -138,11 +138,6 @@ function renderWishList() {
                       }</a>
                     </div>
                     <div class="prices">
-                      <div class="price-small">
-                        <del><h4>${
-                          product.prevPrice
-                        }.<sup>99</sup><span>₼</span></h4></del>
-                      </div>
                       <div class="offer-price">
                         <h4>${Math.trunc(
                           product.price

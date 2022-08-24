@@ -1,0 +1,83 @@
+.head .container {
+  padding-bottom: 11px;
+}
+
+main .advertisement {
+  padding-bottom: 15px;
+}
+main .advertisement img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .products-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .products-filter .left {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+}
+main .products-filter .left .filter {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d8d8d8;
+}
+main .products-filter .left .filter button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  height: 46px;
+  background-color: transparent;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 16px;
+}
+main .products-filter .left .filter button i {
+  padding: 0 46px;
+}
+main .products-filter .left .filter button .fa-circle-info {
+  font-size: 12px;
+}
+main .products-filter .left .filter .ul-wrapper {
+  width: 100%;
+}
+main .products-filter .left .filter .ul-wrapper ul {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+main .products-filter .left .filter .ul-wrapper ul li {
+  padding-left: 36px;
+  padding-bottom: 11px;
+  font-size: 14px;
+}
+main .products-filter .right {
+  width: 75%;
+}
+main .products-filter .right .product-list-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d8d8d8;
+  padding: 14px;
+}
+main .products-filter .right .product-list-header h4 {
+  font-size: 16px;
+}
+main .products-filter .right .product-list-header .btns button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding-right: 11px;
+}
+main .products-filter .right .product-list-header .btns button i {
+  font-size: 13px;
+  padding-left: 5px;
+}/*# sourceMappingURL=smartPhones.css.map */

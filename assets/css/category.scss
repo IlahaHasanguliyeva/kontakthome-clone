@@ -3,7 +3,8 @@
     $grey: #d8d8d8;
     $black: #171717;
     $light-grey: #fcfcfd;
-    section {
+    .head {
+        padding: 0;
         .heading {
             margin-top: 20px;
             border: 1px solid $grey;
@@ -69,8 +70,9 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 .img {
-                    width: 290px;
+                    width: 90%;
                     height: 159px;
+                    margin: auto;
                     margin-bottom: 50px;
                     img {
                         height: 100%;
@@ -153,6 +155,8 @@
     
     // smartphones
     section {
+        padding-bottom: 70px;
+        border: none;
         .sub-heading {
             display: flex;
             flex-direction: row;

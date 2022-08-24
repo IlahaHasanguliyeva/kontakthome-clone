@@ -1,237 +1,223 @@
-// vars
-$red: #da2c18;
-$grey: #d8d8d8;
-$black: #171717;
-$light-grey: #fcfcfd;
-// 
-.wished-products {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    .card-wrapper {
-        width: 25%;
-        display: none;
-        &:nth-child(1) {
-            display: inline-block;
-        }
-        &:nth-child(2) {
-            display: inline-block;
-        }
-        &:nth-child(3) {
-            display: inline-block;
-        }
-        &:nth-child(4) {
-            display: inline-block;
-        }
-        .card {
-            border: 1px solid $grey;
-            border-radius: 10px;
-            margin-top: 10px;
-            margin-right: 10px;
-            position: relative;
-            &:hover {
-                .wrap-outer {
-                    .wrap-inner {
-                        img {
-                            width: 90% !important;
-                        }
-                        .prices {
-                            display: flex;
-                        }
-                        .add-to-card {
-                            background-color: $red;
-                            margin-bottom: 26px;
-                            i,
-                            span {
-                                color: white;
+        // vars
+        $red: #da2c18;
+        $grey: #d8d8d8;
+        $black: #171717;
+        $light-grey: #fcfcfd;
+        // 
+        .wished-products {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            .card-wrapper {
+                width: 25%;
+                .card {
+                    border: 1px solid $grey;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                    position: relative;
+                    &:hover {
+                        .wrap-outer {
+                            .wrap-inner {
+                                img {
+                                    width: 90% !important;
+                                }
+                                .prices {
+                                    display: flex;
+                                }
+                                .add-to-card {
+                                    background-color: $red;
+                                    margin-bottom: 26px;
+                                    i,
+                                    span {
+                                        color: white;
+                                    }
+                                }
+                                .hoverable {
+                                    display: block;
+                                    opacity: 1;
+                                }
                             }
                         }
-                        .hoverable {
-                            display: block;
-                            opacity: 1;
-                        }
                     }
-                }
-            }
-            .wrap-outer {
-                padding: 15px 20px 20px;
-                .wrap-inner {
-                    display: flex;
-                    flex-direction: column;
-                    height: 484px;
-                    .img {
-                        transition: 0.1s;
-                        max-width: 100%;
-                        width: 90%;
-                        flex-grow: 1;
-                        margin: 0 auto;
-                        a {
+                    .wrap-outer {
+                        padding: 15px 20px 20px;
+                        .wrap-inner {
                             display: flex;
-                            img {
+                            flex-direction: column;
+                            height: 484px;
+                            .img {
                                 transition: 0.1s;
-                                height: 100%;
-                                width: 100%;
-                                padding: 50px 0 0;
-                                object-fit: contain;
+                                max-width: 100%;
+                                width: 90%;
+                                flex-grow: 1;
+                                margin: 0 auto;
+                                a {
+                                    display: flex;
+                                    img {
+                                        transition: 0.1s;
+                                        height: 100%;
+                                        width: 100%;
+                                        padding: 50px 0 0;
+                                        object-fit: contain;
+                                    }
+                                }
                             }
-                        }
-                    }
-                    .name {
-                        transition: 0.1s;
-                        margin-left: 8px;
-                        margin-bottom: 11px;
-                        .product-name {
-                            height: 40px;
-                            text-decoration: none;
-                            font-size: 14px;
-                            line-height: 18px;
-                            letter-spacing: -0.28px;
-                            font-weight: 500;
-                            color: $black;
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                    .prices {
-                        transition: 0.1s;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: flex-start;
-                        // flex-grow: 1;
-                        padding-left: 8px;
-                        margin-bottom: 15px;
-                        .percent {
-                            margin-top: 5px;
-                            padding: 2px 5px;
-                            width: fit-content;
-                            height: 16px;
-                            background-color: $grey;
-                            border-radius: 5px;
-                        }
-                        .price-small {
-                            transition: 0.1s;
-                            h4 {
-                                margin-bottom: -10px;
-                                font-size: 14px;
-                                font-weight: 700;
-                                line-height: 24px;
-                                letter-spacing: -0.36px;
-                                color: $black;
-                                sup {
-                                    font-weight: 700;
-                                    line-height: 24px;
-                                    letter-spacing: -0.36px;
+                            .name {
+                                transition: 0.1s;
+                                margin-left: 8px;
+                                margin-bottom: 11px;
+                                .product-name {
+                                    height: 40px;
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    letter-spacing: -0.28px;
+                                    font-weight: 500;
                                     color: $black;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                            .prices {
+                                transition: 0.1s;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-start;
+                                // flex-grow: 1;
+                                padding-left: 8px;
+                                margin-bottom: 15px;
+                                .percent {
+                                    margin-top: 5px;
+                                    padding: 2px 5px;
+                                    width: fit-content;
+                                    height: 16px;
+                                    background-color: $grey;
+                                    border-radius: 5px;
+                                }
+                                .price-small {
+                                    transition: 0.1s;
+                                    h4 {
+                                        margin-bottom: -10px;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        line-height: 24px;
+                                        letter-spacing: -0.36px;
+                                        color: $black;
+                                        sup {
+                                            font-weight: 700;
+                                            line-height: 24px;
+                                            letter-spacing: -0.36px;
+                                            color: $black;
+                                        }
+                                        span {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                                .offer-price {
+                                    transition: 0.1s;
+                                    h4 {
+                                        font-weight: 700;
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        letter-spacing: -0.36px;
+                                        color: $red;
+                                    }
+                                    sup {
+                                        font-weight: 700;
+                                        color: $red;
+                                    }
+                                    span {
+                                        font-size: 18px;
+                                        color: $black;
+                                    }
+                                }
+                            }
+                            .add-to-card {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: transparent;
+                                border: 1px solid $grey;
+                                border-radius: 10px;
+                                width: 100%;
+                                height: 55px;
+                                min-height: 55px;
+                                cursor: pointer;
+                                transition: 0.1s;
+                                i {
+                                    font-size: 18px;
+                                    color: gray;
+                                    margin-right: 13px;
                                 }
                                 span {
-                                    font-size: 14px;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    line-height: 17px;
+                                    color: $black;
                                 }
                             }
-                        }
-                        .offer-price {
-                            transition: 0.1s;
-                            h4 {
-                                font-weight: 700;
-                                font-size: 18px;
-                                line-height: 24px;
-                                letter-spacing: -0.36px;
-                                color: $red;
-                            }
-                            sup {
-                                font-weight: 700;
-                                color: $red;
-                            }
-                            span {
-                                font-size: 18px;
-                                color: $black;
-                            }
-                        }
-                    }
-                    .add-to-card {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: transparent;
-                        border: 1px solid $grey;
-                        border-radius: 10px;
-                        width: 100%;
-                        height: 55px;
-                        min-height: 55px;
-                        cursor: pointer;
-                        transition: 0.1s;
-                        i {
-                            font-size: 18px;
-                            color: gray;
-                            margin-right: 13px;
-                        }
-                        span {
-                            font-size: 12px;
-                            font-weight: 500;
-                            line-height: 17px;
-                            color: $black;
-                        }
-                    }
-                    .hoverable {
-                        opacity: 0;
-                        width: 100.6%;
-                        position: absolute;
-                        z-index: 80;
-                        display: none;
-                        bottom: -120px;
-                        left: -1px;
-                        border: 1px solid $grey;
-                        border-bottom-left-radius: 10px;
-                        border-bottom-right-radius: 10px;
-                        background-color: white;
-                        border-top: none;
-                        transition: 0.1s;
-                        .button-wrapper {
-                            transition: 0.1s;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            // padding-left: 23px;
-                            // padding-right: 24px;
-                            padding-top: 26px;
-                            padding-bottom: 75px;
-                            .heart {
-                                border: 2px solid $grey;
-                                border-top-left-radius: 10px;
+                            .hoverable {
+                                opacity: 0;
+                                width: 100.6%;
+                                position: absolute;
+                                z-index: 80;
+                                display: none;
+                                bottom: -120px;
+                                left: -1px;
+                                border: 1px solid $grey;
                                 border-bottom-left-radius: 10px;
-                                border-right: none;
-                            }
-                            .compare {
-                                border: 2px solid $grey;
-                            }
-                            .like {
-                                border: 2px solid $grey;
-                                border-top-right-radius: 10px;
                                 border-bottom-right-radius: 10px;
-                                border-left: none;
-                            }
-                            button {
-                                background-color: transparent;
-                                cursor: pointer;
-                                width: 30%;
-                                height: 45px;
-                                i {
-                                    font-size: 22px;
-                                    color: gray;
+                                background-color: white;
+                                border-top: none;
+                                transition: 0.1s;
+                                .button-wrapper {
+                                    transition: 0.1s;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    // padding-left: 23px;
+                                    // padding-right: 24px;
+                                    padding-top: 26px;
+                                    padding-bottom: 75px;
+                                    .heart {
+                                        border: 2px solid $grey;
+                                        border-top-left-radius: 10px;
+                                        border-bottom-left-radius: 10px;
+                                        border-right: none;
+                                    }
+                                    .compare {
+                                        border: 2px solid $grey;
+                                    }
+                                    .like {
+                                        border: 2px solid $grey;
+                                        border-top-right-radius: 10px;
+                                        border-bottom-right-radius: 10px;
+                                        border-left: none;
+                                    }
+                                    button {
+                                        background-color: transparent;
+                                        cursor: pointer;
+                                        width: 30%;
+                                        height: 45px;
+                                        i {
+                                            font-size: 22px;
+                                            color: gray;
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+            .empty-wish {
+                padding: 46px;
+            }
         }
-    }
-}
-
-.empty-wish {
-    padding: 46px;
-}

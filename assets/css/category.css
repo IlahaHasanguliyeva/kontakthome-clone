@@ -1,9 +1,12 @@
-section .heading {
+.head {
+  padding: 0;
+}
+.head .heading {
   margin-top: 20px;
   border: 1px solid #d8d8d8;
   border-radius: 10px;
 }
-section .heading h1 {
+.head .heading h1 {
   padding: 20px 30px;
   border-bottom: 1px solid #d8d8d8;
   font-size: 48px;
@@ -12,29 +15,29 @@ section .heading h1 {
   color: #171717;
   line-height: 40px;
 }
-section .heading .route {
+.head .heading .route {
   padding: 23px 30px 22px;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 12px;
 }
-section .heading .route #home {
+.head .heading .route #home {
   transition: 0.3s;
   font-size: 12px;
 }
-section .heading .route #home:hover {
+.head .heading .route #home:hover {
   color: #d8d8d8;
 }
-section .heading .route a {
+.head .heading .route a {
   padding-right: 8px;
   color: gray;
   text-decoration: none;
 }
-section .heading .route a:hover {
+.head .heading .route a:hover {
   text-decoration: underline;
 }
-section .heading .route i {
+.head .heading .route i {
   padding-right: 8px;
   color: gray;
   font-size: 6px;
@@ -62,8 +65,9 @@ section .category-cards .card {
   justify-content: flex-end;
 }
 section .category-cards .card .img {
-  width: 290px;
+  width: 90%;
   height: 159px;
+  margin: auto;
   margin-bottom: 50px;
 }
 section .category-cards .card .img img {
@@ -140,6 +144,10 @@ section .category-cards .card .sub-category-name .bubble:after {
   left: 33px;
 }
 
+section {
+  padding-bottom: 70px;
+  border: none;
+}
 section .sub-heading {
   display: flex;
   flex-direction: row;

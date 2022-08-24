@@ -74,12 +74,13 @@ basketOverlay.addEventListener("click", () => {
 // products-----------
 
 const firstCards = document.querySelector(".first-card");
+const secondCards = document.querySelector(".second-card");
 const basketCardsEl = document.querySelector(".full-basket");
 const totalItemsEl = document.querySelector(".number-products");
 const totalPriceEl = document.querySelector("#total-price");
 const numberOnIcon = document.querySelector(".number-of-items");
 
-// render products
+// render phones
 function renderPhoneFirst() {
     xiaomi.forEach((product) => {
         firstCards.innerHTML += `
@@ -105,6 +106,7 @@ function renderPhoneFirst() {
                             product.price
                           )}.<sup>99</sup><span>₼</span></h4>
                         </div>
+                        <h6 class="percent">0₼.0%.12ay</h6>
                       </div>
                       <button class="add-to-card" onclick="addToCard(${
                         product.id
@@ -114,10 +116,16 @@ function renderPhoneFirst() {
                       </button>
                       <div class="hoverable">
                         <div class="button-wrapper">
-                          <button class="heart">
-                            <i class="fa-solid fa-heart"></i>
+                          <button class="heart" onclick="addToWish(${
+                            product.id
+                          })">
+                          <img class="wish ${
+                            product.id
+                          }" src="./assets/images/menu icons/heart-icon.svg" alt="icon">
                           </button>
-                          <button class="compare">
+                          <button class="compare" onclick="addToCompare(${
+                            product.id
+                          })">
                             <i class="fa-solid fa-scale-balanced"></i>
                           </button>
                           <button class="like">
@@ -133,6 +141,68 @@ function renderPhoneFirst() {
 }
 
 renderPhoneFirst();
+
+// render tablets
+function renderTablets() {
+    tablets.forEach((product) => {
+        secondCards.innerHTML += `
+      <div class="card-wrapper">
+              <div class="card">
+                <div class="wrap-outer">
+                  <div class="wrap-inner">
+                    <div class="img">
+                      <a href="#">
+                        <img
+                          src="${product.imgSrc}"
+                        />
+                      </a>
+                    </div>
+                    <div class="name">
+                      <a class="product-name" href="#" target="_blank">${
+                        product.name
+                      }</a>
+                    </div>
+                    <div class="prices">
+                      <div class="offer-price">
+                        <h4>${Math.trunc(
+                          product.price
+                        )}.<sup>99</sup><span>₼</span></h4>
+                      </div>
+                      <h6 class="percent">0₼.0%.12ay</h6>
+                    </div>
+                    <button class="add-to-card" onclick="addToCard(${
+                      product.id
+                    })">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      <span>Səbətə əlavə et</span>
+                    </button>
+                    <div class="hoverable">
+                      <div class="button-wrapper">
+                        <button class="heart" onclick="addToWishTablets(${
+                          product.id
+                        })">
+                        <img class="wish ${
+                          product.id
+                        }" src="./assets/images/menu icons/heart-icon.svg" alt="icon">
+                        </button>
+                        <button class="compare" onclick="addToCompareTablets(${
+                          product.id
+                        })">
+                          <i class="fa-solid fa-scale-balanced"></i>
+                        </button>
+                        <button class="like">
+                          <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+    });
+}
+
+renderTablets()
 
 // item card
 let card = JSON.parse(localStorage.getItem("CARD")) || [];
@@ -243,7 +313,7 @@ function renderSubtotal() {
     }
 }
 
-// add to card
+// add to wishlist and compare
 const wishList = document.querySelector(".wished-products");
 const basketListEl = document.querySelector(".bucket-list");
 const numberOnIconHeart = document.querySelector(".number-of-items-heart");
@@ -273,6 +343,26 @@ function addToWish(id) {
     // check if product already exist in card
     if (likeCard.some((item) => item.id === id)) {
         likeCard = likeCard.filter((item) => item.id !== id);
+    } else {
+        const item = xiaomi.find((product) => product.id === id);
+        likeCard.push({
+            ...item,
+            numberOfUnits: 1,
+        });
+    }
+    updateWishList();
+}
+
+function addToWishTablets(id) {
+    // check if product already exist in card
+    if (likeCard.some((item) => item.id === id)) {
+        likeCard = likeCard.filter((item) => item.id !== id);
+    } else {
+        const item = tablets.find((product) => product.id === id);
+        likeCard.push({
+            ...item,
+            numberOfUnits: 1,
+        });
     }
     updateWishList();
 }
@@ -281,7 +371,6 @@ function updateWishList() {
     WishTotal();
     localStorage.setItem("WISH", JSON.stringify(likeCard));
 }
-
 
 function WishTotal() {
     let totalItems = 0;
@@ -295,6 +384,35 @@ function WishTotal() {
     }
 }
 
+// add to compare func
+
+function addToCompare(id) {
+    if (compareCard.some((item) => item.id === id)) {
+        compareCard = compareCard.filter((item) => item.id !== id);
+    } else {
+        const item = xiaomi.find((product) => product.id === id);
+        compareCard.push({
+            ...item,
+            numberOfUnits: 1,
+        });
+    }
+
+    updateCompare();
+}
+
+function addToCompareTablets(id) {
+    if (compareCard.some((item) => item.id === id)) {
+        compareCard = compareCard.filter((item) => item.id !== id);
+    } else {
+        const item = tablets.find((product) => product.id === id);
+        compareCard.push({
+            ...item,
+            numberOfUnits: 1,
+        });
+    }
+
+    updateCompare();
+}
 
 function updateCompare() {
     compareTotal();
@@ -398,9 +516,10 @@ function removeItemFromCart(id) {
 // load more btn-----------------------------------------
 
 let loadMoreBtn = document.querySelector(".load-more");
-let currentItem = 4;
+let loadMore = document.querySelector(".load-more-btn");
 
 loadMoreBtn.onclick = () => {
+    let currentItem = 4;
     let boxes = [...document.querySelectorAll(".first-card .card-wrapper")];
 
     for (let i = currentItem; i < currentItem + 4; i++) {
@@ -409,8 +528,23 @@ loadMoreBtn.onclick = () => {
 
     currentItem += 4;
 
-    if (currentItem >= boxes.length) {
+    if (currentItem <= boxes.length) {
         loadMoreBtn.style.display = "none";
+    }
+};
+
+loadMore.onclick = () => {
+    let currentItem = 4;
+    let boxes = [...document.querySelectorAll(".second-card .card-wrapper")];
+
+    for (let i = currentItem; i < currentItem + 4; i++) {
+        boxes[i].style.display = "inline-block";
+    }
+
+    currentItem += 4;
+
+    if (currentItem >= boxes.length) {
+        loadMore.style.display = "none";
     }
 };
 
