@@ -30,7 +30,7 @@
 <body>
     <!-- header ------------------------->
     <header>
-        <div class="navigation">
+        <div class="navigation pc">
             <div class="container">
                 <nav>
                     <!-- logo --------------------------------------------------- -->
@@ -136,7 +136,7 @@
                         <div class="sub-category-box">
                             <ul class="sub-category-wrap">
                                 <li class="sub-category">
-                                    <a href="./phonesCategory.html" target="_blank">
+                                    <a href="./smartPhones.html" target="_blank">
                                         <span>Smartfonlar</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
@@ -1646,7 +1646,6 @@
         // introSwiper-------------------------
         var swiperFirst = new Swiper(".mySwiperFirst", {
             loop: true,
-            slidesPerView: 2,
             spaceBetween: 10,
             autoplay: {
                 delay: 3000,
@@ -1659,16 +1658,32 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            breakpoints: {
+                520: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                }
+            }
         });
         // partnersSwiper-------------------------------
         var swiper = new Swiper(".mySwiper", {
             loop: true,
-            slidesPerView: 4,
             spaceBetween: 30,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            breakpoints: {
+                520: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 4,
+                }
+            }
         });
     </script>
 </body>

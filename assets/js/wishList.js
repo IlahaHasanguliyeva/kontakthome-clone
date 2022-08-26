@@ -153,7 +153,7 @@ function renderWishList() {
                     </button>
                     <div class="hoverable">
                       <div class="button-wrapper">
-                        <button class="heart" onclick="addToWish(${
+                        <button class="heart" onclick="removeFromWish(${
                           product.id
                         })">
                         <img class="wish ${
@@ -178,11 +178,8 @@ function renderWishList() {
 }
 
 // add to wish func
-function addToWish(id) {
-    // check if product already exist in card
-    if (likeCard.some((item) => item.id === id)) {
-        likeCard = likeCard.filter((item) => item.id !== id);
-    }
+function removeFromWish(id) {
+    likeCard = likeCard.filter((item) => item.id !== id);
     updateWishList();
 }
 

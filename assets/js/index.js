@@ -335,8 +335,7 @@ function updateCard() {
 function renderBasketCardItems() {
     basketCardsEl.innerHTML = "";
     card.forEach((item) => {
-        basketCardsEl.innerHTML += `
-    
+        basketCardsEl.innerHTML += `   
     <div class="basket-card">
     <button class="remove-card" onclick="removeItemFromCart(${
       item.id

@@ -2,20 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"></meta>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt Home</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-
     <!-- styles -->
-
+    <link rel="stylesheet" href="./assets/css/singleProduct.css"></link>
+    <link rel="stylesheet" href="./assets/css/bucket.css"></link>
     <link rel="stylesheet" href="./assets/css/index.css"></link>
 
-    <link rel="stylesheet" href="./assets/css/bucket.css"></link>
+    <!-- Link Swiper's CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"></link>
 
     <!-- icons -->
 
@@ -27,7 +26,7 @@
 </head>
 
 <body>
-    <!-- header ---------------------->
+    <!-- header ------------------------->
     <header>
         <div class="navigation">
             <div class="container">
@@ -135,7 +134,7 @@
                         <div class="sub-category-box">
                             <ul class="sub-category-wrap">
                                 <li class="sub-category">
-                                    <a href="./phonesCategory.html" target="_blank">
+                                    <a href="./smartPhones.html" target="_blank">
                                         <span>Smartfonlar</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
@@ -716,9 +715,7 @@
 
                                 <li class="sub-category">
                                     <a href="./phonesCategory.html" target="_blank">
-                                        <span>
-                      Ev üçün kiçik məişət texnikası
-                    </span>
+                                        <span>Ev üçün kiçik məişət texnikası</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
@@ -726,9 +723,7 @@
 
                                 <li class="sub-category">
                                     <a href="./phonesCategory.html" target="_blank">
-                                        <span>
-                      Mətbəx üçün kiçik məişət texnikası
-                    </span>
+                                        <span>Mətbəx üçün kiçik məişət texnikası</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
@@ -736,9 +731,7 @@
 
                                 <li class="sub-category">
                                     <a href="./phonesCategory.html" target="_blank">
-                                        <span>
-                      Mətbəx üçün quraşdırılmış texnikası
-                    </span>
+                                        <span>Mətbəx üçün quraşdırılmış texnikası</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
@@ -802,9 +795,7 @@
 
                                 <li class="sub-category">
                                     <a href="./phonesCategory.html" target="_blank">
-                                        <span>
-                      Musiqi alətləri və avadanlıqları
-                    </span>
+                                        <span>Musiqi alətləri və avadanlıqları</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
@@ -1032,6 +1023,44 @@
             </div>
         </div>
 
+        <!-- basket -->
+
+        <div class="basket-modal">
+            <div id="basket-modal" class="overlay"></div>
+
+            <div class="basket-content">
+                <div class="full-basket"></div>
+
+                <div class="order-btns">
+                    <div class="number-price">
+                        <div class="products-count">
+                            <span class="number-products"></span>
+
+                            <span>Məhsul</span>
+                        </div>
+
+                        <div class="total-price">
+                            <span>məbləğ:</span>
+
+                            <h3 id="total-price">₼</h3>
+                        </div>
+                    </div>
+
+                    <div class="basket-btns">
+                        <a href="./bucket.html" target="_blank" class="go-basket-page">
+                            <i class="fa-solid fa-bag-shopping"></i> Səbət
+                        </a>
+
+                        <a href="./official.html" target="_blank" class="order">
+                            <span>Sifarişi rəsimləşdir</span>
+
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ------------------------------------ -->
 
         <div class="container">
@@ -1042,289 +1071,102 @@
 
                 <i class="fa-solid fa-angle-right"></i>
 
-                <a href="#">Səbət</a>
+                <a href="#">Telefonlar və Planşetlər</a>
+                <i class="fa-solid fa-angle-right"></i>
+
+                <a href="#">Smartfonlar</a>
+                <i class="fa-solid fa-angle-right"></i>
+
+                <a href="#">product name</a>
             </div>
 
             <div class="sub-heading">
-                <h2>Səbət</h2>
+                <h2 class="product-name">product name</h2>
             </div>
         </div>
 
-        <!-- ---------------------------------- -->
-        <section class="bucket-products">
+        <section>
             <div class="container">
-                <div class="bucket">
-                    <div class="bucket-left">
-                        <div class="add-to-card-list">
-                            <div class="remove-all">
-                                <button>
-                  Hamısını sil
-
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-                            </div>
-
-                            <div class="bucket-list">
-                                <!-- cards  -->
-                            </div>
+                <div class="product-header">
+                    <div class="first-part">
+                        <div class="in-stock">
+                            <i class="fa-solid fa-check"></i>
+                            <h3>Məhsul mövcuddur</h3>
+                        </div>
+                        <div class="product-code">
+                            <h5>Məhsul kodu:</h5>
+                            <h5 class="code">TM-DG-SBP-1105-SM-1698</h5>
                         </div>
                     </div>
-
-                    <div class="bucket-right">
-                        <div class="total-prices">
-                            <h3>
-                                Məhsullar:
-
-                                <span class="total-items"></span>
-                            </h3>
-
-                            <div class="name-price-wrapper">
-                                <div class="list"></div>
-                            </div>
-
-                            <div class="total">
-                                <!-- <div class="discount">
-                    <h5>Endirim:</h5>
-                    <span>888₼</span>
-                  </div> -->
-
-                                <a class="order">
-                                    <span>Ödəniləcək məbləğ</span>
-
-                                    <span id="total-price">888₼</span>
-                                </a>
-                            </div>
+                    <div class="product-header-btns">
+                        <div class="video-advice">
+                            <button>
+                                <i class="fa-solid fa-video"></i>
+                                <span>Canlı Video Məsləhətçi</span>
+                            </button>
+                        </div>
+                        <div class="heart-btn">
+                            <button><i class="fa-solid fa-heart"></i></button>
                         </div>
 
-                        <div class="order-btn">
-                            <a href="#" class="order">
-                                <span>Sifarişi rəsimləşdir</span>
-
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
+                        <div class="compare-btn">
+                            <button><i class="fa-solid fa-scale-balanced"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cargo">
+                    <span>faizsiz</span>
+                    <h4>pulsuz çatdırılma</h4>
+                </div>
+                <div class="product-details">
+                    <div class="product-images">
+                        <div class="img-btns">
+                            <img class="img-small" src="./assets/images/phones id/iPhone-13-mini-Green-2_png.webp" alt="product">
+                            <img class="img-small" src="./assets/images/phones id/iPhone-13-mini-Green-3_png.webp" alt="product">
+                            <img class="img-small" src="./assets/images/phones id/iPhone-13-mini-Green-4_png.webp" alt="product">
+                        </div>
+                        <div class="big-img">
+                            <img class="img-big" src="./assets/images/phones id/iPhone-13-mini-Green-2_png.webp" alt="product">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">
+                            iPhone 13 mini 256 GB Green</h3>
+                        <div class="payment-methods">
+                            <div class="payment-type">
+                                <img src="./assets/images/payment-icons/kart.png" alt="payment">
+                            </div>
+                            <div class="payment-type">
+                                <img src="./assets/images/payment-icons/online.png" alt="payment">
+                            </div>
+                            <div class="payment-type">
+                                <img src="./assets/images/payment-icons/qapida.png" alt="payment">
+                            </div>
+                            <div class="payment-type">
+                                <img src="./assets/images/payment-icons/taksit_az.png" alt="payment">
+                            </div>
+                        </div>
+                        <div class="price"><span>Qiymət</span>
+                            <h3>2189.99<span>₼</span></h3>
+                        </div>
+                        <div class="credit-title">
+                            <h4>Kredit Kalkulyatoru</h4>
+                            <div class="advert">
+                                <img src="./assets/images/payment-icons/birkart.webp" alt="bir kart">
+                                <h5>18 ay 24.45 <span>₼dan</span></h5>
+                            </div>
+                        </div>
+                        <div class="credit">
+                            <div class="calculator">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="empty-bucket">
-            <div class="empty">
-                <img src="./assets/images/images/Screenshot_2.png" alt="empty bucket">
-
-                <h3>Səbətiniz boşdur!</h3>
-
-                <p>
-                    Bəyəndiyiniz məhsulları səbətə əlavə edin
-                </p>
-
-                <button class="catalogue">
-          <i class="fa-solid fa-bars"></i>
-          Məhsul kataloqu
-        </button>
-            </div>
-        </section>
     </main>
-    <!-- footer ---------------------->
-    <footer>
-        <div class="footer-content">
-            <div class="container">
-                <!-- scroll to Top--------------------------- -->
-
-                <div class="scroll-top">
-                    <div class="scroll-button">
-                        <button class="to-top">
-            <i class="fa-solid fa-arrow-up"></i>
-          </button>
-
-                        <h3>Yuxarı</h3>
-                    </div>
-                </div>
-
-                <div class="further-info">
-                    <!-- melumat ----------------------------------- -->
-
-                    <div class="info box">
-                        <h3>Məlumat</h3>
-
-                        <a href="">Tez-tez verilən suallar</a>
-
-                        <a href="">Saytın istifadə şərtləri</a>
-
-                        <a href="">Kontakt TV</a>
-                    </div>
-
-                    <!-- sirketler --------------------------------- -->
-
-                    <div class="companies box">
-                        <h3>Şirkətlər</h3>
-
-                        <a href="">Şirkət haqqında</a>
-
-                        <a href="">Şirkətin xəbərləri</a>
-
-                        <a href="">Mağazalarımız</a>
-
-                        <a href="">Xidmətlər</a>
-
-                        <a href="">Vakansiyalar</a>
-
-                        <a href="">Konfidensiallıq siyasəti</a>
-                    </div>
-
-                    <!-- istifadeciler ucun ------------------------- -->
-
-                    <div class="for-customers box">
-                        <h3>Müştərilər üçün</h3>
-
-                        <a href="">Çatdırıma və ödəniş</a>
-
-                        <a href="">Geri qaytarma siyasəti</a>
-
-                        <a href="">Zəmanət</a>
-
-                        <a href="">
-            Hissə-hissə ödənişinə dair tələblər
-          </a>
-
-                        <a href="">
-            Aylıq ödənişlərin həyata keçirilməsi üsülları
-          </a>
-
-                        <a href="">Aylıq ödənişlərin üsulları</a>
-                    </div>
-
-                    <!-- elaqe ---------------------------------------- -->
-
-                    <div class="contact box">
-                        <h3>Əlaqə</h3>
-
-                        <a href="tel:*6060" id="tel">*6060</a>
-
-                        <a href="">Biz xəritədə</a>
-                    </div>
-                </div>
-
-                <!-- socials--------------------------------- -->
-
-                <div class="socials">
-                    <!-- --------------------- -->
-
-                    <div class="left">
-                        <label for="">Abunə olun:</label>
-
-                        <div class="subs">
-                            <div class="email-input">
-                                <input id="subscribe-input" class="email" type="email" placeholder="E-mail"></input>
-
-                                <i class="fa-solid fa-triangle-exclamation"></i>
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-
-                            <button class="mail-button">Abunə olmaq</button>
-                        </div>
-                    </div>
-
-                    <div class="right">
-                        <h3>Biz sosial şəbəkələrdə:</h3>
-
-                        <ul class="social-logos">
-                            <li>
-                                <a href="https://www.facebook.com/Kontakthome" target="_blank">
-                                    <img src="./assets/images/logos/socials/fb.svg" alt="socials">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.youtube.com/c/KontaktHome-TV" target="_blank">
-                                    <img src="./assets/images/logos/socials/yt.svg" alt="socials">
-                                </a>
-                            </li>
-
-                            <li class="instagram">
-                                <div class="insta-popup">
-                                    <span>@Kontakt_Home</span>
-
-                                    <p>@Kontakt Home Mebel</p>
-                                </div>
-
-                                <img src="./assets/images/logos/socials/inst.svg" alt="socials">
-                            </li>
-
-                            <li>
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <img src="./assets/images/logos/socials/linkedin.svg" alt="socials">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://api.whatsapp.com/send/?phone=994508286060&text&app_absent=0" target="_blank">
-                                    <img src="./assets/images/logos/socials/whatsapp.png" alt="socials">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://t.me/kontakt_az" target="_blank">
-                                    <img src="./assets/images/logos/socials/telegram.svg" alt="socials">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.tiktok.com/@kontakt_home?is_from_webapp=1&sender_device=pc" target="_blank">
-                                    <img src="./assets/images/logos/socials/tiktok.png" alt="socials">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://twitter.com/KontakHome" target="_blank">
-                                    <img src="./assets/images/logos/socials//twitter.svg" alt="socials">
-                                </a>
-                            </li>
-                        </ul>
-
-                        <h3>Ödəniş sistemləri</h3>
-
-                        <ul class="payment-logos">
-                            <li>
-                                <img src="./assets/images/logos/socials/visa_icon.png" alt="payment method">
-                            </li>
-
-                            <li>
-                                <img src="./assets/images/logos/socials/mc.svg" alt="payment method">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h5>
-                    © Оnlayn - mağaza Kontakt Home - 2014 - 2021
-                </h5>
-            </div>
-        </div>
-
-        <!-- subscriber modal ---- -->
-
-        <div class="sub-modal">
-            <div id="mail-overlay" class="overlay"></div>
-
-            <div class="subscriber-modal">
-                <span>
-        <img
-          src="./assets/images/images/smile.svg"
-          alt="smiley face"
-        >
-      </span>
-
-                <h4>
-                    Siz uğurla abunə oldunuz.
-
-                    <br> Təşəkkür edirik!
-                </h4>
-            </div>
-        </div>
-    </footer>
-    <script src="./assets/js/products.js"></script>
-    <script src="./assets/js/bucket.js"></script>
+    <script src="./assets/js/singleProduct.js"></script>
 </body>
 
 </html>
