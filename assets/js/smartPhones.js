@@ -12,6 +12,7 @@ for (let i = 0; i < filters.length; i++) {
 
 
 const productWrapper = document.querySelector(".product-wrapper");
+const pagination = document.querySelector(".pagination")
 
 function renderProduct() {
     phones.forEach((product) => {
@@ -71,4 +72,23 @@ function renderProduct() {
               </div>`;
     });
 }
-renderProduct()
+
+let currentPage = 1;
+let cards = 16;
+
+function displayList(items, wrapper, itemsPerPage, page) {
+    wrapper.innerHTML = "";
+    page--;
+
+    let start = itemsPerPage * page
+    let end = start + itemsPerPage
+    let paginatedItems = items.slice(start, end)
+
+    for (let i = 0; i < paginatedItems.length; i++) {
+        const item = items[i]
+            // const element = array[i];
+        renderProduct()
+    }
+}
+
+displayList(phones, productWrapper, cards, currentPage)
