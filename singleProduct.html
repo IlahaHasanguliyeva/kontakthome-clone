@@ -22,7 +22,7 @@
 
     <!-- fonts -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -1084,7 +1084,7 @@
                 <h2 class="product-name">product name</h2>
             </div>
         </div>
-
+        <!-- product details -->
         <section>
             <div class="container">
                 <div class="product-header">
@@ -1158,8 +1158,210 @@
                         </div>
                         <div class="credit">
                             <div class="calculator">
+                                <input type="range" id="calculator" min="6" max="18" step="3" list="ticks">
+                                <div class="hr-field">
+                                    <hr class="6">
+                                    <hr class="8">
+                                    <hr class="12">
+                                    <hr class="15">
+                                    <hr class="18">
+                                </div>
+                                <div class="hr-labels">
+                                    <span class="6">6ay</span>
+                                    <span class="8">8ay</span>
+                                    <span class="12">12ay</span>
+                                    <span class="15">15ay</span>
+                                    <span class="18">18ay</span>
+                                </div>
+                            </div>
+                            <div class="percentages">
+                                <div class="zero">
+                                    <h3>0%</h3>
+                                </div>
+                                <div class="first-payment">
+                                    <p>
+                                        İlkin ödəniş <br> 0 ₼
+                                    </p>
+                                </div>
+                                <div class="monthly">
+                                    <p>
+                                        Aylıq ödəniş
+                                    </p>
+                                    <span class="monthly-price">41.8 ₼</span>
+                                </div>
                             </div>
                         </div>
+                        <div class="payment-btns">
+                            <button class="one-click">Bir kliklə al</button>
+                            <button class="cash-btn">Nağd al</button>
+                            <button class="partly-btn">Hissə - hissə al</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- commentary and details -->
+        <section>
+            <div class="container">
+                <div class="tab-list">
+                    <ul>
+                        <li class="tab-first" data-tab-target="#tab-first">Xüsusiyyətlər</li>
+                        <li class="tab-second" data-tab-target="#tab-second">İstifadəçi rəyləri</li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="tab-first" data-tab-content class="active">
+                        <table>
+                            <tr>
+                                <th>İstehsalçı</th>
+                                <td>Apple</td>
+                            </tr>
+                            <tr>
+                                <th>Əməliyyat sistemi</th>
+                                <td>iOS</td>
+                            </tr>
+                            <tr>
+                                <th>Əməliyyat sistemin versiyası</th>
+                                <td>iOS 15</td>
+                            </tr>
+                            <tr>
+                                <th>Ekran</th>
+                                <td>6.1"</td>
+                            </tr>
+                            <tr>
+                                <th>Əsas kamera</th>
+                                <td>12 MP + 12 MP + 12 MP</td>
+                            </tr>
+                            <tr>
+                                <th>Ön kamera</th>
+                                <td>12 MP</td>
+                            </tr>
+                            <tr>
+                                <th>Nüvə sayı</th>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>SIM kartların sayı</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Sim kartın növü</th>
+                                <td>Nano SIM</td>
+                            </tr>
+                            <tr>
+                                <th>Prosessorun adı</th>
+                                <td>Apple</td>
+                            </tr>
+                            <tr>
+                                <th>Prosessor tezliyi</th>
+                                <td>3.2 GHz</td>
+                            </tr>
+                            <tr>
+                                <th>Daxili yaddaş</th>
+                                <td>128 GB</td>
+                            </tr>
+                            <tr>
+                                <th>Operativ Yaddaş</th>
+                                <td>6 GB</td>
+                            </tr>
+                            <tr>
+                                <th>3G</th>
+                                <td>Var</td>
+                            </tr>
+                            <tr>
+                                <th>4G</th>
+                                <td>Var</td>
+                            </tr>
+                            <tr>
+                                <th>NFC</th>
+                                <td>Var</td>
+                            </tr>
+                            <tr>
+                                <th>Prosessorun növü</th>
+                                <td>Apple A15 Bionic (5 nm)</td>
+                            </tr>
+                            <tr>
+                                <th>Şəbəkə</th>
+                                <td>5G</td>
+                            </tr>
+                            <tr>
+                                <th>Displey növü</th>
+                                <td>Super Retina XDR OLED</td>
+                            </tr>
+                            <tr>
+                                <th>Simsiz enerji</th>
+                                <td>Var</td>
+                            </tr>
+                            <tr>
+                                <th>İnfraqırmızı port</th>
+                                <td>Yox</td>
+                            </tr>
+                            <tr>
+                                <th>Göz tanıma funksiyası</th>
+                                <td>Yox</td>
+                            </tr>
+                            <tr>
+                                <th>Üz tanıma</th>
+                                <td>Var</td>
+                            </tr>
+                            <tr>
+                                <th>Sürətli enerji yığma</th>
+                                <td>Var</td>
+                            </tr>
+                            <tr>
+                                <th>Ön fləş</th>
+                                <td>Var</td>
+                            </tr>
+                            <tr>
+                                <th>Qorunma dərəcəsi</th>
+                                <td>IP68</td>
+                            </tr>
+                            <tr>
+                                <th>Ölçülər</th>
+                                <td>146.7 × 71.5 × 7.7 mm</td>
+                            </tr>
+                            <tr>
+                                <th>Ekran rənglərinin sayı</th>
+                                <td>16 mln</td>
+                            </tr>
+                            <tr>
+                                <th>Yaddaş kartı dəstəyi</th>
+                                <td>Yox</td>
+                            </tr>
+                            <tr>
+                                <th>Video formatı</th>
+                                <td>4K / 1080p</td>
+                            </tr>
+                            <tr>
+                                <th>Bluetooth versiyası</th>
+                                <td>5.0</td>
+                            </tr>
+                            <tr>
+                                <th>Zoom (video)</th>
+                                <td>9x-ə qədər</td>
+                            </tr>
+                            <tr>
+                                <th>Zoom (şəkil)</th>
+                                <td>15x-ə qədər</td>
+                            </tr>
+                            <tr>
+                                <th>Görüntü imkanı</th>
+                                <td>1170 × 2532</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="tab-second" data-tab-content>
+                        <form>
+                            <h3>Rəy yaz</h3>
+                            <div class="input">
+                                <label for="name">Adınız<span>*</span></label>
+                                <input type="text" id="name">
+                                <label for="email">Adınız<span>*</span></label>
+                                <input type="text" id="email">
+                            </div>
+                            <label for="review">Rəyiniz<span>*</span></label>
+                            <textarea name="review" id="reviwe" cols="30" rows="10"></textarea>
+                        </form>
                     </div>
                 </div>
             </div>

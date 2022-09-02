@@ -1764,7 +1764,7 @@ header .responsive .container .language-switch .switch:hover {
 main .res-menu {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 99999;
   top: 0;
   transform: translateX(-100%);
@@ -1819,7 +1819,7 @@ main .res-menu .all-menu button {
 }
 main .res-menu .all-menu button span {
   font-size: 14px;
-  padding-right: 165px;
+  padding-right: 75px;
   padding-left: 11px;
 }
 main .res-menu .all-menu button i {
@@ -1919,7 +1919,7 @@ main .res-menu .res-menu-wrapper .category-wrap .category .sub-category-box .sub
   background-color: white;
   border: none;
   border-bottom: 1px solid #d8d8d8;
-  padding: 26px 0;
+  padding: 26px 22px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1963,6 +1963,9 @@ main .res-menu .res-menu-wrapper .category-wrap .category .sub-category-box .sub
   }
   .basket-modal .basket-content .order-btns {
     width: inherit;
+  }
+  .basket-modal .basket-content {
+    top: 111px;
   }
   section .intro .container .slider-wrapper {
     flex-direction: column-reverse;

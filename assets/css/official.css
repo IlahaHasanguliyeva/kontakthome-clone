@@ -1,1 +1,449 @@
-/*# sourceMappingURL=official.css.map */
+section .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+section .container .left {
+  width: 68%;
+}
+section .container .left details[open] > summary i {
+  transform: rotate(90deg);
+}
+section .container .left details {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 36px;
+}
+section .container .left details summary {
+  width: inherit;
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18px;
+  letter-spacing: -0.48px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  align-items: center;
+  border: 1px solid rgb(216, 216, 216);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+section .container .left details summary i {
+  transition: 0.3s;
+  font-size: 16px;
+}
+section .container .left details .content {
+  border-top: none !important;
+  border: 1px solid rgb(216, 216, 216);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 22px;
+}
+section .container .left details .content .input-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+section .container .left details .content .input-field .input {
+  width: 44%;
+  margin-bottom: 16px;
+}
+section .container .left details .content .input-field .input label {
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.28px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+section .container .left details .content .input-field .input label span {
+  color: red;
+}
+section .container .left details .content .input-field .input input {
+  width: 100%;
+  height: 34px;
+  outline: none;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  color: #171717;
+}
+section .container .left details .content .input-field .input-check {
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 44%;
+  margin-bottom: 16px;
+  padding: 22px;
+  accent-color: rgb(217, 42, 23);
+}
+section .container .left details .content .input-field .input-check input {
+  height: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+section .container .left details .content .input-field .input-check label {
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: -0.28px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+section .container .left details .content .input-field .input-check label span {
+  color: red;
+  padding: 5px 0;
+}
+section .container .left details .content .input-field .first {
+  padding-bottom: 63px;
+}
+section .container .left details .content .radio-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  margin: 0 25px;
+}
+section .container .left details .content .radio-field img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .container .left details .content .radio-field .input-check {
+  padding: 18px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 24%;
+  height: 200px;
+  margin-bottom: 16px;
+}
+section .container .left details .content .radio-field .input-check input {
+  height: 16px;
+  width: 100%;
+  cursor: pointer;
+  accent-color: rgb(217, 42, 23);
+}
+section .container .left details .content .radio-field .input-check label {
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: -0.28px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+section .container .left details .content .radio-field .input-check label span {
+  color: red;
+  padding: 5px 0;
+}
+section .container .left details .content .payment-info {
+  width: 94%;
+  padding: 8px 5px;
+  margin: 0 25px;
+  background-color: #d1ecf1;
+  border-radius: 10px;
+}
+section .container .left details .content .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 16px 0;
+  margin-bottom: 0;
+}
+section .container .left details .content .button button {
+  background-color: #da2c18;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  padding: 12px 36px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+section .container .left details .content .button button:hover {
+  background-color: rgb(188, 32, 32);
+}
+section .container .left details .content .text {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px;
+}
+section .container .left details .content .text label {
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.28px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+section .container .left details .content .text textarea {
+  outline: none;
+  height: 63px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  color: #171717;
+}
+section .container .left details .content .adress-details {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px;
+}
+section .container .left details .content .adress-details label {
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.28px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+section .container .left details .content .adress-details input {
+  outline: none;
+  height: 30px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  color: #171717;
+}
+section .bucket-right {
+  width: 30%;
+}
+section .bucket-right .total-prices {
+  position: relative;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 10px;
+  height: 705px;
+}
+section .bucket-right .total-prices h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 62px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  letter-spacing: -0.48px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #171717;
+  padding: 0 18px;
+}
+section .bucket-right .total-prices h3 span {
+  letter-spacing: -0.48px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #171717;
+  padding-left: 6px;
+}
+section .bucket-right .total-prices .name-price-wrapper {
+  height: 560px;
+  overflow-y: auto;
+}
+section .bucket-right .total-prices .name-price-wrapper .list {
+  padding: 0 18px;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .current {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .current h4 {
+  width: 223px;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #171717;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .current span {
+  font-weight: 700;
+  color: #171717;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .current span sup {
+  font-weight: 700;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .sale {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .sale span {
+  font-size: 12px;
+  line-height: 15px;
+  color: gray;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .sale .pr {
+  color: rgb(217, 42, 23);
+  font-size: 18px;
+  font-weight: 700;
+}
+section .bucket-right .total-prices .name-price-wrapper .list .item .sale .pr sup {
+  font-weight: 700;
+  margin-right: 6px;
+}
+section .bucket-right .total-prices .total {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 82px;
+  width: 100%;
+  padding: 18px;
+  border-top: 1px solid rgb(216, 216, 216);
+  background-color: #fcfcfd;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+section .bucket-right .total-prices .total span {
+  font-size: 18px;
+  font-weight: 700;
+}
+section .bucket-right .total-prices .total .order {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+section .bucket-right .total-prices .total .discount {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+section .bucket-right .order-btn {
+  margin-top: 11px;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 10px;
+  padding: 18px;
+}
+section .bucket-right .order-btn .order {
+  width: 100%;
+  height: 62px;
+  transition: 0.3s;
+  background-color: rgb(217, 42, 23);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid rgb(217, 42, 23);
+  border-radius: 10px;
+  text-decoration: none;
+}
+section .bucket-right .order-btn .order:hover {
+  background-color: rgb(188, 32, 32);
+}
+section .bucket-right .order-btn .order:hover i {
+  transition: 0.3s;
+  padding-left: 15px;
+}
+section .bucket-right .order-btn .order span {
+  color: white;
+  padding-left: 110px;
+  font-size: 12px;
+}
+section .bucket-right .order-btn .order i {
+  font-size: 14px;
+  color: white;
+  padding-left: 6px;
+}
+
+.error {
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  width: inherit;
+  font-size: 12px;
+  margin-top: -18px;
+  margin-bottom: 15px;
+  padding-left: 3px;
+  color: rgb(217, 42, 23);
+}
+.error i {
+  color: rgb(217, 42, 23);
+  padding-right: 5px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  section .container {
+    flex-direction: column;
+  }
+  section .container .left {
+    width: 100%;
+  }
+  section .container .left details .content .input-field .input-check {
+    width: 100%;
+  }
+  section .container .left details .content .input-field .input {
+    width: 100%;
+  }
+  section .container .left details .content .adress-details {
+    width: 100%;
+    margin-left: 0;
+  }
+  section .container .left details .content .text {
+    width: 100%;
+    margin-left: 0;
+  }
+  section .container .left details .content .radio-field {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
+  section .container .left details .content .radio-field .input-check {
+    width: 100%;
+  }
+  section .container .left details .content .payment-info {
+    width: 100%;
+    margin: 0;
+  }
+  section .bucket-right {
+    width: 100%;
+  }
+}/*# sourceMappingURL=official.css.map */

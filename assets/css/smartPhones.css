@@ -37,21 +37,69 @@ main .advertisement img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .products-filter {
+main .filter-btn {
+  padding: 0 42px;
+}
+main .filter-btn .container {
   display: flex;
+  align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
+  border-radius: 10px;
+  border: 1px solid #d8d8d8;
+  padding: 0;
+  height: 50px;
 }
-main .products-filter .left {
-  width: 24%;
-  display: flex;
-  flex-direction: column;
+main .filter-btn .container button {
+  padding: 0 67px;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
-main .products-filter .left .filter {
+main .filter-btn .container button i {
+  padding-left: 11px;
+}
+main .filter-btn .container .filter-open {
+  height: 50px;
+  padding-left: 20%;
+  border-left: 1px solid #d8d8d8;
+}
+main .filter-modal {
+  position: fixed;
+  display: none;
+  left: 0;
+  z-index: 7777;
+}
+main .filter-modal .filter-wrapper {
+  overflow-y: scroll;
+  height: 85vh;
+  padding: 30px;
+  position: fixed;
+  top: 111px;
+  left: 0;
+  z-index: 88888;
+  background-color: white;
+}
+main .filter-modal .filter-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+main .filter-modal .filter-wrapper::-webkit-scrollbar-track {
+  box-shadow: unset;
+  background: #fcfcfd;
+}
+main .filter-modal .filter-wrapper::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border-radius: 10px;
+}
+main .filter-modal .filter-wrapper::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+main .filter-modal .filter-wrapper .filter {
   width: 100%;
   margin-bottom: 11px;
 }
-main .products-filter .left .filter button {
+main .filter-modal .filter-wrapper .filter button {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid #d8d8d8;
@@ -67,10 +115,10 @@ main .products-filter .left .filter button {
   border-bottom: 1px solid #d8d8d8;
   font-size: 16px;
 }
-main .products-filter .left .filter button .fa-circle-info {
+main .filter-modal .filter-wrapper .filter button .fa-circle-info {
   font-size: 12px;
 }
-main .products-filter .left .filter .ul-wrapper {
+main .filter-modal .filter-wrapper .filter .ul-wrapper {
   width: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -81,7 +129,7 @@ main .products-filter .left .filter .ul-wrapper {
           animation: rotateX 300ms ease-in-out;
   transform-origin: top center;
 }
-main .products-filter .left .filter .ul-wrapper ul {
+main .filter-modal .filter-wrapper .filter .ul-wrapper ul {
   -webkit-animation: rotateX 300ms ease-in-out;
           animation: rotateX 300ms ease-in-out;
   transform-origin: top center;
@@ -89,36 +137,113 @@ main .products-filter .left .filter .ul-wrapper ul {
   display: flex;
   flex-direction: column;
 }
-main .products-filter .left .filter .ul-wrapper ul li {
+main .filter-modal .filter-wrapper .filter .ul-wrapper ul li {
   padding-left: 36px;
   padding-bottom: 11px;
   font-size: 14px;
 }
-main .products-filter .left .filter .ul-wrapper ul li:nth-last-child(1) {
+main .filter-modal .filter-wrapper .filter .ul-wrapper ul li:nth-last-child(1) {
   padding-bottom: 0;
 }
-main .products-filter .left .filter .ul-wrapper .price-ul {
+main .filter-modal .filter-wrapper .filter .ul-wrapper .price-ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 36px;
 }
-main .products-filter .left .filter .ul-wrapper .price-ul input {
+main .filter-modal .filter-wrapper .filter .ul-wrapper .price-ul input {
   width: 90px;
   height: 36px;
   border: 2px solid #d8d8d8;
   border-radius: 4px;
 }
-main .products-filter .left .filter .ul-wrapper .price-ul hr {
+main .filter-modal .filter-wrapper .filter .ul-wrapper .price-ul hr {
   width: 16px;
   height: 2px;
   background-color: #d8d8d8;
   margin: 0 5px;
 }
-main .products-filter .right {
+main .products-filter .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .products-filter .container .left {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+}
+main .products-filter .container .left .filter {
+  width: 100%;
+  margin-bottom: 11px;
+}
+main .products-filter .container .left .filter button {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid #d8d8d8;
+  padding: 0 26px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 46px;
+  background-color: transparent;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 16px;
+}
+main .products-filter .container .left .filter button .fa-circle-info {
+  font-size: 12px;
+}
+main .products-filter .container .left .filter .ul-wrapper {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #d8d8d8;
+  border-top: none;
+  display: none;
+  -webkit-animation: rotateX 300ms ease-in-out;
+          animation: rotateX 300ms ease-in-out;
+  transform-origin: top center;
+}
+main .products-filter .container .left .filter .ul-wrapper ul {
+  -webkit-animation: rotateX 300ms ease-in-out;
+          animation: rotateX 300ms ease-in-out;
+  transform-origin: top center;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+main .products-filter .container .left .filter .ul-wrapper ul li {
+  padding-left: 36px;
+  padding-bottom: 11px;
+  font-size: 14px;
+}
+main .products-filter .container .left .filter .ul-wrapper ul li:nth-last-child(1) {
+  padding-bottom: 0;
+}
+main .products-filter .container .left .filter .ul-wrapper .price-ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 36px;
+}
+main .products-filter .container .left .filter .ul-wrapper .price-ul input {
+  width: 90px;
+  height: 36px;
+  border: 2px solid #d8d8d8;
+  border-radius: 4px;
+}
+main .products-filter .container .left .filter .ul-wrapper .price-ul hr {
+  width: 16px;
+  height: 2px;
+  background-color: #d8d8d8;
+  margin: 0 5px;
+}
+main .products-filter .container .right {
   width: 75%;
 }
-main .products-filter .right .product-list-header {
+main .products-filter .container .right .product-list-header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -128,17 +253,17 @@ main .products-filter .right .product-list-header {
   border: 1px solid #d8d8d8;
   padding: 14px;
 }
-main .products-filter .right .product-list-header h4 {
+main .products-filter .container .right .product-list-header h4 {
   font-size: 16px;
 }
-main .products-filter .right .product-list-header .btns button {
+main .products-filter .container .right .product-list-header .btns button {
   cursor: pointer;
   background-color: transparent;
   border: none;
   font-size: 16px;
   padding-right: 11px;
 }
-main .products-filter .right .product-list-header .btns button i {
+main .products-filter .container .right .product-list-header .btns button i {
   font-size: 13px;
   padding-left: 5px;
 }
@@ -146,15 +271,71 @@ main #sale-cards {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-left: 13px;
 }
 main #sale-cards .card-wrapper {
-  width: 33% !important;
+  width: 33%;
 }
 main #sale-cards .card-wrapper:nth-child(n) {
   display: inline-block !important;
 }
+main .pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 11px;
+}
+main .pagination button {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+main .pagination button:hover {
+  background-color: #da2c18 !important;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.063);
+  color: white;
+}
 
 .show {
   display: block;
+}
+
+.active-pagination {
+  background-color: #da2c18 !important;
+  color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.063);
+}
+
+@media screen and (min-width: 768px) {
+  .filter-btn {
+    display: none;
+  }
+  .filter-modal {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .advertisement .container img {
+    height: 85px;
+  }
+  section .products-filter .container .left {
+    display: none;
+  }
+  section .products-filter .container .right {
+    width: 100%;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper {
+    width: 50% !important;
+  }
+  section .products-filter .container .right .product-list-header {
+    display: none;
+  }
 }/*# sourceMappingURL=smartPhones.css.map */

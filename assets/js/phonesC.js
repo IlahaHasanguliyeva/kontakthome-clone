@@ -1,9 +1,61 @@
 "use strict";
+// responsive menu
+const body = document.querySelector("body");
+const resMenu = document.querySelector(".res-menu")
+const resMenuWrap = document.querySelector(".res-menu-wrapper")
+const category = resMenu.querySelectorAll(".category");
+const resMenuBtn = document.querySelector(".menu-btn-responsive")
+const resMenuOverlay = document.querySelector("#res-menu-overlay")
+const menuCloseBtn = document.querySelector(".menu-close")
+const allMenu = document.querySelector(".all-categories")
+const categoryWrap = document.querySelector(".category-wrap")
+
+
+resMenuBtn.addEventListener("click", () => {
+    resMenu.style.transform = "translateX(0)"
+    body.style.overflow = "hidden";
+});
+
+function resMenuClose() {
+    resMenu.style.transform = "translateX(-100%)"
+
+    body.style.overflow = "auto";
+
+}
+resMenuOverlay.addEventListener("click", resMenuClose);
+menuCloseBtn.addEventListener("click", resMenuClose)
+
+allMenu.addEventListener("click", () => {
+    categoryWrap.classList.toggle("show")
+})
+
+for (let i = 0; i < category.length; i++) {
+    const element = category[i];
+    const categoryBtn = element.querySelector(".category-btn");
+    const subCategoryBox = element.querySelector(".sub-category-box")
+    const subCategory = element.querySelectorAll(".sub-category")
+    categoryBtn.addEventListener("click", () => {
+        subCategoryBox.classList.toggle("show")
+    })
+    for (let i = 0; i < subCategory.length; i++) {
+        const item = subCategory[i];
+        const subCategoryBtn = item.querySelector(".sub-category-btn")
+        const subCategoryCard = item.querySelector(".sub-category-cards")
+        subCategoryBtn.addEventListener("click", () => {
+            subCategoryCard.classList.toggle("show")
+        })
+
+    }
+}
 // Search bar-----------------------------------------------------------
 const searchBtns = document.querySelector(".toggle");
-const searchInput = document.querySelector("#search-input");
+const searchInput = document.querySelector(".search-input");
 const searchIcon = document.querySelector(".fa-magnifying-glass");
 const clearSearch = document.querySelector(".fa-xmark");
+const searchInputRes = document.querySelector(".search-input-res");
+const searchIconRes = document.querySelector(".search-res");
+const clearSearchRes = document.querySelector(".clear-res");
+const searchBtnsRes = document.querySelector(".toggle-res");
 
 searchInput.addEventListener("focus", () => {
     searchIcon.style.color = "#da2c18";
@@ -16,6 +68,32 @@ searchInput.addEventListener("blur", () => {
 clearSearch.addEventListener("click", () => {
     if (searchInput.value !== "") {
         searchInput.value = "";
+        searchBtns.classList.remove("show");
+    }
+});
+
+// responsive
+
+searchInputRes.addEventListener("input", () => {
+    if (searchInputRes.value !== "") {
+        searchBtnsRes.classList.add("show");
+    } else if (searchInputRes.value === "") {
+        searchBtnsRes.classList.remove("show");
+    }
+});
+
+searchInputRes.addEventListener("focus", () => {
+    searchIconRes.style.color = "#da2c18";
+});
+
+searchInputRes.addEventListener("blur", () => {
+    searchIconRes.style.color = "black";
+});
+
+clearSearchRes.addEventListener("click", () => {
+    if (searchInputRes.value !== "") {
+        searchInputRes.value = "";
+        searchBtnsRes.classList.remove("show");
     }
 });
 
@@ -27,12 +105,11 @@ searchInput.addEventListener("input", () => {
     }
 });
 
-// bucket
-const body = document.querySelector("body");
+// menu btn-------------------------------------------------------------------------------
 const menuBtn = document.querySelector(".menu-btn");
 const menuModal = document.querySelector(".menu-modal");
 const menuOverlay = document.querySelector("#menu-overlay");
-const basketIco = document.querySelector("#basket");
+const basketIcos = document.querySelectorAll(".basket");
 const basketModal = document.querySelector(".basket-modal");
 const emptyBasket = document.querySelector(".empty-basket");
 const fullBasket = document.querySelector(".full-basket");
@@ -55,16 +132,23 @@ menuOverlay.addEventListener("click", () => {
     body.style.overflow = "auto";
 });
 
-basketIco.addEventListener("mouseenter", () => {
-    if (menuModal.classList.contains("show")) {
-        menuModal.classList.remove("show");
-        basketModal.classList.add("show");
-        body.style.overflow = "hidden";
-    } else {
-        basketModal.classList.add("show");
-        body.style.overflow = "hidden";
-    }
-});
+// nav icons-------------------------------------------------------------------------------
+// bucket
+
+for (let i = 0; i < basketIcos.length; i++) {
+    const basketIco = basketIcos[i];
+    basketIco.addEventListener("mouseenter", () => {
+        if (menuModal.classList.contains("show")) {
+            menuModal.classList.remove("show");
+            basketModal.classList.add("show");
+            body.style.overflow = "hidden";
+        } else {
+            basketModal.classList.add("show");
+            body.style.overflow = "hidden";
+        }
+    });
+
+}
 
 basketOverlay.addEventListener("click", () => {
     basketModal.classList.remove("show");
