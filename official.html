@@ -40,10 +40,10 @@
                     <!-- menu btn --------------------------------------------------- -->
 
                     <button class="menu-btn">
-                <i class="fa-solid fa-bars"></i>
-    
-                <span>Menyu</span>
-              </button>
+            <i class="fa-solid fa-bars"></i>
+
+            <span>Menyu</span>
+          </button>
 
                     <!-- search bar --------------------------------------------------- -->
 
@@ -118,8 +118,8 @@
             <div class="container">
                 <!-- menu btn -------->
                 <button class="menu-btn-responsive">
-                            <i class="fa-solid fa-bars"></i>
-                          </button>
+                        <i class="fa-solid fa-bars"></i>
+                      </button>
                 <!-- search ---------->
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass search-res"></i>
@@ -159,6 +159,8 @@
             </div>
         </div>
     </header>
+
+    <!-- main ------------------------->
     <main>
         <!-- reponsive menu category -->
         <div class="res-menu">
@@ -1126,6 +1128,28 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="icon user">
+                        <a href="./register.html" target="_blank">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Daxil olun</span>
+                        </a>
+                    </div>
+
+                    <div class="icon compare">
+                        <a href="#">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <span class="number-of-items-scale"></span>
+                            <span>Müqayisə</span>
+                        </a>
+                    </div>
+
+                    <div class="icon liked">
+                        <a href="./wishList.html" target="_blank">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="number-of-items-heart"></span>
+                            <span>Seçilmişlər</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -2040,6 +2064,63 @@
             </div>
         </div>
 
+        <!-- basket -->
+
+        <div class="basket-modal">
+            <div id="basket-modal" class="overlay"></div>
+
+            <div class="basket-content-empty">
+                <div class="empty">
+                    <img src="./assets/images/images/Screenshot_2.png" alt="empty bucket">
+
+                    <h3>Səbətiniz boşdur!</h3>
+
+                    <p>
+                        Bəyəndiyiniz məhsulları səbətə əlavə edin
+                    </p>
+
+                    <button class="catalogue">
+              <i class="fa-solid fa-bars"></i>
+              Məhsul kataloqu
+            </button>
+                </div>
+            </div>
+
+            <div class="basket-content full">
+                <div class="full-basket">
+                    <!--  -->
+                </div>
+                <div class="order-btns">
+                    <div class="number-price">
+                        <div class="products-count">
+                            <span class="number-products"></span>
+                            <span>Məhsul</span>
+                        </div>
+
+                        <div class="total-price">
+                            <span>məbləğ:</span>
+
+                            <h3 id="total-price">₼</h3>
+                        </div>
+                    </div>
+
+                    <div class="basket-btns">
+                        <a href="./bucket.html" target="_blank" class="go-basket-page">
+                            <i class="fa-solid fa-bag-shopping"></i> Səbət
+                        </a>
+
+                        <a href="./official.html" target="_blank" class="order">
+                            <span>Sifarişi rəsimləşdir</span>
+
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------ -->
+
         <div class="container">
             <div class="route">
                 <a href="./index.html" target="_blank">
@@ -2067,7 +2148,8 @@
                                     <div class="input">
                                         <label for="name">Adınız<span>*</span></label>
                                         <input type="text" name="" id="name" placeholder="Adınız">
-                                        <div class="error name"><i class="fa-solid fa-triangle-exclamation"></i>
+                                        <div class="error name">
+                                            <i class="fa-solid fa-triangle-exclamation"></i>
                                             <div class="msg-name"></div>
                                         </div>
                                     </div>
@@ -2087,7 +2169,21 @@
                                     </div>
                                     <div class="input">
                                         <label for="tel">Telefon nömrəniz<span>*</span></label>
-                                        <input type="tel" name="" id="tel">
+                                        <div class="tel-input">
+                                            <div class="country-tel-prefix">+994</div>
+                                            <div class="tel-prefix">
+                                                <select name="prefix" class="prefix">
+                                                <option value="volvo">0XX</option>
+                                                <option value="saab">050</option>
+                                                <option value="mercedes">051</option>
+                                                <option value="audi">055</option>
+                                                <option value="audi">070</option>
+                                                <option value="audi">010</option>
+                                                <option value="audi">077</option>
+                                                <option value="audi">099</option>
+                                              </select></div>
+                                            <input type="tel" name="" id="tel">
+                                        </div>
                                         <div class="error tel"><i class="fa-solid fa-triangle-exclamation"></i>
                                             <div class="msg-tel"></div>
                                         </div>
@@ -2203,8 +2299,8 @@
                 <div class="scroll-top">
                     <div class="scroll-button">
                         <button class="to-top">
-            <i class="fa-solid fa-arrow-up"></i>
-          </button>
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
 
                         <h3>Yuxarı</h3>
                     </div>
@@ -2216,11 +2312,11 @@
                     <div class="info box">
                         <h3>Məlumat</h3>
 
-                        <a href="">Tez-tez verilən suallar</a>
+                        <a href="./FAQ.html">Tez-tez verilən suallar</a>
 
-                        <a href="">Saytın istifadə şərtləri</a>
+                        <a href="./istifadeSertleri.html">Saytın istifadə şərtləri</a>
 
-                        <a href="">Kontakt TV</a>
+                        <a href="./konfidensialliq.html">Konfidensiallıq siyasəti</a>
                     </div>
 
                     <!-- sirketler --------------------------------- -->
@@ -2228,17 +2324,13 @@
                     <div class="companies box">
                         <h3>Şirkətlər</h3>
 
-                        <a href="">Şirkət haqqında</a>
+                        <a href="./about.html">Şirkət haqqında</a>
 
-                        <a href="">Şirkətin xəbərləri</a>
+                        <a href="./korporativ.html">Korporativ satışlar</a>
 
-                        <a href="">Mağazalarımız</a>
+                        <a href="./shops.html">Mağazalarımız</a>
 
-                        <a href="">Xidmətlər</a>
 
-                        <a href="">Vakansiyalar</a>
-
-                        <a href="">Konfidensiallıq siyasəti</a>
                     </div>
 
                     <!-- istifadeciler ucun ------------------------- -->
@@ -2246,19 +2338,17 @@
                     <div class="for-customers box">
                         <h3>Müştərilər üçün</h3>
 
-                        <a href="">Çatdırıma və ödəniş</a>
-
                         <a href="">Geri qaytarma siyasəti</a>
 
                         <a href="">Zəmanət</a>
 
                         <a href="">
-            Hissə-hissə ödənişinə dair tələblər
-          </a>
+        Hissə-hissə ödənişinə dair tələblər
+      </a>
 
                         <a href="">
-            Aylıq ödənişlərin həyata keçirilməsi üsülları
-          </a>
+        Aylıq ödənişlərin həyata keçirilməsi üsülları
+      </a>
 
                         <a href="">Aylıq ödənişlərin üsulları</a>
                     </div>
@@ -2378,11 +2468,11 @@
 
             <div class="subscriber-modal">
                 <span>
-        <img
-          src="./assets/images/images/smile.svg"
-          alt="smiley face"
-        >
-      </span>
+    <img
+      src="./assets/images/images/smile.svg"
+      alt="smiley face"
+    >
+  </span>
 
                 <h4>
                     Siz uğurla abunə oldunuz.

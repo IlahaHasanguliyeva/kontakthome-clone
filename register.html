@@ -19,7 +19,7 @@
 <body>
     <!-- header ------------------------->
     <header>
-        <div class="navigation">
+        <div class="navigation pc">
             <div class="container">
                 <nav>
                     <!-- logo --------------------------------------------------- -->
@@ -41,13 +41,13 @@
                     <!-- search bar --------------------------------------------------- -->
 
                     <div class="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass search-btn"></i>
 
-                        <input id="search-input" type="search" placeholder="Məhsul üzrə axtarış..."></input>
+                        <input class="search-input" type="search" placeholder="Məhsul üzrə axtarış..."></input>
 
                         <div class="toggle">
                             <div class="btn">
-                                <i class="fa-solid fa-xmark"></i>
+                                <i class="fa-solid fa-xmark clear-btn"></i>
 
                                 <button>Axtarış</button>
                             </div>
@@ -77,7 +77,7 @@
                             </a>
                         </div>
 
-                        <div id="basket" class="icon bucket">
+                        <div class="icon bucket basket">
                             <a href="./bucket.html" target="_blank">
                                 <i class="fa-solid fa-bag-shopping"></i>
                                 <span class="number-of-items"></span>
@@ -101,9 +101,1052 @@
                 </nav>
             </div>
         </div>
+        <!-- nav res  -->
+        <div class="navigation responsive">
+            <div class="logo-res">
+                <a href="./index.html">
+                    <img src="./assets/images/logos/Screenshot_6.png" alt="home logo">
+                </a>
+            </div>
+            <div class="container">
+                <!-- menu btn -------->
+                <button class="menu-btn-responsive">
+                        <i class="fa-solid fa-bars"></i>
+                      </button>
+                <!-- search ---------->
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass search-res"></i>
+
+                    <input class="search-input-res" type="search" placeholder="Məhsul üzrə axtarış..."></input>
+
+                    <div class="toggle-res">
+                        <div class="btn">
+                            <i class="fa-solid fa-xmark clear-res"></i>
+
+                            <button>Axtarış</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- other icons ----->
+                <div class="icons">
+                    <div class="icon bucket basket">
+                        <a href="./bucket.html" target="_blank">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span class="number-of-items"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- language --------------------------------------------------- -->
+                <div class="icon language-switch">
+                    <div class="switch">
+                        <div class="img">
+                            <img src="./assets/images/logos/azer.svg" alt="flag">
+                        </div>
+
+                        <span>AZ</span>
+
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+
     <!-- main ------------------------->
     <main>
+        <!-- reponsive menu category -->
+        <div class="res-menu">
+            <div class="overlay" id="res-menu-overlay"></div>
+            <div class="res-menu-wrapper">
+                <div class="menu-close-btn">
+                    <div class="number">
+                        <img src="./assets/images/phone-black.png" alt="icon">
+                        <span>*6060</span>
+                    </div>
+                    <div class="menu-btn"><i class="fa-solid fa-xmark menu-close"></i></div>
+                </div>
+                <div class="all-menu">
+                    <button class="all-categories">
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Bütün kateqoriyalar</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <ul class="category-wrap show">
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/phones.webp" alt="phones">
+                            
+                            <a href="./phonesCategory.html" target="_blank">Telefonlar və Planşetlər</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="./smartPhones.html" target="_blank">Smartfonlar</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Apple</a>
+                                            </div>
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Samsung</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Xiaomi</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Huawei</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">BQ</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Blackview</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Realme</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">ZTE</a>
+                                            </div>
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Asus</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">TCL</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Honor</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Nokia</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Planşetlər</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Apple</a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Samsung</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Apple</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Huawei</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Lenovo</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Blackview</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Xiaomi</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">TCL</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Microsoft</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Qulaqlıqlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Qulaqlıqlar</a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Qulaqlıqlar (Bluetooth)</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Düyməli telefonlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Nokia</a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">INOI</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ev və Ofis telefonları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Panasonic
+                                                </a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Gigaset
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Elektron kitab</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                        <a href="#" target="_blank">Rəsm Planşetləri</a>
+                                   <i class="fa-solid fa-angle-down"></i>
+                                    </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Policral
+                                            </div>
+    
+                                            <!-- ------ -->
+    
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Xiaomi</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Aksesuarlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/watch.webp" alt="phones">
+                            
+                            <a href="./phonesCategory.html" target="_blank">Saatlar və qolbaqlar</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Smart saatlar</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Smart qolbaqlar</a>
+                                            </div>
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Apple</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Huawei</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">MyKronoz</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Samsung</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Smart qolbaqlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Apple</a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Samsung</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Apple</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Huawei</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Lenovo</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Blackview</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Xiaomi</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">TCL</a>
+                                            </div>
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Microsoft</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Saatlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Qulaqlıqlar</a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Qulaqlıqlar (Bluetooth)</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Uşaq saatları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Nokia</a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">INOI</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Aksesuarlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                        <!-- cards -->
+
+                                        <div class="sub-category-cards">
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Panasonic
+                                                </a>
+                                            </div>
+
+                                            <!-- ------ -->
+
+                                            <div class="sub-cat-card">
+                                                <a href="#" target="_blank">Gigaset
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/tv.webp" alt="phones">
+                            
+                            <a href="./phonesCategory.html" target="_blank">TV, audio video</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Apple</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Noutbuklar</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Televizorlar</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Proyektor və ekran</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Audio,video</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Televizor altlığı</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Aksesuarlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/computer.webp" alt="phones">
+                            
+                            <a href="./phonesCategory.html" target="_blank">Kompüter və aksesuarlar</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Monitor</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Monoblok</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Proqram təminatı</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Kompüter hissələri</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Oyun aksesuarları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/house furniture.webp" alt="phones">
+                            
+                            <a href="./phonesCategory.html" target="_blank">Məişət texnikası</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Kondisionerlər</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Buxar dolabı</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Peşəkar təmizlik avadanlığı</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">İqlim texnikası</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ev üçün kiçik məişət texnikası</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/game.webp" alt="phones">
+                            
+                            <a href="./phonesCategory.html" target="_blank">Hobbi və Əyləncə</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Nəqliyyat</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">PlayStation</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Oyun konsolları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Musiqi alətləri və avadanlıqları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">İdman</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Oyunlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/cosmetics.webp" alt="phones">
+                            
+                            <a href="#" target="_blank">Gözəllik və sağlamlıq</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Fen (Hava)</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Fen (Ütü)</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Fen (Daraq)</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Multistayler</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Üzqırxan</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Trimmer</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Manikür və pedikür dəsti</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Masajor ayaq üçün</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Tonometr</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">İrriqatorlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/car.webp" alt="phones">
+                            
+                            <a href="#" target="_blank">Alətlər və Avtomobil məhsulları</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Avtomobil məhsullari</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Elektrik alətlər</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Generatorlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">İnşaat geyimləri</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Əl alətləri</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Kəsici alətlər</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/PLANT.webp" alt="phones">
+                            
+                            <a href="#" target="_blank">Ev və bağ</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Bağ mebeli və aksesuarlar</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Divar kağızları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Otaq qapıları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ağıllı ev</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Bağ texnikası</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Nərdivanlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Hovuz və aksesuarlar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/house furniture.webp" alt="phones">
+                            
+                            <a href="#" target="_blank">Mebel və Ev tekstili</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Mebel və Ev tekstili</a>
+                                           <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ev Mebeli</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ev tekstili</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ofis mebeli</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Bağ texnikası</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Sel Home</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Xalçalar</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Bağ mebeli və aksesuarları</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Madame Coco</a>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="category">
+                            <button class="category-btn">
+                            <img src="./assets/images/menu icons/tationery.webp" alt="phones">
+                            
+                            <a href="#" target="_blank">Dəftərxana ləvazimatları</a>
+    
+                               <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                            <!-- sub categories -->
+
+                            <div class="sub-category-box">
+                                <ul class="sub-category-wrap">
+
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Məktəb ləvazimatları</a>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ofis ləvazimatları</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        </button>
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Proyektor və ekran</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        </button>
+
+                                    </li>
+
+                                    <li class="sub-category">
+                                        <button class="sub-category-btn">
+                                            <a href="#" target="_blank">Ev və Ofis telefonları</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="icon user">
+                        <a href="./register.html" target="_blank">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Daxil olun</span>
+                        </a>
+                    </div>
+
+                    <div class="icon compare">
+                        <a href="#">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <span class="number-of-items-scale"></span>
+                            <span>Müqayisə</span>
+                        </a>
+                    </div>
+
+                    <div class="icon liked">
+                        <a href="./wishList.html" target="_blank">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="number-of-items-heart"></span>
+                            <span>Seçilmişlər</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <!-- menu and card modals ---------------------------------------------------- -->
 
         <div class="menu-modal">
@@ -125,7 +1168,7 @@
                         <div class="sub-category-box">
                             <ul class="sub-category-wrap">
                                 <li class="sub-category">
-                                    <a href="./phonesCategory.html" target="_blank">
+                                    <a href="./smartPhones.html" target="_blank">
                                         <span>Smartfonlar</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
@@ -428,7 +1471,7 @@
 
                                 <li class="sub-category">
                                     <a href="#" target="_blank">
-                                        <span>R'sm Planşetləri</span>
+                                        <span>Rəsm Planşetləri</span>
 
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
@@ -1019,14 +2062,31 @@
         <div class="basket-modal">
             <div id="basket-modal" class="overlay"></div>
 
-            <div class="basket-content">
-                <div class="full-basket"></div>
+            <div class="basket-content-empty">
+                <div class="empty">
+                    <img src="./assets/images/images/Screenshot_2.png" alt="empty bucket">
 
+                    <h3>Səbətiniz boşdur!</h3>
+
+                    <p>
+                        Bəyəndiyiniz məhsulları səbətə əlavə edin
+                    </p>
+
+                    <button class="catalogue">
+              <i class="fa-solid fa-bars"></i>
+              Məhsul kataloqu
+            </button>
+                </div>
+            </div>
+
+            <div class="basket-content full">
+                <div class="full-basket">
+                    <!--  -->
+                </div>
                 <div class="order-btns">
                     <div class="number-price">
                         <div class="products-count">
                             <span class="number-products"></span>
-
                             <span>Məhsul</span>
                         </div>
 
@@ -1051,6 +2111,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="container">
             <div class="user">
@@ -1106,93 +2167,87 @@
         </div>
       </div>
     </main>
-    <!-- footer ------------------------->
-    <footer>
-        <div class="footer-content">
-            <div class="container">
-                <!-- scroll to Top--------------------------- -->
+ <!-- footer ------------------------->
+ <footer>
+    <div class="footer-content">
+        <div class="container">
+            <!-- scroll to Top--------------------------- -->
 
-                <div class="scroll-top">
-                    <div class="scroll-button">
-                        <button class="to-top">
-            <i class="fa-solid fa-arrow-up"></i>
-          </button>
+            <div class="scroll-top">
+                <div class="scroll-button">
+                    <button class="to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
 
-                        <h3>Yuxarı</h3>
-                    </div>
+                    <h3>Yuxarı</h3>
+                </div>
+            </div>
+
+            <div class="further-info">
+                <!-- melumat ----------------------------------- -->
+
+                <div class="info box">
+                    <h3>Məlumat</h3>
+
+                    <a href="./FAQ.html">Tez-tez verilən suallar</a>
+
+                    <a href="./istifadeSertleri.html">Saytın istifadə şərtləri</a>
+
+                    <a href="./konfidensialliq.html">Konfidensiallıq siyasəti</a>
                 </div>
 
-                <div class="further-info">
-                    <!-- melumat ----------------------------------- -->
+                <!-- sirketler --------------------------------- -->
 
-                    <div class="info box">
-                        <h3>Məlumat</h3>
+                <div class="companies box">
+                    <h3>Şirkətlər</h3>
 
-                        <a href="">Tez-tez verilən suallar</a>
+                    <a href="./about.html">Şirkət haqqında</a>
 
-                        <a href="">Saytın istifadə şərtləri</a>
+                    <a href="./korporativ.html">Korporativ satışlar</a>
 
-                        <a href="">Kontakt TV</a>
-                    </div>
+                    <a href="./shops.html">Mağazalarımız</a>
 
-                    <!-- sirketler --------------------------------- -->
 
-                    <div class="companies box">
-                        <h3>Şirkətlər</h3>
-
-                        <a href="">Şirkət haqqında</a>
-
-                        <a href="">Şirkətin xəbərləri</a>
-
-                        <a href="">Mağazalarımız</a>
-
-                        <a href="">Xidmətlər</a>
-
-                        <a href="">Vakansiyalar</a>
-
-                        <a href="">Konfidensiallıq siyasəti</a>
-                    </div>
-
-                    <!-- istifadeciler ucun ------------------------- -->
-
-                    <div class="for-customers box">
-                        <h3>Müştərilər üçün</h3>
-
-                        <a href="">Çatdırıma və ödəniş</a>
-
-                        <a href="">Geri qaytarma siyasəti</a>
-
-                        <a href="">Zəmanət</a>
-
-                        <a href="">
-            Hissə-hissə ödənişinə dair tələblər
-          </a>
-
-                        <a href="">
-            Aylıq ödənişlərin həyata keçirilməsi üsülları
-          </a>
-
-                        <a href="">Aylıq ödənişlərin üsulları</a>
-                    </div>
-
-                    <!-- elaqe ---------------------------------------- -->
-
-                    <div class="contact box">
-                        <h3>Əlaqə</h3>
-
-                        <a href="tel:*6060" id="tel">*6060</a>
-
-                        <a href="">Biz xəritədə</a>
-                    </div>
                 </div>
 
-                <!-- socials--------------------------------- -->
+                <!-- istifadeciler ucun ------------------------- -->
 
-                <div class="socials">
-                    <!-- --------------------- -->
+                <div class="for-customers box">
+                    <h3>Müştərilər üçün</h3>
 
-                    <div class="left">
-                        <label for="">Abunə olun:</label>
+                    <a href="">Geri qaytarma siyasəti</a>
+
+                    <a href="">Zəmanət</a>
+
+                    <a href="">
+        Hissə-hissə ödənişinə dair tələblər
+      </a>
+
+                    <a href="">
+        Aylıq ödənişlərin həyata keçirilməsi üsülları
+      </a>
+
+                    <a href="">Aylıq ödənişlərin üsulları</a>
+                </div>
+
+                <!-- elaqe ---------------------------------------- -->
+
+                <div class="contact box">
+                    <h3>Əlaqə</h3>
+
+                    <a href="tel:*6060" id="tel">*6060</a>
+
+                    <a href="">Biz xəritədə</a>
+                </div>
+            </div>
+
+            <!-- socials--------------------------------- -->
+
+            <div class="socials">
+                <!-- --------------------- -->
+
+                <div class="left">
+                    <label for="">Abunə olun:</label>
 
                             <div class="subs">
                                 <div class="email-input">
@@ -1290,11 +2345,11 @@
 
             <div class="subscriber-modal">
                 <span>
-        <img
-          src="./assets/images/images/smile.svg"
-          alt="smiley face"
-        >
-      </span>
+    <img
+      src="./assets/images/images/smile.svg"
+      alt="smiley face"
+    >
+  </span>
 
                 <h4>
                     Siz uğurla abunə oldunuz.
@@ -1309,5 +2364,3 @@
 </body>
 
 </html>
-
-<img src="./assets/images/" alt="" />

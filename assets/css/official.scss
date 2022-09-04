@@ -1,74 +1,238 @@
-// vars
-$red: rgb(217, 42, 23);
-$grey: rgb(216, 216, 216);
-$black: #171717;
-$light-grey: #fcfcfd;
-section {
-    .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-        .left {
-            width: 68%;
-            details[open] {
-                >summary {
-                    i {
-                        transform: rotate(90deg);
+    // vars
+    $red: rgb(217, 42, 23);
+    $grey: rgb(216, 216, 216);
+    $black: #171717;
+    $light-grey: #fcfcfd;
+    section {
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            .left {
+                width: 68%;
+                details[open] {
+                    >summary {
+                        i {
+                            transform: rotate(90deg);
+                        }
                     }
                 }
-            }
-            details {
-                width: 100%;
-                height: fit-content;
-                margin-bottom: 36px;
-                summary {
-                    width: inherit;
-                    height: 62px;
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 0 18px;
-                    letter-spacing: -0.48px;
-                    font-size: 24px;
-                    line-height: 30px;
-                    font-weight: 600;
-                    align-items: center;
-                    border: 1px solid $grey;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-                    i {
-                        transition: 0.3s;
-                        font-size: 16px;
-                    }
-                }
-                .content {
-                    border-top: none !important;
-                    border: 1px solid $grey;
-                    border-bottom-left-radius: 10px;
-                    border-bottom-right-radius: 10px;
-                    padding: 22px;
-                    .input-field {
+                details {
+                    width: 100%;
+                    height: fit-content;
+                    margin-bottom: 36px;
+                    summary {
+                        width: inherit;
+                        height: 62px;
                         display: flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        align-items: baseline;
-                        flex-wrap: wrap;
-                        .input {
-                            width: 44%;
-                            margin-bottom: 16px;
+                        justify-content: space-between;
+                        padding: 0 18px;
+                        letter-spacing: -0.48px;
+                        font-size: 24px;
+                        line-height: 30px;
+                        font-weight: 600;
+                        align-items: center;
+                        border: 1px solid $grey;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        i {
+                            transition: 0.3s;
+                            font-size: 16px;
+                        }
+                    }
+                    .content {
+                        border-top: none !important;
+                        border: 1px solid $grey;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        padding: 22px;
+                        .input-field {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: baseline;
+                            flex-wrap: wrap;
+                            .input {
+                                width: 44%;
+                                margin-bottom: 20px;
+                                .tel-input {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 34px;
+                                    input {
+                                        width: 100%;
+                                        height: 34px;
+                                        outline: none;
+                                        border: 1px solid $grey;
+                                        border-radius: 5px;
+                                        border-top-left-radius: 0;
+                                        border-bottom-left-radius: 0;
+                                        padding: 5px;
+                                        color: $black;
+                                    }
+                                    .country-tel-prefix {
+                                        font-size: 18px;
+                                        border: 1px solid $grey;
+                                        background-color: $light-grey;
+                                        padding: 5px;
+                                        border-right: none;
+                                        border-top-left-radius: 5px;
+                                        border-bottom-left-radius: 5px;
+                                    }
+                                    .tel-prefix {
+                                        select {
+                                            font-size: 18px;
+                                            padding: 4px;
+                                            border: 1px solid $grey;
+                                            border-right: none;
+                                            outline: none;
+                                        }
+                                    }
+                                }
+                                label {
+                                    display: flex;
+                                    align-items: center;
+                                    letter-spacing: -0.28px;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                    span {
+                                        color: red;
+                                    }
+                                }
+                                input {
+                                    width: 100%;
+                                    height: 34px;
+                                    outline: none;
+                                    border: 1px solid $grey;
+                                    border-radius: 5px;
+                                    padding: 5px;
+                                    color: $black;
+                                }
+                            }
+                            .input-check {
+                                background-color: $grey;
+                                border-radius: 10px;
+                                display: flex;
+                                flex-direction: column-reverse;
+                                justify-content: center;
+                                align-items: center;
+                                width: 44%;
+                                margin-bottom: 16px;
+                                padding: 22px;
+                                accent-color: $red;
+                                input {
+                                    height: 16px;
+                                    width: 100%;
+                                    cursor: pointer;
+                                }
+                                label {
+                                    margin-top: 11px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    letter-spacing: -0.28px;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                    span {
+                                        color: red;
+                                        padding: 5px 0;
+                                    }
+                                }
+                            }
+                            .first {
+                                padding-bottom: 63px;
+                            }
+                        }
+                        .radio-field {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 94%;
+                            margin: 0 25px;
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                object-fit: contain;
+                            }
+                            .input-check {
+                                padding: 18px;
+                                background-color: $grey;
+                                border-radius: 10px;
+                                display: flex;
+                                flex-direction: column-reverse;
+                                justify-content: center;
+                                align-items: center;
+                                width: 24%;
+                                height: 200px;
+                                margin-bottom: 16px;
+                                input {
+                                    height: 16px;
+                                    width: 100%;
+                                    cursor: pointer;
+                                    accent-color: $red;
+                                }
+                                label {
+                                    margin-top: 11px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    letter-spacing: -0.28px;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                    span {
+                                        color: red;
+                                        padding: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                        .payment-info {
+                            width: 94%;
+                            padding: 8px 5px;
+                            margin: 0 25px;
+                            background-color: #d1ecf1;
+                            border-radius: 10px;
+                        }
+                        .button {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            margin: 16px 0;
+                            margin-bottom: 0;
+                            button {
+                                background-color: #da2c18;
+                                border: none;
+                                border-radius: 10px;
+                                color: white;
+                                font-size: 14px;
+                                padding: 12px 36px;
+                                cursor: pointer;
+                                transition: 0.4s;
+                                &:hover {
+                                    background-color: rgb(188, 32, 32);
+                                }
+                            }
+                        }
+                        .text {
+                            width: 94%;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 25px;
                             label {
                                 display: flex;
                                 align-items: center;
                                 letter-spacing: -0.28px;
                                 font-size: 16px;
                                 margin-bottom: 10px;
-                                span {
-                                    color: red;
-                                }
                             }
-                            input {
+                            textarea {
+                                outline: none;
+                                height: 63px;
                                 width: 100%;
-                                height: 34px;
                                 outline: none;
                                 border: 1px solid $grey;
                                 border-radius: 5px;
@@ -77,389 +241,267 @@ section {
                                 color: $black;
                             }
                         }
-                        .input-check {
-                            background-color: $grey;
-                            border-radius: 10px;
-                            display: flex;
-                            flex-direction: column-reverse;
-                            justify-content: center;
-                            align-items: center;
-                            width: 44%;
-                            margin-bottom: 16px;
-                            padding: 22px;
-                            accent-color: $red;
-                            input {
-                                height: 16px;
-                                width: 100%;
-                                cursor: pointer;
-                            }
-                            label {
-                                margin-top: 11px;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                letter-spacing: -0.28px;
-                                font-size: 16px;
-                                margin-bottom: 10px;
-                                span {
-                                    color: red;
-                                    padding: 5px 0;
-                                }
-                            }
-                        }
-                        .first {
-                            padding-bottom: 63px;
-                        }
-                    }
-                    .radio-field {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-                        width: 94%;
-                        margin: 0 25px;
-                        img {
-                            width: 100px;
-                            height: 100px;
-                            object-fit: contain;
-                        }
-                        .input-check {
-                            padding: 18px;
-                            background-color: $grey;
-                            border-radius: 10px;
-                            display: flex;
-                            flex-direction: column-reverse;
-                            justify-content: center;
-                            align-items: center;
-                            width: 24%;
-                            height: 200px;
-                            margin-bottom: 16px;
-                            input {
-                                height: 16px;
-                                width: 100%;
-                                cursor: pointer;
-                                accent-color: $red;
-                            }
-                            label {
-                                margin-top: 11px;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                letter-spacing: -0.28px;
-                                font-size: 16px;
-                                margin-bottom: 10px;
-                                span {
-                                    color: red;
-                                    padding: 5px 0;
-                                }
-                            }
-                        }
-                    }
-                    .payment-info {
-                        width: 94%;
-                        padding: 8px 5px;
-                        margin: 0 25px;
-                        background-color: #d1ecf1;
-                        border-radius: 10px;
-                    }
-                    .button {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        margin: 16px 0;
-                        margin-bottom: 0;
-                        button {
-                            background-color: #da2c18;
-                            border: none;
-                            border-radius: 10px;
-                            color: white;
-                            font-size: 14px;
-                            padding: 12px 36px;
-                            cursor: pointer;
-                            transition: 0.4s;
-                            &:hover {
-                                background-color: rgb(188, 32, 32);
-                            }
-                        }
-                    }
-                    .text {
-                        width: 94%;
-                        display: flex;
-                        flex-direction: column;
-                        margin: 0 25px;
-                        label {
-                            display: flex;
-                            align-items: center;
-                            letter-spacing: -0.28px;
-                            font-size: 16px;
-                            margin-bottom: 10px;
-                        }
-                        textarea {
-                            outline: none;
-                            height: 63px;
-                            width: 100%;
-                            outline: none;
-                            border: 1px solid $grey;
-                            border-radius: 5px;
-                            margin-bottom: 20px;
-                            padding: 5px;
-                            color: $black;
-                        }
-                    }
-                    .adress-details {
-                        width: 94%;
-                        display: flex;
-                        flex-direction: column;
-                        margin: 0 25px;
-                        label {
-                            display: flex;
-                            align-items: center;
-                            letter-spacing: -0.28px;
-                            font-size: 16px;
-                            margin-bottom: 10px;
-                        }
-                        input {
-                            outline: none;
-                            height: 30px;
-                            width: 100%;
-                            outline: none;
-                            border: 1px solid $grey;
-                            border-radius: 5px;
-                            margin-bottom: 20px;
-                            padding: 5px;
-                            color: $black;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .bucket-right {
-        width: 30%;
-        .total-prices {
-            position: relative;
-            border: 1px solid $grey;
-            border-radius: 10px;
-            height: 705px;
-            h3 {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                height: 62px;
-                border-bottom: 1px solid $grey;
-                letter-spacing: -0.48px;
-                font-size: 24px;
-                line-height: 30px;
-                font-weight: 600;
-                color: $black;
-                padding: 0 18px;
-                span {
-                    letter-spacing: -0.48px;
-                    font-size: 24px;
-                    line-height: 30px;
-                    font-weight: 600;
-                    color: $black;
-                    padding-left: 6px;
-                }
-            }
-            .name-price-wrapper {
-                height: 560px;
-                overflow-y: auto;
-                .list {
-                    padding: 0 18px;
-                    .item {
-                        width: 100%;
-                        padding-top: 30px;
-                        padding-bottom: 30px;
-                        border-bottom: 1px solid $grey;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: left;
-                        .current {
-                            width: inherit;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                            align-items: center;
-                            h4 {
-                                width: 223px;
-                                line-height: 18px;
-                                letter-spacing: -0.28px;
-                                font-size: 14px;
-                                font-weight: 500;
-                                color: $black;
-                            }
-                            span {
-                                font-weight: 700;
-                                color: $black;
-                                font-size: 18px;
-                                line-height: 24px;
-                                letter-spacing: -0.36px;
-                                sup {
-                                    font-weight: 700;
-                                }
-                            }
-                        }
-                        .sale {
-                            width: inherit;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                            align-items: center;
-                            span {
-                                font-size: 12px;
-                                line-height: 15px;
-                                color: gray;
-                            }
-                            .pr {
-                                color: $red;
-                                font-size: 18px;
-                                font-weight: 700;
-                                sup {
-                                    font-weight: 700;
-                                    margin-right: 6px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .total {
-                position: absolute;
-                bottom: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                height: 82px;
-                width: 100%;
-                padding: 18px;
-                border-top: 1px solid $grey;
-                background-color: $light-grey;
-                border-bottom-left-radius: 18px;
-                border-bottom-right-radius: 18px;
-                span {
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-                .order {
-                    width: inherit;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                }
-                .discount {
-                    width: inherit;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding-bottom: 16px;
-                    border-bottom: 1px solid $grey;
-                }
-            }
-        }
-        .order-btn {
-            margin-top: 11px;
-            border: 1px solid $grey;
-            border-radius: 10px;
-            padding: 18px;
-            .order {
-                width: 100%;
-                height: 62px;
-                transition: 0.3s;
-                background-color: $red;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                border: 1px solid $red;
-                border-radius: 10px;
-                text-decoration: none;
-                &:hover {
-                    background-color: rgb(188, 32, 32);
-                    i {
-                        transition: 0.3s;
-                        padding-left: 15px;
-                    }
-                }
-                span {
-                    color: white;
-                    padding-left: 110px;
-                    font-size: 12px;
-                }
-                i {
-                    font-size: 14px;
-                    color: white;
-                    padding-left: 6px;
-                }
-            }
-        }
-    }
-}
-
-.error {
-    transition: 0.2s;
-    visibility: hidden;
-    opacity: 0;
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    width: inherit;
-    font-size: 12px;
-    margin-top: -18px;
-    margin-bottom: 15px;
-    padding-left: 3px;
-    color: $red;
-    i {
-        color: $red;
-        padding-right: 5px;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    section {
-        .container {
-            flex-direction: column;
-            .left {
-                width: 100%;
-                details {
-                    .content {
-                        .input-field {
-                            .input-check {
-                                width: 100%;
-                            }
-                            .input {
-                                width: 100%;
-                            }
-                        }
                         .adress-details {
-                            width: 100%;
-                            margin-left: 0;
-                        }
-                        .text {
-                            width: 100%;
-                            margin-left: 0;
-                        }
-                        .radio-field {
+                            width: 94%;
+                            display: flex;
                             flex-direction: column;
-                            margin-left: 0;
-                            width: 100%;
-                            .input-check {
-                                width: 100%;
+                            margin: 0 25px;
+                            label {
+                                display: flex;
+                                align-items: center;
+                                letter-spacing: -0.28px;
+                                font-size: 16px;
+                                margin-bottom: 10px;
                             }
-                        }
-                        .payment-info {
-                            width: 100%;
-                            margin: 0;
+                            input {
+                                outline: none;
+                                height: 30px;
+                                width: 100%;
+                                outline: none;
+                                border: 1px solid $grey;
+                                border-radius: 5px;
+                                margin-bottom: 20px;
+                                padding: 5px;
+                                color: $black;
+                            }
                         }
                     }
                 }
             }
         }
         .bucket-right {
-            width: 100%;
+            width: 30%;
+            .total-prices {
+                position: relative;
+                border: 1px solid $grey;
+                border-radius: 10px;
+                height: 705px;
+                h3 {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 62px;
+                    border-bottom: 1px solid $grey;
+                    letter-spacing: -0.48px;
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 600;
+                    color: $black;
+                    padding: 0 18px;
+                    span {
+                        letter-spacing: -0.48px;
+                        font-size: 24px;
+                        line-height: 30px;
+                        font-weight: 600;
+                        color: $black;
+                        padding-left: 6px;
+                    }
+                }
+                .name-price-wrapper {
+                    height: 560px;
+                    overflow-y: auto;
+                    .list {
+                        padding: 0 18px;
+                        .item {
+                            width: 100%;
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                            border-bottom: 1px solid $grey;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: left;
+                            .current {
+                                width: inherit;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                h4 {
+                                    width: 223px;
+                                    line-height: 18px;
+                                    letter-spacing: -0.28px;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    color: $black;
+                                }
+                                span {
+                                    font-weight: 700;
+                                    color: $black;
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    letter-spacing: -0.36px;
+                                    sup {
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                            .sale {
+                                width: inherit;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                span {
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                    color: gray;
+                                }
+                                .pr {
+                                    color: $red;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    sup {
+                                        font-weight: 700;
+                                        margin-right: 6px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .total {
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 82px;
+                    width: 100%;
+                    padding: 18px;
+                    border-top: 1px solid $grey;
+                    background-color: $light-grey;
+                    border-bottom-left-radius: 18px;
+                    border-bottom-right-radius: 18px;
+                    span {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                    .order {
+                        width: inherit;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        cursor: pointer;
+                    }
+                    .discount {
+                        width: inherit;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-bottom: 16px;
+                        border-bottom: 1px solid $grey;
+                    }
+                }
+            }
+            .order-btn {
+                margin-top: 11px;
+                border: 1px solid $grey;
+                border-radius: 10px;
+                padding: 18px;
+                .order {
+                    width: 100%;
+                    height: 62px;
+                    transition: 0.3s;
+                    background-color: $red;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border: 1px solid $red;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgb(188, 32, 32);
+                        i {
+                            transition: 0.3s;
+                            padding-left: 15px;
+                        }
+                    }
+                    span {
+                        color: white;
+                        padding-left: 110px;
+                        font-size: 12px;
+                    }
+                    i {
+                        font-size: 14px;
+                        color: white;
+                        padding-left: 6px;
+                    }
+                }
+            }
         }
     }
-}
+    
+    .show {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .error {
+        transition: 0.2s;
+        visibility: hidden;
+        opacity: 0;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        width: fit-content;
+        font-size: 12px;
+        margin-top: 3px;
+        margin-bottom: 15px;
+        padding-left: 3px;
+        color: $red;
+        i {
+            color: $red;
+            padding-right: 5px;
+            font-size: 12px;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        section {
+            .container {
+                flex-direction: column;
+                .left {
+                    width: 100%;
+                    details {
+                        .content {
+                            .input-field {
+                                .input-check {
+                                    width: 100%;
+                                }
+                                .input {
+                                    width: 100%;
+                                }
+                            }
+                            .adress-details {
+                                width: 100%;
+                                margin-left: 0;
+                            }
+                            .text {
+                                width: 100%;
+                                margin-left: 0;
+                            }
+                            .radio-field {
+                                flex-direction: column;
+                                margin-left: 0;
+                                width: 100%;
+                                .input-check {
+                                    width: 100%;
+                                }
+                            }
+                            .payment-info {
+                                width: 100%;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .bucket-right {
+                width: 100%;
+            }
+        }
+    }

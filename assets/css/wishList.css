@@ -7,6 +7,9 @@
 .wished-products .card-wrapper {
   width: 25%;
 }
+.wished-products .card-wrapper:nth-child(n) {
+  display: inline-block;
+}
 .wished-products .card-wrapper .card {
   border: 1px solid #d8d8d8;
   border-radius: 10px;

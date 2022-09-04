@@ -213,7 +213,7 @@ function displayList(items, wrapper, itemsPerPage, page) {
                   <div class="wrap-outer">
                     <div class="wrap-inner">
                       <div class="img">
-                        <a href="#">
+                        <a href="./singleProduct.html">
                           <img
                             src="${item.imgSrc}"
                           />
@@ -309,7 +309,7 @@ const saleCards = document.querySelector("#sale-cards");
 const basketCardsEl = document.querySelector(".full-basket");
 const totalItemsEl = document.querySelector(".number-products");
 const totalPriceEl = document.querySelector("#total-price");
-const numberOnIcon = document.querySelector(".number-of-items");
+const numberOnIcon = document.querySelectorAll(".number-of-items");
 const numberOnIconHeart = document.querySelector(".number-of-items-heart");
 const numberOnIconCompare = document.querySelector(".number-of-items-scale");
 
@@ -488,11 +488,13 @@ function renderSubtotal() {
 
     totalPriceEl.innerHTML = `${totalPrice.toFixed(2)}₼`;
     totalItemsEl.innerHTML = `${totalItems}`;
-    if (totalItems === 0) {
-        numberOnIcon.innerHTML = "";
-    } else {
-        numberOnIcon.innerHTML = `${totalItems}`;
-    }
+    numberOnIcon.forEach(icon => {
+        if (totalItems === 0) {
+            icon.innerHTML = "";
+        } else {
+            icon.innerHTML = `${totalItems}`;
+        }
+    })
 }
 
 

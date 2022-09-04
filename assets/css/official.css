@@ -52,7 +52,41 @@ section .container .left details .content .input-field {
 }
 section .container .left details .content .input-field .input {
   width: 44%;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+section .container .left details .content .input-field .input .tel-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+}
+section .container .left details .content .input-field .input .tel-input input {
+  width: 100%;
+  height: 34px;
+  outline: none;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 5px;
+  color: #171717;
+}
+section .container .left details .content .input-field .input .tel-input .country-tel-prefix {
+  font-size: 18px;
+  border: 1px solid rgb(216, 216, 216);
+  background-color: #fcfcfd;
+  padding: 5px;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+section .container .left details .content .input-field .input .tel-input .tel-prefix select {
+  font-size: 18px;
+  padding: 4px;
+  border: 1px solid rgb(216, 216, 216);
+  border-right: none;
+  outline: none;
 }
 section .container .left details .content .input-field .input label {
   display: flex;
@@ -70,7 +104,6 @@ section .container .left details .content .input-field .input input {
   outline: none;
   border: 1px solid rgb(216, 216, 216);
   border-radius: 5px;
-  margin-bottom: 20px;
   padding: 5px;
   color: #171717;
 }
@@ -344,6 +377,7 @@ section .bucket-right .total-prices .total .order {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 section .bucket-right .total-prices .total .discount {
   width: inherit;
@@ -371,6 +405,7 @@ section .bucket-right .order-btn .order {
   border: 1px solid rgb(217, 42, 23);
   border-radius: 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 section .bucket-right .order-btn .order:hover {
   background-color: rgb(188, 32, 32);
@@ -390,6 +425,11 @@ section .bucket-right .order-btn .order i {
   padding-left: 6px;
 }
 
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 .error {
   transition: 0.2s;
   visibility: hidden;
@@ -397,9 +437,11 @@ section .bucket-right .order-btn .order i {
   display: flex !important;
   flex-direction: row;
   align-items: center;
-  width: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 12px;
-  margin-top: -18px;
+  margin-top: 3px;
   margin-bottom: 15px;
   padding-left: 3px;
   color: rgb(217, 42, 23);

@@ -351,10 +351,27 @@ section {
         flex-direction: row;
         align-items: center;
         justify-content: right;
-        li {
-            background-color: $grey;
+        transform: scaleY(1.05);
+        .tab-first {
+            background-color: #f0efef;
+            border: 1px solid $grey;
+            border-bottom: none;
             padding: 11px;
             cursor: pointer;
+            border-right: none;
+        }
+        .tab-second {
+            background-color: #f0efef;
+            border: 1px solid $grey;
+            border-top-right-radius: 10px;
+            border-bottom: none;
+            padding: 11px;
+            cursor: pointer;
+        }
+        .tab.active {
+            background-color: white;
+            border-top: none;
+            border-right: none;
         }
     }
 }
@@ -362,6 +379,9 @@ section {
 #tab-first {
     transition: 0.3s;
     table {
+        background-color: white;
+        border-radius: 10px;
+        border-top-right-radius: 0px;
         border: 1px solid $grey;
         padding: 33px;
         width: 100%;
@@ -389,10 +409,86 @@ section {
 }
 
 #tab-second {
-    transition: 0.3s;
-    border: 1px solid $grey;
-    margin-left: 20px;
-    margin-right: 20px;
+    form {
+        background-color: white;
+        border-radius: 10px;
+        border-top-right-radius: 0px;
+        transition: 0.3s;
+        border: 1px solid $grey;
+        padding: 33px;
+        display: flex;
+        flex-direction: column;
+        h3 {
+            font-size: 21px;
+            font-weight: 400;
+            letter-spacing: .11px;
+            margin-bottom: 30px;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.28px;
+            font-size: 16px;
+            margin-bottom: 14px;
+            span {
+                color: red;
+            }
+        }
+        textarea {
+            border-radius: 5px;
+            outline: none;
+            padding: 8px 9px;
+            width: 100%;
+            border: 1px solid $grey;
+            background-color: #f0efef;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            cursor: pointer;
+            height: 160px;
+        }
+        .input-field {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .input {
+                width: 47%;
+                margin-bottom: 64px;
+                input {
+                    border-radius: 5px;
+                    outline: none;
+                    padding: 4px 9px;
+                    width: 100%;
+                    border: 1px solid $grey;
+                    background-color: #f0efef;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    cursor: pointer;
+                    height: 40px;
+                }
+            }
+        }
+        .submit-btn {
+            text-align: end;
+            margin: 11px;
+            margin-right: 0;
+            button {
+                background-color: #e3e3e3;
+                border: none;
+                font-size: 16px;
+                font-weight: 700;
+                text-align: center;
+                color: #282828;
+                height: 35px;
+                width: 110px;
+                border-radius: 5px;
+                transition: .4s;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 [data-tab-content] {

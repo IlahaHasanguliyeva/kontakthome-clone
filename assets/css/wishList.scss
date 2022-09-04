@@ -11,6 +11,9 @@
             flex-wrap: wrap;
             .card-wrapper {
                 width: 25%;
+                &:nth-child(n) {
+                    display: inline-block;
+                }
                 .card {
                     border: 1px solid $grey;
                     border-radius: 10px;

@@ -359,9 +359,18 @@ const saleCards = document.querySelector("#sale-cards");
 const basketCardsEl = document.querySelector(".full-basket");
 const totalItemsEl = document.querySelector(".number-products");
 const totalPriceEl = document.querySelector("#total-price");
-const numberOnIcon = document.querySelector(".number-of-items");
-const numberOnIconHeart = document.querySelector(".number-of-items-heart");
-const numberOnIconCompare = document.querySelector(".number-of-items-scale");
+const numberOnIcon = document.querySelectorAll(".number-of-items");
+const numberOnIconHeart = document.querySelectorAll(".number-of-items-heart");
+const numberOnIconCompare = document.querySelectorAll(".number-of-items-scale");
+const fullBucket = document.querySelector(".basket-content");
+const emptyBucket = document.querySelector(".basket-content-empty");
+const catalogBtn = document.querySelector(".catalogue");
+
+catalogBtn.addEventListener("click", () => {
+    basketModal.classList.remove("show");
+    menuModal.classList.add("show");
+    body.style.overflow = "hidden";
+})
 
 // render products
 function renderSaleProducts() {
@@ -481,11 +490,13 @@ function WishTotal() {
     likeCard.forEach((item) => {
         totalItems += item.numberOfUnits;
     });
-    if (totalItems === 0) {
-        numberOnIconHeart.innerHTML = "";
-    } else {
-        numberOnIconHeart.innerHTML = `${totalItems}`;
-    }
+    numberOnIconHeart.forEach(icon => {
+        if (totalItems === 0) {
+            icon.innerHTML = "";
+        } else {
+            icon.innerHTML = `${totalItems}`;
+        }
+    })
 }
 
 // add to compare func
@@ -515,11 +526,13 @@ function compareTotal() {
         totalItems += item.numberOfUnits;
     });
     totalItemsEl.innerHTML = `${totalItems}`;
-    if (totalItems === 0) {
-        numberOnIconCompare.innerHTML = "";
-    } else {
-        numberOnIconCompare.innerHTML = `${totalItems}`;
-    }
+    numberOnIconCompare.forEach(icon => {
+        if (totalItems === 0) {
+            icon.innerHTML = "";
+        } else {
+            icon.innerHTML = `${totalItems}`;
+        }
+    })
 }
 
 // update card func
@@ -529,7 +542,9 @@ function updateCard() {
 
     // save cart to local storage
     localStorage.setItem("CARD", JSON.stringify(card));
+
 }
+
 
 // render basket card
 function renderBasketCardItems() {
@@ -605,12 +620,24 @@ function renderSubtotal() {
 
     totalPriceEl.innerHTML = `${totalPrice.toFixed(2)}₼`;
     totalItemsEl.innerHTML = `${totalItems}`;
-    if (totalItems === 0) {
-        numberOnIcon.innerHTML = "";
-    } else {
-        numberOnIcon.innerHTML = `${totalItems}`;
-    }
+    numberOnIcon.forEach(icon => {
+        if (totalItems === 0) {
+            icon.innerHTML = "";
+        } else {
+            icon.innerHTML = `${totalItems}`;
+        }
+    })
 }
+
+if (card.length === 0) {
+    fullBucket.classList.add("hide");
+    emptyBucket.classList.add("active");
+} else if (card.length > 0) {
+    fullBucket.classList.add("active");
+    emptyBucket.classList.add("hide");
+}
+
+
 
 // load more btn-----------------------------------------
 const loadMoreBtn = document.querySelector(".load-more");

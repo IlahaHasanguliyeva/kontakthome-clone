@@ -1194,9 +1194,9 @@
             .card {
                 border: 1px solid $grey;
                 border-radius: 10px;
-                margin-top: 10px;
-                margin-right: 10px;
                 position: relative;
+                margin: 0 3px;
+                margin-top: 10px;
                 &:hover {
                     .wrap-outer {
                         .wrap-inner {
@@ -1620,6 +1620,61 @@
             }
         }
         
+        // empty bucket---------------------------
+        .basket-content-empty {
+            overflow-y: auto;
+            padding: 0 35px;
+            top: 55px;
+            right: 0;
+            z-index: 96;
+            background-color: white;
+            width: 34%;
+            height: 100vh;
+            position: fixed;
+            .empty {
+                height: 80vh;
+                padding-top: 80px;
+                text-align: center;
+                h3 {
+                    color: $black;
+                    letter-spacing: -0.48px;
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 600;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $black;
+                    letter-spacing: -.28px;
+                    line-height: 20px;
+                }
+                button {
+                    margin-top: 45px;
+                    color: white;
+                    font-size: 14px;
+                    letter-spacing: -.28px;
+                    line-height: 20px;
+                    padding: 18px 28px;
+                    background-color: $red;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        background-color: rgb(188, 32, 32);
+                    }
+                    i {
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+        
+        .active {
+            display: block;
+        }
+        
         // swipeeer----------------------------------------------------------------
         .swiper-button-next,
         .swiper-button-prev {
@@ -1782,8 +1837,8 @@
                                 font-size: 11px;
                                 font-weight: 700;
                                 position: absolute;
-                                left: 36px;
-                                top: 7px;
+                                left: 10px;
+                                top: 8px;
                             }
                         }
                     }
@@ -1873,12 +1928,12 @@
                         flex-direction: row;
                         align-items: center;
                         justify-content: left;
-                        padding: 26px 22px;
+                        padding: 26px 20px;
                         border-bottom: 1px solid $grey;
                         cursor: pointer;
                         span {
                             font-size: 14px;
-                            padding-right: 75px;
+                            padding-right: 133px;
                             padding-left: 11px;
                         }
                         i {
@@ -1886,6 +1941,30 @@
                         }
                         .fa-angle-down {
                             color: $grey;
+                        }
+                    }
+                }
+                .icon {
+                    a {
+                        background-color: transparent;
+                        border: none;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: left;
+                        padding: 26px 20px;
+                        border-bottom: 1px solid $grey;
+                        cursor: pointer;
+                        text-decoration: none;
+                        span {
+                            font-size: 14px;
+                            color: $black;
+                        }
+                        i {
+                            padding-right: 11px;
+                            font-size: 14px;
+                            color: $black;
                         }
                     }
                 }
@@ -2019,8 +2098,7 @@
                 }
             }
             .container {
-                width: 95%;
-                margin: 0 auto;
+                padding: 20px;
             }
             // menu 
             .menu {
@@ -2038,6 +2116,26 @@
             .basket-modal {
                 .basket-content {
                     top: 111px;
+                    .order-btns {
+                        .basket-btns {
+                            gap: 11px;
+                            a {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                width: fit-content;
+                                height: 46px !important;
+                                padding: 0 15px !important;
+                                font-size: 10px;
+                                span {
+                                    padding-left: 13px !important;
+                                }
+                                i {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             // intro section 
@@ -2067,7 +2165,7 @@
                     }
                     .payment-modal {
                         .cards {
-                            width: 63%;
+                            width: 95%;
                             height: 50%;
                             .card-top {
                                 padding-bottom: 0px;
@@ -2094,12 +2192,26 @@
             }
             .tab-nav {
                 text-align: center;
+                #btn {
+                    margin: 0 11px;
+                    padding: 27px 0;
+                }
             }
             // sale-section
             section {
                 .container {
                     .card-wrapper {
                         width: 50% !important;
+                        .card {
+                            .wrap-outer {
+                                .wrap-inner {
+                                    height: 420px;
+                                    .hoverable {
+                                        width: 101%;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -2116,6 +2228,22 @@
                 .footer-content {
                     background-color: #171717;
                     .container {
+                        padding-top: 0;
+                        .scroll-top {
+                            top: 111px;
+                            .scroll-button {
+                                .to-top {
+                                    padding: 16px !important;
+                                    i {
+                                        font-size: 16px;
+                                        color: white;
+                                    }
+                                }
+                                h3 {
+                                    margin-top: 2px;
+                                }
+                            }
+                        }
                         .further-info {
                             flex-direction: column;
                             .box {
@@ -2128,7 +2256,15 @@
                         .socials {
                             flex-direction: column;
                             text-align: center;
+                            .left {
+                                .subs {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 11px;
+                                }
+                            }
                             .right {
+                                margin: 0;
                                 .payment-logos {
                                     justify-content: center;
                                 }
@@ -2147,5 +2283,4 @@
                     top: 80% !important;
                 }
             }
-            // payment modal
         }

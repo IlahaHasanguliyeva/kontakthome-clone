@@ -435,4 +435,19 @@ main section .bucket .bucket-right .order-btn .order i {
 
 .active {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .bucket-products .container .bucket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bucket-products .container .bucket .bucket-left {
+    width: 100%;
+    margin-bottom: 11px;
+  }
+  .bucket-products .container .bucket .bucket-right {
+    width: 100%;
+  }
 }/*# sourceMappingURL=bucket.css.map */
