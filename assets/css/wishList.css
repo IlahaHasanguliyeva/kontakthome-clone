@@ -17,24 +17,6 @@
   margin-right: 10px;
   position: relative;
 }
-.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner img {
-  width: 90% !important;
-}
-.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .prices {
-  display: flex;
-}
-.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .add-to-card {
-  background-color: #da2c18;
-  margin-bottom: 26px;
-}
-.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .add-to-card i,
-.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .add-to-card span {
-  color: white;
-}
-.wished-products .card-wrapper .card:hover .wrap-outer .wrap-inner .hoverable {
-  display: block;
-  opacity: 1;
-}
 .wished-products .card-wrapper .card .wrap-outer {
   padding: 15px 20px 20px;
 }

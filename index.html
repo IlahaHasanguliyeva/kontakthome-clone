@@ -1158,6 +1158,8 @@
 
             </div>
         </div>
+
+
         <!-- menu and card modals ---------------------------------------------------- -->
 
         <div class="menu-modal">
@@ -2343,7 +2345,7 @@
 
                         <button id="btn" data-tab-target="#tab-phones" class="phones">Telefonlar</button>
 
-                        <button id="btn" class="comp">Kompyuterlər</button>
+                        <button id="btn" data-tab-target="#tab-comp" class="comp">Kompyuterlər</button>
 
                         <button id="btn" class="furniture">Məişət Texnikası</button>
 
@@ -2360,6 +2362,9 @@
                                 <!--  -->
                             </div>
                             <div class="sale-cards" id="tab-phones" data-tab-content>
+                                <!--  -->
+                            </div>
+                            <div class="sale-cards" id="tab-comp" data-tab-content>
                                 <!--  -->
                             </div>
                         </div>
@@ -2469,12 +2474,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- scroll img ------------------- -->
-
-                <div class="scIco">
-                    <img src="./assets/images/images/Screenshot_10.png" alt="scroll img">
+                      <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -2673,6 +2674,33 @@
             </div>
         </div>
 
+        <!-- bottom nav -->
+        <div class="bottom-nav">
+            <div class="search-toggle">
+                <input type="text" name="" id="" placeholder="Axtarış...">
+            </div>
+            <div class="icon-field">
+                <div class="icon search-button">
+                    <i class="fa-solid fa-magnifying-glass search-res"></i>
+                    <span>Tətbiq et</span>
+                </div>
+                <div class="icon">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <span>Canlı Çat</span>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-video"></i>
+                    <span>Video Məsləhətçi</span>
+                </div>
+                <div class="icon">
+                    <a href="./register.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Hesab</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <!-- subscriber modal ---- -->
 
         <div class="sub-modal">
@@ -2732,8 +2760,10 @@
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
-                delay: 3000,
                 disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
             },
             breakpoints: {
                 520: {

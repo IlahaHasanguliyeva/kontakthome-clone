@@ -1,3 +1,11 @@
+// bottom nav search button
+const searchToggle = document.querySelector(".search-toggle")
+const searchBtn = document.querySelector(".search-button")
+
+searchBtn.addEventListener("click", () => {
+    searchToggle.classList.toggle("toggle")
+})
+
 // form ------------------------------------------------------
 const errorName = document.querySelector(".msg-name");
 const errorEmail = document.querySelector(".msg-email");
@@ -124,7 +132,13 @@ submitBtn.addEventListener("click", (e) => {
                 }),
             })
             .then((res) => res.json())
-            .then((res) => console.log(res));
+        .then((res) => {
+        usernameInput.value = "",
+        emailInputForm.value= "",
+        passwordInput.value = "",
+        checkPassword.value = "",
+        checkBox.checked = false,
+        console.log(res)});
     }
 });
 

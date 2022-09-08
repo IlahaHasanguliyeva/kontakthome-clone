@@ -1,4 +1,11 @@
-// responsive menu
+// bottom nav search button
+const searchToggle = document.querySelector(".search-toggle")
+const searchBtn = document.querySelector(".search-button")
+
+searchBtn.addEventListener("click", () => {
+        searchToggle.classList.toggle("toggle")
+    })
+    // responsive menu
 const body = document.querySelector("body");
 const resMenu = document.querySelector(".res-menu")
 const resMenuWrap = document.querySelector(".res-menu-wrapper")

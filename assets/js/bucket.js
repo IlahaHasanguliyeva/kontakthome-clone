@@ -1,5 +1,12 @@
 "use strict";
-// responsive menu
+// bottom nav search button
+const searchToggle = document.querySelector(".search-toggle")
+const searchBtn = document.querySelector(".search-button")
+
+searchBtn.addEventListener("click", () => {
+        searchToggle.classList.toggle("toggle")
+    })
+    // responsive menu
 const body = document.querySelector("body");
 const resMenu = document.querySelector(".res-menu")
 const resMenuWrap = document.querySelector(".res-menu-wrapper")
@@ -110,55 +117,20 @@ const menuBtn = document.querySelector(".menu-btn");
 const menuModal = document.querySelector(".menu-modal");
 const menuOverlay = document.querySelector("#menu-overlay");
 const basketIcos = document.querySelectorAll(".basket");
-const basketModal = document.querySelector(".basket-modal");
 const emptyBasket = document.querySelector(".empty-basket");
 const fullBasket = document.querySelector(".full-basket");
 const orderPageBtn = document.querySelector(".order-btns");
 const basketOverlay = document.querySelector("#basket-modal");
 
 menuBtn.addEventListener("click", () => {
-    if (basketModal.classList.contains("show")) {
-        basketModal.classList.remove("show");
-        menuModal.classList.add("show");
-        body.style.overflow = "hidden";
-    } else {
-        menuModal.classList.add("show");
-        body.style.overflow = "hidden";
-    }
+    menuModal.classList.add("show");
+    body.style.overflow = "hidden";
 });
 
 menuOverlay.addEventListener("click", () => {
     menuModal.classList.remove("show");
     body.style.overflow = "auto";
 });
-
-// nav icons-------------------------------------------------------------------------------
-// bucket
-
-for (let i = 0; i < basketIcos.length; i++) {
-    const basketIco = basketIcos[i];
-    basketIco.addEventListener("mouseenter", () => {
-        if (menuModal.classList.contains("show")) {
-            menuModal.classList.remove("show");
-            body.style.overflow = "hidden";
-        } else {
-            body.style.overflow = "hidden";
-        }
-    });
-
-}
-
-// section two------------------------------------------------------------------------------
-
-const btns = document.querySelectorAll("#btn");
-
-for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-        const current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace("active", "");
-        this.className += " active";
-    });
-}
 
 // footer ---------------------------------------------------------------------------------
 // scroll to top---

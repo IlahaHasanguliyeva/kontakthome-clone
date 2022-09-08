@@ -1,5 +1,12 @@
 "use strict";
-// responsive menu
+// bottom nav search button
+const searchToggle = document.querySelector(".search-toggle")
+const searchBtn = document.querySelector(".search-button")
+
+searchBtn.addEventListener("click", () => {
+        searchToggle.classList.toggle("toggle")
+    })
+    // responsive menu
 const body = document.querySelector("body");
 const resMenu = document.querySelector(".res-menu")
 const resMenuWrap = document.querySelector(".res-menu-wrapper")
@@ -550,3 +557,19 @@ mailOverlay.addEventListener("click", () => {
     subModal.classList.remove("show");
     body.style.overflow = "auto";
 });
+
+axios.get("http://localhost:9000/get-data")
+.then(res=>{
+    console.log(res.data.data)
+for (let i = 0; i < res.data.data.length; i++) {
+    const element = res.data.data[i];
+    const arr = {
+        name: element.name,
+        price: element.price,
+        imgSrc: element.url
+    }
+    phones.push(arr)
+    console.log(element.url)
+console.log(phones)
+}
+})

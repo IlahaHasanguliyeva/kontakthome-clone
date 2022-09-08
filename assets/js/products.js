@@ -1,3 +1,4 @@
+
 const saleProducts = [{
         id: 0,
         name: "Buxarlı təmizləyici Black&Decker FSMH13E10-QS",
@@ -534,5 +535,36 @@ const phones = [{
         price: 1699.99,
         inStock: 50,
         imgSrc: "assets/images/images/products/top 20/display (7).webp",
+    },
+]
+
+const comp = [
+    {
+        id: 88,
+        name: "Noutbuk Apple MacBook Pro 16 MK183RU/A Space Gray ",
+        price: 5899.99,
+        inStock: 50,
+        imgSrc: "/assets/images/images/products/comp/comps.webp",
+    },
+    {
+        id: 89,
+        name: "Noutbuk Lenovo Legion 5 17ITH6H (82JM001CRK) ",
+        price: 3499.99,
+        inStock: 50,
+        imgSrc: "/assets/images/images/products/comp/TM-DG-KOT-1114-NB-1388_097773eb97d937d1377782402daa0042_w_png.webp",
+    },
+    {
+        id: 90,
+        name: "Noutbuk Lenovo V14-IGL (82C2000YRU) ",
+        price: 599.99,
+        inStock: 50,
+        imgSrc: "/assets/images/images/products/comp/TM-DG-KOT-1114-NB-0998_c0fc8ff425ca45774052a2ce110c5635_w_png.webp",
+    },
+    {
+        id: 91,
+        name: "Noutbuk Asus X415EA-EB512 (90NB0TT2-M07290) ",
+        price: 1019.99,
+        inStock: 50,
+        imgSrc: "/assets/images/images/products/comp/s.webp",
     },
 ]

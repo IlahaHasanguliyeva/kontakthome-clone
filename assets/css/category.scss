@@ -272,6 +272,10 @@
                 .category-cards {
                     .card {
                         width: 49%;
+                        height: 360px;
+                        .img {
+                            height: 222px;
+                        }
                     }
                 }
             }
@@ -283,6 +287,144 @@
             .second-card {
                 .card-wrapper {
                     width: 50%;
+                }
+            }
+        }
+        
+        @media screen and (min-width: 520px) {
+            footer {
+                .bottom-nav {
+                    display: none;
+                }
+            }
+            .card-wrapper {
+                .card {
+                    &:hover {
+                        .wrap-outer {
+                            .wrap-inner {
+                                img {
+                                    width: 90% !important;
+                                }
+                                .prices {
+                                    display: flex;
+                                }
+                                .add-to-card {
+                                    background-color: $red;
+                                    margin-bottom: 26px;
+                                    i,
+                                    span {
+                                        color: white;
+                                    }
+                                }
+                                .hoverable {
+                                    display: block;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        @media screen and (max-width: 520px) {
+            section {
+                .category-cards {
+                    .card {
+                        width: 100%;
+                    }
+                }
+            }
+            .first-card {
+                .card-wrapper {
+                    width: 100%;
+                    .wrap-outer {
+                        .wrap-inner {
+                            height: 636px;
+                            .add-to-card {
+                                transition: 0.2s;
+                                &:hover {
+                                    background-color: $red;
+                                    i {
+                                        color: white;
+                                    }
+                                    span {
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .hoverable {
+                                width: 101%;
+                                opacity: 1;
+                                display: block;
+                                padding: 0;
+                                background-color: transparent;
+                                border: none;
+                                margin-bottom: 11px;
+                                position: unset;
+                                .button-wrapper {
+                                    padding: 0;
+                                    padding-top: 11px;
+                                    button {
+                                        transition: 0.2s;
+                                        &:hover {
+                                            border-color: $red;
+                                            background-color: $red;
+                                            i {
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .second-card {
+                .card-wrapper {
+                    width: 100%;
+                    .wrap-outer {
+                        .wrap-inner {
+                            height: 636px;
+                            .add-to-card {
+                                transition: 0.2s;
+                                &:hover {
+                                    background-color: $red;
+                                    i {
+                                        color: white;
+                                    }
+                                    span {
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .hoverable {
+                                width: 101%;
+                                opacity: 1;
+                                display: block;
+                                padding: 0;
+                                background-color: transparent;
+                                border: none;
+                                margin-bottom: 11px;
+                                position: unset;
+                                .button-wrapper {
+                                    padding: 0;
+                                    padding-top: 11px;
+                                    button {
+                                        transition: 0.2s;
+                                        &:hover {
+                                            border-color: $red;
+                                            background-color: $red;
+                                            i {
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

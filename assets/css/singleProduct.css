@@ -231,7 +231,7 @@ section .big-img img {
 .product-info .credit-title .advert img {
   height: 60px;
   position: relative;
-  z-index: 888;
+  z-index: 1;
 }
 .product-info .credit-title .advert h5 {
   font-size: 16px;
@@ -303,10 +303,14 @@ section .big-img img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right;
   margin-top: 33px;
 }
-.product-info .payment-btns .one-click {
+.product-info .payment-btns a {
+  text-decoration: none;
+  color: black;
+}
+.product-info .payment-btns .one-click a {
   color: red;
 }
 .product-info .payment-btns button {
@@ -317,9 +321,12 @@ section .big-img img {
   font-size: 20px;
   font-weight: 600;
   transition: 0.4s;
+  margin-left: 11px;
 }
 .product-info .payment-btns button:hover {
   background-color: #da2c18;
+}
+.product-info .payment-btns button:hover a {
   color: white;
 }
 
@@ -537,4 +544,92 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 0.5rem;
   height: 10px;
   width: 10px;
+}
+
+.res-name {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  section .product-header .product-header-btns .video-advice i {
+    padding: 7px;
+  }
+  section .product-header .product-header-btns .video-advice span {
+    display: none;
+  }
+  section .res-name {
+    display: block;
+    padding: 0;
+  }
+  section .res-name h3 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 0 !important;
+    padding-top: 20px !important;
+  }
+  section .container .product-details {
+    flex-direction: column;
+  }
+  section .container .product-details .product-info {
+    margin-top: 44px;
+    width: 100%;
+  }
+  section .container .product-details .product-info .product-name {
+    display: none;
+  }
+  section .container .tab-content #tab-first table {
+    border-spacing: 0px;
+  }
+  section .container .tab-content #tab-first table tr td {
+    padding-left: 120px;
+  }
+  section .container .tab-content #tab-second form .input-field {
+    flex-direction: column;
+  }
+  section .container .tab-content #tab-second form .input-field .input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 520px) {
+  section .product-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section .product-header .first-part {
+    margin-bottom: 11px;
+  }
+  section .big-img img {
+    width: 363px;
+  }
+  section .container .product-details {
+    flex-direction: column;
+  }
+  section .container .product-details .product-info .credit {
+    flex-direction: column;
+  }
+  section .container .product-details .product-info .credit .calculator {
+    width: 100%;
+    margin: 10px 0;
+  }
+  section .container .product-details .product-info .credit .percentages {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+  }
+  section .container .product-details .product-info .credit .percentages div {
+    width: 100%;
+    margin-bottom: 11px;
+  }
+  section .container .product-details .product-info .credit .percentages div h3 {
+    text-align: center;
+  }
+  section .container .product-details .product-info .payment-btns {
+    flex-direction: column;
+  }
+  section .container .product-details .product-info .payment-btns button {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 11px;
+  }
 }/*# sourceMappingURL=singleProduct.css.map */

@@ -338,4 +338,21 @@ main .pagination button:hover {
   section .products-filter .container .right .product-list-header {
     display: none;
   }
+}
+@media screen and (max-width: 520px) {
+  .filter-btn .container button {
+    padding: 0px 50px !important;
+  }
+  section .products-filter .container .left {
+    display: none;
+  }
+  section .products-filter .container .right {
+    width: 100%;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper {
+    width: 100% !important;
+  }
+  section .products-filter .container .right .product-list-header {
+    display: none;
+  }
 }/*# sourceMappingURL=smartPhones.css.map */
