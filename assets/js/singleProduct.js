@@ -110,7 +110,7 @@ searchInput.addEventListener("input", () => {
 const menuBtn = document.querySelector(".menu-btn");
 const menuModal = document.querySelector(".menu-modal");
 const menuOverlay = document.querySelector("#menu-overlay");
-const basketIcos = document.querySelectorAll(".basket");
+const basketIco = document.querySelector(".basket");
 const basketModal = document.querySelector(".basket-modal");
 const emptyBasket = document.querySelector(".empty-basket");
 const fullBasket = document.querySelector(".full-basket");
@@ -137,8 +137,7 @@ menuOverlay.addEventListener("click", () => {
 // nav icons-------------------------------------------------------------------------------
 // bucket
 
-for (let i = 0; i < basketIcos.length; i++) {
-    const basketIco = basketIcos[i];
+
     basketIco.addEventListener("mouseenter", () => {
         if (menuModal.classList.contains("show")) {
             menuModal.classList.remove("show");
@@ -150,7 +149,6 @@ for (let i = 0; i < basketIcos.length; i++) {
         }
     });
 
-}
 
 basketOverlay.addEventListener("click", () => {
     basketModal.classList.remove("show");

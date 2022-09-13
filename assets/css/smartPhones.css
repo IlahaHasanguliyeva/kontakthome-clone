@@ -73,7 +73,7 @@ main .filter-modal {
 }
 main .filter-modal .filter-wrapper {
   overflow-y: scroll;
-  height: 85vh;
+  height: 100vh;
   padding: 30px;
   position: fixed;
   top: 111px;
@@ -351,6 +351,39 @@ main .pagination button:hover {
   }
   section .products-filter .container .right .product-wrapper .card-wrapper {
     width: 100% !important;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner {
+    height: 636px !important;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner .add-to-card {
+    transition: 0.2s;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner .add-to-card:hover {
+    background-color: #da2c18;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner .add-to-card:hover i {
+    color: white;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner .add-to-card:hover span {
+    color: white;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner .hoverable {
+    width: 101%;
+    opacity: 1;
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 11px;
+    position: unset;
+    padding: 60px;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper {
+    padding: 0;
+    padding-top: 11px;
+  }
+  section .products-filter .container .right .product-wrapper .card-wrapper .card .wrap-outer .wrap-inner .hoverable .button-wrapper button {
+    transition: 0.2s;
   }
   section .products-filter .container .right .product-list-header {
     display: none;

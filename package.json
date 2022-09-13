@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Luicenth/kontakthome#readme",
   "dependencies": {
     "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }

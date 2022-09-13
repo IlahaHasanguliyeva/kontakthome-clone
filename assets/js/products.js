@@ -1,7 +1,7 @@
 
 const saleProducts = [{
         id: 0,
-        name: "Buxarlı təmizləyici Black&Decker FSMH13E10-QS",
+        name: "Buxarlı təmizləyici Black&Decker",
         prevPrice: 179,
         price: 129.99,
         inStock: 100,
@@ -33,7 +33,7 @@ const saleProducts = [{
     },
     {
         id: 4,
-        name: "Buxarlı təmizləyici Karcher SC 1 EasyFix (sarı)",
+        name: "Buxarlı təmizləyici Karcher",
         prevPrice: 239,
         price: 229.99,
         inStock: 50,

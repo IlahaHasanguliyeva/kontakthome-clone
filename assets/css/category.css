@@ -259,8 +259,14 @@ section p i {
   .first-card .card-wrapper {
     width: 50%;
   }
+  .first-card .card-wrapper .wrap-inner {
+    height: 500px !important;
+  }
   .second-card .card-wrapper {
     width: 50%;
+  }
+  .second-card .card-wrapper .wrap-inner {
+    height: 500px !important;
   }
 }
 @media screen and (min-width: 520px) {
@@ -294,7 +300,7 @@ section p i {
     width: 100%;
   }
   .first-card .card-wrapper .wrap-outer .wrap-inner {
-    height: 636px;
+    height: 636px !important;
   }
   .first-card .card-wrapper .wrap-outer .wrap-inner .add-to-card {
     transition: 0.2s;
@@ -317,6 +323,7 @@ section p i {
     border: none;
     margin-bottom: 11px;
     position: unset;
+    padding: 60px;
   }
   .first-card .card-wrapper .wrap-outer .wrap-inner .hoverable .button-wrapper {
     padding: 0;
@@ -336,7 +343,7 @@ section p i {
     width: 100%;
   }
   .second-card .card-wrapper .wrap-outer .wrap-inner {
-    height: 636px;
+    height: 636px !important;
   }
   .second-card .card-wrapper .wrap-outer .wrap-inner .add-to-card {
     transition: 0.2s;
@@ -359,6 +366,7 @@ section p i {
     border: none;
     margin-bottom: 11px;
     position: unset;
+    padding: 60px;
   }
   .second-card .card-wrapper .wrap-outer .wrap-inner .hoverable .button-wrapper {
     padding: 0;

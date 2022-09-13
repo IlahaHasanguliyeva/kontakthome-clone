@@ -117,7 +117,7 @@ searchInput.addEventListener("input", () => {
 const menuBtn = document.querySelector(".menu-btn");
 const menuModal = document.querySelector(".menu-modal");
 const menuOverlay = document.querySelector("#menu-overlay");
-const basketIcos = document.querySelectorAll(".basket");
+const basketIco = document.querySelector(".basket");
 const basketModal = document.querySelector(".basket-modal");
 const emptyBasket = document.querySelector(".empty-basket");
 const fullBasket = document.querySelector(".full-basket");
@@ -143,8 +143,7 @@ menuOverlay.addEventListener("click", () => {
 // nav icons-------------------------------------------------------------------------------
 // bucket
 
-for (let i = 0; i < basketIcos.length; i++) {
-    const basketIco = basketIcos[i];
+
     basketIco.addEventListener("mouseenter", () => {
         if (menuModal.classList.contains("show")) {
             menuModal.classList.remove("show");
@@ -155,8 +154,6 @@ for (let i = 0; i < basketIcos.length; i++) {
             body.style.overflow = "hidden";
         }
     });
-
-}
 
 basketOverlay.addEventListener("click", () => {
     basketModal.classList.remove("show");
@@ -211,17 +208,23 @@ function renderPhoneFirst() {
                           <button class="heart" onclick="addToWish(${
                             product.id
                           })">
-                          <img class="wish ${
+                          <img class="svg wish-${
                             product.id
                           }" src="./assets/images/menu icons/heart-icon.svg" alt="icon">
                           </button>
                           <button class="compare" onclick="addToCompare(${
                             product.id
                           })">
-                            <i class="fa-solid fa-scale-balanced"></i>
+                          <img class="svg compare-${
+                            product.id
+                          }" src="./assets/images/menu icons/scale.png" alt="icon">
                           </button>
-                          <button class="like">
-                            <i class="fa-solid fa-thumbs-up"></i>
+                          <button class="like" onclick="like(${
+                            product.id
+                          })">
+                          <img id="" class="svg like-${
+                            product.id
+                          }" src="./assets/images/menu icons/like.png" alt="icon">
                           </button>
                         </div>
                       </div>
@@ -233,6 +236,18 @@ function renderPhoneFirst() {
 }
 
 renderPhoneFirst();
+
+function like(id) {
+  const item = xiaomi.find((product) => product.id === id);
+  const likeSvg = document.querySelector(`.like-${item.id}`);
+  if(!likeSvg.classList.contains("filled")){
+    likeSvg.src = "./assets/images/menu icons/like-filled.png";
+    likeSvg.classList.add("filled")
+  } else {
+    likeSvg.src = "./assets/images/menu icons/like.png";
+    likeSvg.classList.remove("filled")
+  }
+}
 
 // render tablets
 function renderTablets() {
@@ -273,17 +288,23 @@ function renderTablets() {
                         <button class="heart" onclick="addToWishTablets(${
                           product.id
                         })">
-                        <img class="wish ${
+                        <img class="svg wish-${
                           product.id
                         }" src="./assets/images/menu icons/heart-icon.svg" alt="icon">
                         </button>
                         <button class="compare" onclick="addToCompareTablets(${
                           product.id
                         })">
-                          <i class="fa-solid fa-scale-balanced"></i>
+                        <img class="svg compare-${
+                          product.id
+                        }" src="./assets/images/menu icons/scale.png" alt="icon">
                         </button>
-                        <button class="like">
-                          <i class="fa-solid fa-thumbs-up"></i>
+                        <button class="like" onclick="likeTablets(${
+                          product.id
+                        })">
+                        <img id="" class="svg like-${
+                          product.id
+                        }" src="./assets/images/menu icons/like.png" alt="icon">
                         </button>
                       </div>
                     </div>
@@ -295,6 +316,18 @@ function renderTablets() {
 }
 
 renderTablets()
+
+function likeTablets(id) {
+  const item = tablets.find((product) => product.id === id);
+  const likeSvg = document.querySelector(`.like-${item.id}`);
+  if(!likeSvg.classList.contains("filled")){
+    likeSvg.src = "./assets/images/menu icons/like-filled.png";
+    likeSvg.classList.add("filled")
+  } else {
+    likeSvg.src = "./assets/images/menu icons/like.png";
+    likeSvg.classList.remove("filled")
+  }
+}
 
 // item card
 let card = JSON.parse(localStorage.getItem("CARD")) || [];
@@ -434,9 +467,14 @@ function updateCard() {
 function addToWish(id) {
     // check if product already exist in card
     if (likeCard.some((item) => item.id === id)) {
-        likeCard = likeCard.filter((item) => item.id !== id);
+        likeCard = likeCard.filter((item) => item.id !== id ) 
+        const item = xiaomi.find((product) => product.id === id);
+          const wishSvg = document.querySelector(`.wish-${item.id}`)
+          wishSvg.src = "./assets/images/menu icons/heart-icon.svg"
     } else {
         const item = xiaomi.find((product) => product.id === id);
+        const wishSvg = document.querySelector(`.wish-${item.id}`)
+        wishSvg.src = "./assets/images/menu icons/heart-icon-filled.svg"
         likeCard.push({
             ...item,
             numberOfUnits: 1,
@@ -448,9 +486,14 @@ function addToWish(id) {
 function addToWishTablets(id) {
     // check if product already exist in card
     if (likeCard.some((item) => item.id === id)) {
-        likeCard = likeCard.filter((item) => item.id !== id);
+        likeCard = likeCard.filter((item) => item.id !== id)
+        const item = tablets.find((product) => product.id === id);
+          const wishSvg = document.querySelector(`.wish-${item.id}`)
+          wishSvg.src = "./assets/images/menu icons/heart-icon.svg"
     } else {
         const item = tablets.find((product) => product.id === id);
+        const wishSvg = document.querySelector(`.wish-${item.id}`)
+        wishSvg.src = "./assets/images/menu icons/heart-icon-filled.svg"
         likeCard.push({
             ...item,
             numberOfUnits: 1,
@@ -481,8 +524,13 @@ function WishTotal() {
 function addToCompare(id) {
     if (compareCard.some((item) => item.id === id)) {
         compareCard = compareCard.filter((item) => item.id !== id);
+        const item = xiaomi.find((product) => product.id === id);
+        let scaleSvg = document.querySelector(`.compare-${item.id}`);
+        scaleSvg.src = "./assets/images/menu icons/scale.png";
     } else {
         const item = xiaomi.find((product) => product.id === id);
+        let scaleSvg = document.querySelector(`.compare-${item.id}`);
+        scaleSvg.src = "./assets/images/menu icons/scale-filled.png";
         compareCard.push({
             ...item,
             numberOfUnits: 1,
@@ -495,8 +543,13 @@ function addToCompare(id) {
 function addToCompareTablets(id) {
     if (compareCard.some((item) => item.id === id)) {
         compareCard = compareCard.filter((item) => item.id !== id);
+        const item = tablets.find((product) => product.id === id);
+        let scaleSvg = document.querySelector(`.compare-${item.id}`);
+        scaleSvg.src = "./assets/images/menu icons/scale.png";
     } else {
         const item = tablets.find((product) => product.id === id);
+        let scaleSvg = document.querySelector(`.compare-${item.id}`);
+        scaleSvg.src = "./assets/images/menu icons/scale-filled.png";
         compareCard.push({
             ...item,
             numberOfUnits: 1,

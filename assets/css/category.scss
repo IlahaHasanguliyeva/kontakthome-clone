@@ -282,11 +282,17 @@
             .first-card {
                 .card-wrapper {
                     width: 50%;
+                    .wrap-inner{
+                        height: 500px !important;
+                    }
                 }
             }
             .second-card {
                 .card-wrapper {
                     width: 50%;
+                    .wrap-inner{
+                        height: 500px !important;
+                    }
                 }
             }
         }
@@ -340,7 +346,7 @@
                     width: 100%;
                     .wrap-outer {
                         .wrap-inner {
-                            height: 636px;
+                            height: 636px !important;
                             .add-to-card {
                                 transition: 0.2s;
                                 &:hover {
@@ -362,6 +368,7 @@
                                 border: none;
                                 margin-bottom: 11px;
                                 position: unset;
+                                padding: 60px;
                                 .button-wrapper {
                                     padding: 0;
                                     padding-top: 11px;
@@ -386,7 +393,7 @@
                     width: 100%;
                     .wrap-outer {
                         .wrap-inner {
-                            height: 636px;
+                            height: 636px !important;
                             .add-to-card {
                                 transition: 0.2s;
                                 &:hover {
@@ -408,6 +415,7 @@
                                 border: none;
                                 margin-bottom: 11px;
                                 position: unset;
+                                padding: 60px;
                                 .button-wrapper {
                                     padding: 0;
                                     padding-top: 11px;
