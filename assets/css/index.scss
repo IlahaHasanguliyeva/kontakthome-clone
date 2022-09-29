@@ -96,6 +96,7 @@ header {
   top: 0;
   .container {
     nav {
+      top: 0px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -296,6 +297,60 @@ header {
         .switch:hover {
           color: $red;
         }
+      }
+    }
+  }
+  .bottom-nav {
+    .icon-field {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 55px;
+      background-color: white;
+      border-top: 1px solid $grey;
+      z-index: 44444;
+      .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        span {
+          font-size: 12px;
+          font-weight: 400;
+        }
+        a {
+          color: $black;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-decoration: none;
+        }
+      }
+    }
+    .search-toggle {
+      position: fixed;
+      top: 62px;
+      width: 100%;
+      z-index: -1;
+      background-color: #253444;
+      padding: 11px;
+      transform: translateY(-110%);
+      transition: 0.5s;
+      input {
+        background-color: $light-grey;
+        width: 90%;
+        height: 50px;
+        margin: 0 5%;
+        outline: none;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 5px 8px;
       }
     }
   }
@@ -2126,6 +2181,8 @@ main {
     }
     .responsive {
       display: block;
+      position: absolute;
+      top: 0;
     }
   }
   .container {
@@ -2257,60 +2314,6 @@ main {
   }
   // footer
   footer {
-    .bottom-nav {
-      .icon-field {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 55px;
-        background-color: white;
-        border-top: 1px solid $grey;
-        z-index: 44444;
-        .icon {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          cursor: pointer;
-          span {
-            font-size: 12px;
-            font-weight: 400;
-          }
-          a {
-            color: $black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-          }
-        }
-      }
-      .search-toggle {
-        position: fixed;
-        top: 56px;
-        width: 100%;
-        z-index: 111;
-        background-color: #253444;
-        padding: 11px;
-        transform: translateY(-110%);
-        transition: 0.5s;
-        input {
-          background-color: $light-grey;
-          width: 90%;
-          height: 50px;
-          margin: 0 5%;
-          outline: none;
-          border: 1px solid $grey;
-          border-radius: 5px;
-          font-size: 18px;
-          font-weight: 400;
-          padding: 5px 8px;
-        }
-      }
-    }
     .footer-content {
       background-color: #171717;
       .container {
@@ -2372,7 +2375,7 @@ main {
 }
 
 @media screen and (min-width: 520px) {
-  footer {
+  header {
     .bottom-nav {
       display: none;
     }
